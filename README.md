@@ -1,6 +1,8 @@
 # HTML 발표자료 보관함
 
-html-ppt 스킬로 만든 발표자료를 모아 두는 폴더입니다. 폴더 전체를 웹 서버나 정적 호스팅(GitHub Pages, Netlify, Vercel 등)에 올리면 그대로 웹사이트가 됩니다.
+html-ppt 스킬로 만든 발표자료를 모아 두는 폴더입니다.
+
+**웹 주소:** https://eunhorang.github.io/html-ppt-archive/ (GitHub Pages, `main` 브랜치를 올리면 1~2분 뒤 자동 반영) 폴더 전체를 웹 서버나 정적 호스팅(GitHub Pages, Netlify, Vercel 등)에 올리면 그대로 웹사이트가 됩니다.
 
 ## 구조
 
