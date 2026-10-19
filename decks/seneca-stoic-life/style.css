@@ -1,0 +1,184 @@
+/* 세네카 — deck-specific styles (tokens only) */
+
+/* 한글 명조에는 이탤릭 글꼴이 없어 기울임이 인위적으로 합성되므로 제목은 똑바로 세운다 */
+.h1,.h2,h1.title,h2.title{font-family:var(--font-serif);font-style:normal}
+body{word-break:keep-all;overflow-wrap:break-word}
+.slide{padding:84px 120px}
+.h1{font-size:96px;line-height:1.12}
+.h2{font-size:52px;line-height:1.22;margin-bottom:22px;color:var(--text-1)}
+.lede{font-size:26px;line-height:1.7}
+.kicker{font-size:16px;letter-spacing:.14em}
+.la{font-family:var(--font-serif);font-style:italic;color:var(--text-3)}
+.accent{color:var(--accent-3)}
+p{margin:0}
+
+/* ---------- cover ---------- */
+.cover{justify-content:flex-end;padding-bottom:120px}
+.cover .rule{width:120px;height:4px;background:var(--accent-3);margin:0 0 36px}
+.cover .la{font-size:30px;margin-bottom:14px}
+.cover .meta{margin-top:40px;font-size:21px;color:var(--text-2)}
+.cover .motto{position:absolute;top:96px;right:120px;max-width:700px;text-align:right;
+  font-family:var(--font-serif);font-size:26px;line-height:1.6;color:var(--text-2)}
+.cover .motto .la{display:block;font-size:19px;margin:10px 0 6px}
+.cover .motto small{font-family:var(--font-sans);font-size:16px;color:var(--text-3)}
+
+/* ---------- big statement ---------- */
+.statement{font-family:var(--font-serif);font-size:48px;line-height:1.55;font-weight:600;max-width:30ch;margin:0}
+.statement em{font-style:normal;color:var(--accent-3)}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:60px;border-top:1.5px solid var(--border-strong)}
+.stats>div{padding:28px 28px 0 0}
+.stats>div+div{padding-left:28px;border-left:1px solid var(--border)}
+.stats b{display:block;font-family:var(--font-serif);font-size:64px;line-height:1;font-weight:700;color:var(--accent-3)}
+.stats span{display:block;margin-top:14px;font-size:21px;color:var(--text-2);line-height:1.5}
+
+/* ---------- cards ---------- */
+.card h4{font-family:var(--font-serif);font-size:30px;line-height:1.35;margin-bottom:12px}
+.card p{font-size:22px;line-height:1.65;color:var(--text-2)}
+.card .tag{display:inline-block;font-size:15px;letter-spacing:.1em;color:var(--accent-2);font-weight:700;margin-bottom:10px}
+.card .big{display:block;font-family:var(--font-serif);font-size:56px;line-height:1;color:var(--accent-3);font-weight:700;margin-bottom:16px}
+
+/* ---------- facts list + quote ---------- */
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:start}
+.facts{list-style:none;padding:0;margin:0}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:15px 0;border-bottom:1px solid var(--border);font-size:22px;line-height:1.55}
+.facts li b{font-family:var(--font-serif);color:var(--accent-3);font-weight:700}
+.quote-box{border-left:4px solid var(--accent-3);padding:6px 0 6px 28px;font-family:var(--font-serif);font-size:28px;line-height:1.65;color:var(--text-1)}
+.quote-box .la{display:block;font-size:19px;margin-top:10px}
+.quote-box small{display:block;margin-top:12px;font-family:var(--font-sans);font-size:16px;color:var(--text-3)}
+
+/* ---------- life timeline ---------- */
+.tl{position:relative;margin-top:44px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:58px;height:2px;background:var(--border-strong)}
+.tl .row{display:grid;grid-template-columns:repeat(7,1fr);gap:18px;align-items:start}
+.tl .item{position:relative;padding-top:92px}
+.tl .year{position:absolute;top:0;left:0;font-family:var(--font-serif);font-size:28px;font-weight:700;color:var(--text-1);white-space:nowrap}
+.tl .dot{position:absolute;top:50px;left:0;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--accent-2)}
+.tl .item.low .dot{background:var(--accent-3);border-color:var(--accent-3)}
+.tl .item.low .year{color:var(--accent-3)}
+.tl h4{font-family:var(--font-serif);font-size:24px;line-height:1.4;margin-bottom:8px}
+.tl p{font-size:18px;line-height:1.55;color:var(--text-2)}
+.legend{margin-top:44px;font-size:18px;color:var(--text-3)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin:0 6px 0 18px;vertical-align:middle}
+
+/* ---------- versus (contradiction) ---------- */
+.versus{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+.versus .card{min-height:260px}
+.answer{margin-top:36px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;
+  padding:28px 36px;background:var(--surface-2);border-radius:var(--radius-lg)}
+.answer .lbl{font-size:15px;letter-spacing:.14em;color:var(--accent-2);font-weight:700;writing-mode:horizontal-tb}
+.answer p{font-family:var(--font-serif);font-size:28px;line-height:1.6}
+.answer p .la{font-size:19px;margin-left:8px}
+
+/* ---------- stoa intro ---------- */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.trio .card{text-align:left}
+.trio .who{font-family:var(--font-serif);font-size:30px;font-weight:700;margin-bottom:4px}
+.trio .when{font-size:16px;color:var(--text-3);letter-spacing:.06em;margin-bottom:14px}
+.trio .card.me{border:2px solid var(--accent-3)}
+.trio .card.me .who{color:var(--accent-3)}
+
+/* ---------- event → judgment → feeling ---------- */
+.flow{display:grid;grid-template-columns:1fr 90px 1.2fr 90px 1fr;align-items:stretch;margin-top:44px}
+.flow .step{padding:30px 32px;border:1.5px solid var(--border-strong);border-radius:var(--radius-lg);background:var(--surface)}
+.flow .step.key{border:2.5px solid var(--accent-3);background:color-mix(in srgb,var(--accent-3) 7%,var(--surface))}
+.flow .step .n{font-size:15px;letter-spacing:.14em;color:var(--text-3);font-weight:700}
+.flow .step.key .n{color:var(--accent-3)}
+.flow .step h3{font-family:var(--font-serif);font-size:36px;margin:8px 0 14px}
+.flow .step p{font-size:21px;line-height:1.6;color:var(--text-2)}
+.flow .arr{display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--text-3)}
+.flow-note{margin-top:40px;font-size:25px;line-height:1.6;color:var(--text-2)}
+.flow-note b{color:var(--accent-3)}
+
+/* ---------- myth vs fact ---------- */
+.myths{display:grid;grid-template-columns:1fr;gap:0;margin-top:30px;border-top:1.5px solid var(--border-strong)}
+.myths .m{display:grid;grid-template-columns:1fr 60px 1.25fr;align-items:center;padding:24px 0;border-bottom:1px solid var(--border)}
+.myths .no{font-size:24px;color:var(--text-3);text-decoration:line-through;text-decoration-color:var(--accent-3);text-decoration-thickness:2px}
+.myths .to{text-align:center;font-size:28px;color:var(--text-3)}
+.myths .yes{font-size:24px;line-height:1.55;color:var(--text-1)}
+.myths .yes b{color:var(--accent-3)}
+
+/* ---------- section divider ---------- */
+.divider-slide{justify-content:center}
+.divider-slide .num{font-family:var(--font-serif);font-size:180px;line-height:1;color:var(--accent-3);font-weight:700;margin-bottom:24px}
+.divider-slide .lede{margin-top:10px}
+
+/* ---------- works map ---------- */
+.works{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:22px;margin-top:30px}
+.works .card{padding:24px 26px}
+.works h4{font-size:27px;margin-bottom:6px}
+.works .la{font-size:17px;margin-bottom:14px;display:block}
+.works ul{margin:0;padding-left:20px;font-size:20px;line-height:1.75;color:var(--text-2)}
+.works ul b{color:var(--text-1)}
+.works .star{color:var(--accent-3);font-weight:700}
+.works-note{margin-top:26px;font-size:19px;color:var(--text-3)}
+
+/* ---------- book slides ---------- */
+.book{display:grid;grid-template-columns:400px 1fr;gap:72px;align-items:start}
+.book-side .no{font-size:15px;letter-spacing:.14em;color:var(--text-3);font-weight:700;margin-bottom:18px}
+.book-side h2{font-family:var(--font-serif);font-size:48px;line-height:1.28;margin:0 0 12px;font-weight:700;color:var(--text-1)}
+.book-side .la{font-size:20px;line-height:1.5}
+.book-side .to{margin-top:22px;font-size:18px;line-height:1.6;color:var(--text-2)}
+.book-side .to b{color:var(--text-1)}
+.book-side .core{margin-top:30px;padding:24px 26px;background:var(--surface-2);border-radius:var(--radius-lg);
+  font-family:var(--font-serif);font-size:25px;line-height:1.55;color:var(--text-1)}
+.book-side .core .lbl{display:block;font-family:var(--font-sans);font-size:13px;letter-spacing:.14em;color:var(--accent-2);font-weight:700;margin-bottom:8px}
+.points{list-style:none;padding:0;margin:0;counter-reset:b}
+.points li{position:relative;padding:18px 0 18px 56px;border-bottom:1px solid var(--border);font-size:23px;line-height:1.6;color:var(--text-2)}
+.points li::before{counter-increment:b;content:counter(b);position:absolute;left:0;top:20px;width:34px;height:34px;border-radius:50%;
+  border:1.5px solid var(--border-strong);font-size:15px;line-height:32px;text-align:center;color:var(--text-3);font-family:var(--font-sans)}
+.points li b{color:var(--text-1)}
+.points li q{font-family:var(--font-serif);color:var(--text-1);quotes:none}
+.today{margin-top:26px;padding:20px 26px;border:1.5px dashed var(--accent-2);border-radius:var(--radius-lg);font-size:21px;line-height:1.6;color:var(--text-2)}
+.today .lbl{display:block;font-size:13px;letter-spacing:.14em;color:var(--accent-2);font-weight:700;margin-bottom:4px}
+
+/* ---------- quote grid ---------- */
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 28px;margin-top:26px}
+.q{padding:22px 26px 20px;border-left:4px solid var(--accent-3);background:var(--surface);box-shadow:var(--shadow)}
+.q .ko{font-family:var(--font-serif);font-size:26px;line-height:1.5;font-weight:600;color:var(--text-1)}
+.q .la{display:block;font-size:16px;line-height:1.4;margin-top:8px}
+.q .easy{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:19px;line-height:1.55;color:var(--text-2)}
+.q .easy b{color:var(--accent-2);font-weight:700;margin-right:6px}
+.q .src{font-size:14px;color:var(--text-3);margin-top:8px}
+
+/* ---------- values ---------- */
+.values{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:40px}
+.values .card{padding:26px 22px;text-align:left}
+.values .ic{font-family:var(--font-serif);font-size:54px;line-height:1;color:var(--accent-3);font-weight:700;margin-bottom:16px}
+.values h4{font-size:28px;margin-bottom:4px}
+.values .la{display:block;font-size:16px;margin-bottom:14px}
+.values p{font-size:19px;line-height:1.6}
+
+/* ---------- practice ---------- */
+.practice{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.practice .card{padding:30px 30px 26px}
+.practice .when{display:inline-block;font-size:15px;font-weight:700;letter-spacing:.08em;color:var(--bg);background:var(--accent-2);
+  padding:4px 12px;border-radius:var(--radius);margin-bottom:16px}
+.practice h4{font-size:30px}
+.practice ol{margin:14px 0 0;padding-left:24px;font-size:21px;line-height:1.7;color:var(--text-2)}
+.practice .from{margin-top:18px;font-size:16px;color:var(--text-3)}
+
+/* ---------- death ---------- */
+.death{display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:center;margin-top:20px}
+.death .story p{font-size:23px;line-height:1.75;color:var(--text-2);margin-bottom:18px}
+.death .story p b{color:var(--text-1)}
+.death .story small{font-size:16px;color:var(--text-3)}
+
+/* ---------- reading guide ---------- */
+.guide{list-style:none;padding:0;margin:0}
+.guide li{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--border)}
+.guide .n{font-family:var(--font-serif);font-size:40px;line-height:1;color:var(--accent-3);font-weight:700}
+.guide h4{font-family:var(--font-serif);font-size:27px;margin:0 0 6px}
+.guide p{font-size:20px;line-height:1.6;color:var(--text-2)}
+
+/* ---------- closing ---------- */
+.closing{justify-content:center;text-align:center;align-items:center}
+.closing .statement{max-width:26ch;text-align:center}
+.closing .la{margin-top:22px;font-size:24px}
+.closing .src{margin-top:16px;font-size:18px;color:var(--text-3)}
+
+/* ---------- fixed 1920×1080 stage, scaled to any window ---------- */
+html,body{height:100%;overflow:hidden}
+.deck{position:absolute;left:50%;top:50%;width:1920px;height:1080px;
+  transform:translate(-50%,-50%) scale(var(--stage-scale,1));transform-origin:center}
