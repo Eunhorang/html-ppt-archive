@@ -1,0 +1,128 @@
+/* 잃어버린 시간을 찾아서 — deck-specific styles (tokens only) */
+
+/* 한글 명조에는 이탤릭 글꼴이 없어 기울임이 인위적으로 합성되므로 제목은 똑바로 세운다 */
+.h1,.h2,h1.title,h2.title{font-style:normal}
+body{word-break:keep-all;overflow-wrap:break-word}
+.slide{padding:84px 120px}
+.h1{font-size:84px;line-height:1.15}
+.h2{font-size:52px;line-height:1.2;margin-bottom:22px}
+.lede{font-size:24px;line-height:1.7}
+.kicker{font-size:15px;letter-spacing:.14em}
+.fr{font-family:var(--font-serif);font-style:italic;color:var(--text-3)}
+.accent{color:var(--accent)}
+p{margin:0}
+
+/* ---------- cover ---------- */
+.cover{justify-content:flex-end;padding-bottom:120px}
+.cover .rule{width:120px;height:3px;background:var(--accent);margin:0 0 36px}
+.cover .fr{font-size:30px;margin-bottom:12px}
+.cover .meta{margin-top:40px;font-size:20px;color:var(--text-2)}
+.cover .first-line{position:absolute;top:84px;right:120px;max-width:720px;text-align:right;
+  font-size:22px;line-height:1.6;color:var(--text-3)}
+
+/* ---------- big statement ---------- */
+.statement{font-family:var(--font-serif);font-size:46px;line-height:1.55;font-weight:600;max-width:30ch;margin:0}
+.statement em{font-style:normal;color:var(--accent)}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border-top:1px solid var(--border-strong)}
+.stats>div{padding:28px 28px 0 0}
+.stats>div+div{padding-left:28px;border-left:1px solid var(--border)}
+.stats b{display:block;font-family:var(--font-serif);font-size:64px;line-height:1;font-weight:700;color:var(--accent)}
+.stats span{display:block;margin-top:14px;font-size:21px;color:var(--text-2);line-height:1.5}
+
+/* ---------- two-column with portrait-like panel ---------- */
+.split{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:start}
+.facts{list-style:none;padding:0;margin:0}
+.facts li{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--border);font-size:22px;line-height:1.55}
+.facts li b{font-family:var(--font-serif);color:var(--accent);font-weight:700}
+.quote-box{border-left:3px solid var(--accent);padding:6px 0 6px 28px;font-family:var(--font-serif);font-size:26px;line-height:1.65;color:var(--text-1)}
+.quote-box small{display:block;margin-top:14px;font-family:var(--font-sans);font-size:16px;color:var(--text-3)}
+
+/* ---------- cards ---------- */
+.card h4{font-family:var(--font-serif);font-size:28px;margin-bottom:10px}
+.card p{font-size:21px;line-height:1.65;color:var(--text-2)}
+.card .tag{display:inline-block;font-size:15px;letter-spacing:.1em;color:var(--accent);font-weight:600;margin-bottom:10px}
+
+/* ---------- publication timeline ---------- */
+.tl{position:relative;margin-top:48px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:58px;height:2px;background:var(--border-strong)}
+.tl .row{display:grid;grid-template-columns:repeat(7,1fr);gap:18px;align-items:start}
+.tl .item{position:relative;padding-top:92px}
+.tl .year{position:absolute;top:0;left:0;font-family:var(--font-serif);font-size:30px;font-weight:700;color:var(--text-1)}
+.tl .dot{position:absolute;top:50px;left:0;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl .item.after .dot{background:var(--text-3);border-color:var(--text-3)}
+.tl .item.after .year{color:var(--text-3)}
+.tl h4{font-family:var(--font-serif);font-size:23px;line-height:1.4;margin-bottom:8px}
+.tl p{font-size:18px;line-height:1.55;color:var(--text-2)}
+.legend{margin-top:48px;font-size:18px;color:var(--text-3)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin:0 6px 0 18px;vertical-align:middle}
+
+/* ---------- two ways diagram ---------- */
+.ways{display:grid;grid-template-columns:1fr 200px 1fr;align-items:center;margin-top:36px}
+.way{padding:32px 36px;border:1.5px solid var(--border-strong);border-radius:var(--radius-lg);background:var(--surface)}
+.way h3{font-family:var(--font-serif);font-size:34px;margin-bottom:6px}
+.way .fr{font-size:18px;margin-bottom:18px}
+.way ul{margin:0;padding-left:22px;font-size:22px;line-height:1.8;color:var(--text-2)}
+.hub{text-align:center;font-family:var(--font-serif)}
+.hub .home{font-size:30px;font-weight:700}
+.hub .arrow{font-size:28px;color:var(--text-3);letter-spacing:.2em}
+.hub small{display:block;font-family:var(--font-sans);font-size:15px;color:var(--text-3);margin-top:6px}
+.ways-note{margin-top:40px;font-size:24px;color:var(--text-2)}
+.ways-note b{color:var(--accent)}
+
+/* ---------- characters ---------- */
+.cast{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+.cast .card{padding:20px 22px}
+.cast h4{font-size:24px;margin-bottom:4px}
+.cast .role{font-size:14px;letter-spacing:.08em;color:var(--accent);font-weight:600;margin-bottom:8px}
+.cast p{font-size:17px;line-height:1.55}
+.cast .group{grid-column:1/-1;font-size:14px;letter-spacing:.14em;color:var(--text-3);font-weight:600;
+  border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:6px}
+
+/* ---------- section divider ---------- */
+.divider-slide{justify-content:center}
+.divider-slide .num{font-family:var(--font-serif);font-size:180px;line-height:1;color:var(--accent);font-weight:700;margin-bottom:24px}
+
+/* ---------- volume slides ---------- */
+.vol{display:grid;grid-template-columns:330px 1fr;gap:72px;align-items:start}
+.vol-side .n{font-family:var(--font-serif);font-size:150px;line-height:1.05;font-weight:700;color:var(--accent)}
+.vol-side .of{font-size:15px;letter-spacing:.14em;color:var(--text-3);margin:14px 0 26px}
+.vol-side h2{font-family:var(--font-serif);font-size:42px;line-height:1.3;margin:0 0 10px;font-weight:700}
+.vol-side .fr{font-size:19px;line-height:1.5}
+.vol-side .year{margin-top:22px;font-size:17px;color:var(--text-2)}
+.vol-side .year b{color:var(--text-1)}
+.beats{list-style:none;padding:0;margin:0;counter-reset:b}
+.beats li{position:relative;padding:18px 0 18px 54px;border-bottom:1px solid var(--border);font-size:24px;line-height:1.6;color:var(--text-2)}
+.beats li::before{counter-increment:b;content:counter(b);position:absolute;left:0;top:20px;width:32px;height:32px;border-radius:50%;
+  border:1.5px solid var(--border-strong);font-size:15px;line-height:30px;text-align:center;color:var(--text-3);font-family:var(--font-sans)}
+.beats li b{color:var(--text-1)}
+.key{margin-top:30px;padding:22px 28px;background:var(--surface-2);border-radius:var(--radius);font-size:22px;line-height:1.6}
+.key .lbl{display:block;font-size:13px;letter-spacing:.14em;color:var(--accent);font-weight:700;margin-bottom:4px}
+
+/* ---------- madeleine ---------- */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px}
+.flow>div{position:relative;padding:0 64px 0 0}
+.flow>div:not(:last-child)::after{content:"→";position:absolute;right:16px;top:4px;font-size:30px;color:var(--text-3)}
+.flow b{display:block;font-family:var(--font-serif);font-size:28px;margin-bottom:10px;color:var(--text-1)}
+.flow p{font-size:21px;line-height:1.6;color:var(--text-2)}
+.versus{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+
+/* ---------- ending loop ---------- */
+.loop{display:grid;grid-template-columns:1fr 120px 1fr;align-items:center;margin-top:40px}
+.loop .end{text-align:center;font-size:56px;color:var(--accent);font-family:var(--font-serif)}
+.loop .card{min-height:230px}
+
+/* ---------- reading guide ---------- */
+.guide li{font-size:24px;line-height:1.65;color:var(--text-2);margin-bottom:14px}
+.guide li b{color:var(--text-1)}
+
+/* ---------- closing ---------- */
+.closing{justify-content:center;text-align:center;align-items:center}
+.closing .statement{max-width:28ch;text-align:center}
+.closing .src{margin-top:30px;font-size:18px;color:var(--text-3)}
+
+/* ---------- fixed 1920×1080 stage, scaled to any window ---------- */
+html,body{height:100%;overflow:hidden}
+.deck{position:absolute;left:50%;top:50%;width:1920px;height:1080px;
+  transform:translate(-50%,-50%) scale(var(--stage-scale,1));transform-origin:center}
