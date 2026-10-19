@@ -24,6 +24,7 @@ html-ppt-archive/
 
 | 폴더 | 제목 | 장수 |
 |---|---|---|
+| `decks/schopenhauer-parerga/` | 쇼펜하우어 · 삶이 괴로울 때 읽는 철학 | 27 |
 | `decks/seneca-stoic-life/` | 세네카 · 2000년 전 로마에서 온 인생 상담 | 22 |
 | `decks/mac-studio-local-ai/` | 맥스튜디오 한 대로 만드는 나만의 AI 시스템 | 10 |
 | `decks/proust-in-search-of-lost-time/` | 잃어버린 시간을 찾아서 · 처음 만나는 프루스트 | 21 |
