@@ -46,6 +46,7 @@ html-ppt-archive/
 <!-- DECKS:START -->
 | 폴더 | 제목 | 주제 | 장수 | 소개 영상 | 등록일 |
 |---|---|---|---|---|---|
+| `decks/marcus-aurelius-meditations/` | 마르쿠스 아우렐리우스 · 황제가 자신에게 쓴 일기 | 철학 | 26 |  | 2026-10-20 |
 | `decks/nietzsche-philosophy/` | 니체 · 망치를 든 철학자 | 철학 | 33 |  | 2026-10-20 |
 | `decks/otrovert-gift-of-not-belonging/` | 이향인 · 무리 속에서도 섞이지 않는 사람들 | 심리 | 26 |  | 2026-10-20 |
 | `decks/schopenhauer-parerga/` | 쇼펜하우어 · 삶이 괴로울 때 읽는 철학 | 철학 | 27 |  | 2026-10-20 |
