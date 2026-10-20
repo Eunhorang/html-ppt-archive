@@ -51,9 +51,14 @@
 
   /* ── 표지 모자이크 ── */
   .mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:calc(100vw / 4 * 9 / 16);overflow:hidden;background:var(--ink)}
-  .mosaic a{position:relative;overflow:hidden;display:block}
+  .mosaic>*{position:relative;overflow:hidden;display:block}
+  .mosaic .cover-link{display:block;width:100%;height:100%}
+  /* 유튜브에 올린 영상이 있는 발표자료는 표지 오른쪽 아래에 바로가기를 둡니다. */
+  .mosaic .yt-badge{position:absolute;right:clamp(10px,1.2vw,18px);bottom:clamp(10px,1.2vw,18px);display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;background:var(--accent);color:var(--accent-ink);font-size:var(--step-small);font-weight:700;text-decoration:none;transition:background-color .2s}
+  .mosaic .yt-badge span{font-size:.75em}
+  .mosaic .yt-badge:hover,.mosaic .yt-badge:focus-visible{background:#fff}
   .mosaic img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.04);transition:filter .5s ease,transform .8s var(--ease-out)}
-  .mosaic a:hover img,.mosaic a:focus-visible img{filter:none;transform:scale(1.03)}
+  .mosaic .cover:hover img,.mosaic .cover-link:focus-visible img{filter:none;transform:scale(1.03)}
   .mosaic .tally{grid-column:span var(--span,1);background:var(--accent);color:var(--accent-ink);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(16px,2vw,28px);text-decoration:none}
   .tally strong{font-size:var(--step-head);font-weight:700;line-height:1;letter-spacing:-.03em}
   .tally span{font-size:var(--step-body)}
@@ -198,7 +203,7 @@
   @media (max-width:900px){
     :root{--axis:0%}
     .mosaic{grid-template-columns:repeat(3,1fr);grid-auto-rows:calc(100vw / 3 * 9 / 16)}
-    .mosaic a.cover:nth-child(n+6){display:none}
+    .mosaic .cover:nth-child(n+6){display:none}
     .mosaic .tally{grid-column:span var(--span-sm,1)}
     .top{grid-template-columns:1fr auto;height:64px}
     .top nav{display:none}
@@ -397,7 +402,8 @@
     const n = parseInt((meta.match(/(\d+)\s*장/) || [])[1], 10) || 0;
     const topics = (li.dataset.topics || '').split(/\s+/).filter(Boolean);
     const text = (title + ' ' + ((li.querySelector('p') || {}).textContent || '') + ' ' + topics.join(' ')).toLowerCase();
-    return { li, href, title, n, topics, text, cover: href.replace(/\/?$/, '/') + 'cover.jpg' };
+    const yt = (li.querySelector('a.yt') || {}).href || '';
+    return { li, href, title, n, topics, text, yt, cover: href.replace(/\/?$/, '/') + 'cover.jpg' };
   });
   if (!data.length) return;
 
@@ -415,10 +421,20 @@
   const total = data.reduce((s, d) => s + d.n, 0);
   const mosaic = document.getElementById('mosaic');
   const tiles = data.slice(0, 7).map((d) => {
+    const tile = document.createElement('div');
+    tile.className = 'cover';
     const a = document.createElement('a');
-    a.className = 'cover'; a.href = d.href; a.setAttribute('aria-label', d.title);
+    a.className = 'cover-link'; a.href = d.href; a.setAttribute('aria-label', d.title);
     a.append(coverImg(d, true));
-    return a;
+    tile.append(a);
+    if (d.yt) {
+      const yt = document.createElement('a');
+      yt.className = 'yt-badge'; yt.href = d.yt; yt.target = '_blank'; yt.rel = 'noopener';
+      yt.setAttribute('aria-label', d.title + ' 영상, YouTube에서 보기');
+      yt.innerHTML = '<span aria-hidden="true">▶</span> YouTube';
+      tile.append(yt);
+    }
+    return tile;
   });
   const tally = document.createElement('a');
   tally.className = 'tally'; tally.href = '#decks';
