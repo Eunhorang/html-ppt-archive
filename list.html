@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>전체 목록 · 정주샘의 슬라이드 모음</title>
+<meta name="description" content="정주샘의 발표 슬라이드 전체 목록. 학기별로 정리되어 있고, 제목·내용·주제로 찾을 수 있습니다.">
+<link rel="canonical" href="https://eunhorang.github.io/html-ppt-archive/list.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="정주샘의 슬라이드 모음">
+<meta property="og:title" content="전체 목록 · 정주샘의 슬라이드 모음">
+<meta property="og:description" content="정주샘의 발표 슬라이드 전체 목록. 학기별로 정리되어 있고, 제목·내용·주제로 찾을 수 있습니다.">
+<meta property="og:url" content="https://eunhorang.github.io/html-ppt-archive/list.html">
+<meta property="og:image" content="https://eunhorang.github.io/html-ppt-archive/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="wordmark" href="./">정주샘</a>
+    <nav aria-label="사이트"><a href="list.html" aria-current="page">목록</a><a href="how.html">사용법</a><a href="https://github.com/Eunhorang/html-ppt-archive">GitHub</a></nav>
+  </div>
+</header>
+<main>
+  <section class="page-head">
+    <div class="wrap page-head-in">
+      <div>
+        <h1 class="lines"><span class="line"><span data-line style="--i:0">전체 목록</span></span></h1>
+        <p class="lede rise" style="--i:0">학기별로 정리했습니다. 제목이나 내용으로 찾고, 왼쪽 화면에서 슬라이드를 미리 넘겨 볼 수 있습니다.</p>
+      </div>
+      <p class="aside rise" style="--i:1" id="aside-count"></p>
+    </div>
+  </section>
+
+  <section class="wrap decks" id="decks" aria-label="발표자료 목록">
+    <div class="figure" aria-live="polite">
+      <div class="figure-in">
+        <div class="screen" id="screen">
+          <img id="cover" alt="" width="1280" height="720">
+          <iframe id="peek" title="발표자료 미리보기" tabindex="-1" loading="lazy"></iframe>
+        </div>
+        <div class="flip">
+          <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+          <span class="count" id="count">표지</span>
+          <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+          <a class="btn open" id="open" href="#">발표 열기</a>
+        </div>
+        <p class="caption">← → 를 누르면 이 자리에서 실제 슬라이드를 넘겨 볼 수 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="decks-body">
+      <div class="tools">
+        <label class="search"><span class="sr">발표자료 검색</span><input type="search" id="q" placeholder="제목이나 내용으로 찾기" autocomplete="off"></label>
+        <div class="topics" id="topics" role="group" aria-label="주제로 거르기"></div>
+        <p class="result" id="result" aria-live="polite"></p>
+      </div>
+      <!-- 아래 목록은 tools/build.py가 decks.json으로 만듭니다. 직접 고치지 마세요. -->
+      <!-- DECKS:START -->
+      <div class="group">
+        <h3 class="group-title">2026년 2학기 <span>7편</span></h3>
+        <ul class="list">
+          <li data-topics="철학">
+            <a href="decks/marcus-aurelius-meditations/">
+              <h4>마르쿠스 아우렐리우스 · 황제가 자신에게 쓴 일기</h4>
+              <p>로마 황제이자 스토아 철학자의 생애와 시련, 『명상록』의 구성과 다섯 가지 주제(아침·마음·장애물·사람·죽음), 기억할 문장과 핵심 가치, 오늘부터 해 보는 연습.</p>
+              <span class="meta">26장 · 10.20</span>
+            </a>
+            <a class="yt" href="https://youtu.be/-DIFBZy_oQY" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> YouTube에서 보기</a>
+          </li>
+          <li data-topics="철학">
+            <a href="decks/nietzsche-philosophy/">
+              <h4>니체 · 망치를 든 철학자</h4>
+              <p>니체의 생애와 핵심 사상(신의 죽음, 허무주의, 힘에의 의지, 위버멘쉬, 영원회귀, 운명애), 세 시기의 저서, 국내외 번역서·해설서·연구서·전기 안내와 독서 순서.</p>
+              <span class="meta">33장 · 10.20</span>
+            </a>
+            <a class="yt" href="https://youtu.be/MyNHAkq_26E" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> YouTube에서 보기</a>
+          </li>
+          <li data-topics="심리">
+            <a href="decks/otrovert-gift-of-not-belonging/">
+              <h4>이향인 · 무리 속에서도 섞이지 않는 사람들</h4>
+              <p>라미 카민스키 『이향인(The Gift of Not Belonging)』을 4부 19장 구조로 정리. 성향 지도, 블루투스 현상, 소속과 연결의 차이, 국내외 반응과 비판까지 표와 도표로.</p>
+              <span class="meta">26장 · 10.20</span>
+            </a>
+          </li>
+          <li data-topics="철학">
+            <a href="decks/schopenhauer-parerga/">
+              <h4>쇼펜하우어 · 삶이 괴로울 때 읽는 철학</h4>
+              <p>쇼펜하우어의 생애와 철학, 저서를 정리하고 『소품과 부록(소품집)』의 행복론·인생론을 쉽게 풀어낸 안내. 고통과 권태의 시계추, 행복을 결정하는 세 가지, 고슴도치의 거리.</p>
+              <span class="meta">27장 · 10.20</span>
+            </a>
+          </li>
+          <li data-topics="철학">
+            <a href="decks/seneca-stoic-life/">
+              <h4>세네카 · 2000년 전 로마에서 온 인생 상담</h4>
+              <p>철학이 처음인 사람을 위한 스토아 입문. 세네카의 생애, 대표 저서 네 권, 기억할 문장과 핵심 가치, 오늘부터 해 보는 연습.</p>
+              <span class="meta">22장 · 10.20</span>
+            </a>
+            <a class="yt" href="https://youtu.be/TupSjoRAFL0" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> YouTube에서 보기</a>
+          </li>
+          <li data-topics="AI">
+            <a href="decks/mac-studio-local-ai/">
+              <h4>맥스튜디오 한 대로 만드는 나만의 AI 시스템</h4>
+              <p>맥스튜디오 M5 Ultra 96GB 소개와 로컬 LLM·옵시디언 볼트·클로드 코드를 함께 쓰는 하이브리드 AI 작업실 구축 방법.</p>
+              <span class="meta">10장 · 10.20</span>
+            </a>
+          </li>
+          <li data-topics="문학">
+            <a href="decks/proust-in-search-of-lost-time/">
+              <h4>잃어버린 시간을 찾아서</h4>
+              <p>마르셀 프루스트의 소설을 처음 만나는 사람을 위한 안내. 작가와 시대, 등장인물, 7권 줄거리, 핵심 주제.</p>
+              <span class="meta">21장 · 10.20</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- DECKS:END -->
+      <p class="empty" id="empty" hidden>찾는 발표자료가 없습니다. 다른 낱말로 찾아보세요.</p>
+      <p class="decks-foot" id="tally-line" data-reveal></p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap site-foot">
+  <div class="foot-cols">
+    <div><h3>소개</h3><p>html-ppt로 만든 발표 슬라이드를 한곳에 모았습니다. 새 발표자료가 생기면 목록 맨 위에 더해집니다.</p></div>
+    <div><h3>바로가기</h3><ul><li><a href="./">처음으로</a></li><li><a href="list.html">전체 목록</a></li><li><a href="how.html">사용법</a></li><li><a href="list.html" id="foot-latest">최신 발표</a></li></ul></div>
+    <div><h3>GitHub</h3><ul><li><a href="https://github.com/Eunhorang/html-ppt-archive">저장소 보기</a></li><li><a href="https://github.com/Eunhorang">GitHub 프로필</a></li></ul></div>
+    <div><h3>만든 도구</h3><ul><li>슬라이드 엔진 html-ppt</li><li>MIT 라이선스</li></ul></div>
+  </div>
+  <p class="legal">© 2026 정주샘 · 발표자료의 내용과 인용문의 저작권은 각 원저작자에게 있습니다.</p>
+</footer>
+
+<script>
+(() => {
+  const items = [...document.querySelectorAll('.list li')];
+  const data = items.map((li) => {
+    const a = li.querySelector('a');
+    const href = a.getAttribute('href');
+    const title = li.querySelector('h4').textContent.trim();
+    const meta = (li.querySelector('.meta') || {}).textContent || '';
+    const n = parseInt((meta.match(/(\d+)\s*장/) || [])[1], 10) || 0;
+    const topics = (li.dataset.topics || '').split(/\s+/).filter(Boolean);
+    const text = (title + ' ' + ((li.querySelector('p') || {}).textContent || '') + ' ' + topics.join(' ')).toLowerCase();
+    const yt = (li.querySelector('a.yt') || {}).href || '';
+    return { li, href, title, n, topics, text, yt, cover: href.replace(/\/?$/, '/') + 'cover.jpg' };
+  });
+  if (!data.length) return;
+
+  const total = data.reduce((s, d) => s + d.n, 0);
+  document.getElementById('tally-line').textContent = `지금까지 ${data.length}편, 슬라이드 ${total}장이 모였습니다.`;
+  document.getElementById('foot-latest').href = data[0].href;
+
+  // 왼쪽 화면: 고른 발표자료의 표지, 넘기면 실제 슬라이드
+  const screen = document.getElementById('screen');
+  const cover = document.getElementById('cover');
+  const peek = document.getElementById('peek');
+  const count = document.getElementById('count');
+  const open = document.getElementById('open');
+  let cur = null, idx = 0, ready = false;
+
+  const label = () => { count.textContent = idx === 0 ? `표지 · ${cur.n}장` : `${idx + 1} / ${cur.n}`; };
+  function activate(d) {
+    if (cur === d) return;
+    cur = d; idx = 0; ready = false;
+    items.forEach((li) => li.classList.toggle('is-active', li === d.li));
+    screen.classList.remove('live');
+    peek.onload = null;
+    peek.removeAttribute('src');
+    cover.classList.add('out');
+    setTimeout(() => {
+      cover.onerror = () => { cover.removeAttribute('src'); };
+      cover.src = d.cover; cover.alt = d.title + ' 표지';
+      cover.classList.remove('out');
+    }, 150);
+    open.href = d.href;
+    open.textContent = '발표 열기';
+    label();
+  }
+  function flip(step) {
+    if (!cur) return;
+    const max = Math.max(cur.n, 1) - 1;
+    idx = Math.min(max, Math.max(0, idx + step));
+    label();
+    const send = () => peek.contentWindow.postMessage({ type: 'preview-goto', idx }, '*');
+    if (ready) { send(); screen.classList.add('live'); return; }
+    if (!peek.getAttribute('src')) {
+      const mine = cur;
+      peek.onload = () => { if (cur !== mine) return; ready = true; send(); screen.classList.add('live'); };
+      peek.src = cur.href.replace(/\/?$/, '/') + '?preview=1';
+    }
+  }
+  document.getElementById('prev').addEventListener('click', () => flip(-1));
+  document.getElementById('next').addEventListener('click', () => flip(1));
+  open.addEventListener('click', () => { if (idx > 0) open.href = cur.href + '#/' + (idx + 1); });
+
+  data.forEach((d) => {
+    const a = d.li.querySelector('a');
+    a.addEventListener('mouseenter', () => activate(d));
+    a.addEventListener('focus', () => activate(d));
+  });
+  // 스크롤: 화면 가운데(휴대폰은 위쪽 그림 바로 아래)에 온 줄을 고릅니다.
+  const narrow = matchMedia('(max-width:900px)');
+  let ticking = false;
+  const pick = () => {
+    ticking = false;
+    const line = narrow.matches ? screen.getBoundingClientRect().bottom + 80 : innerHeight / 2;
+    let best = null, dist = Infinity;
+    for (const d of data) {
+      if (d.li.hidden) continue;
+      const r = d.li.getBoundingClientRect();
+      const dd = Math.abs((r.top + Math.min(r.height, 60) / 2) - line);
+      if (dd < dist) { dist = dd; best = d; }
+    }
+    const list = document.querySelector('.list').getBoundingClientRect();
+    if (best && list.bottom > 0 && list.top < innerHeight) activate(best);
+  };
+  addEventListener('scroll', () => { if (narrow.matches) return; if (!ticking) { ticking = true; requestAnimationFrame(pick); } }, { passive: true });
+  activate(data[0]);
+
+  // 검색과 주제 거르기
+  const q = document.getElementById('q');
+  const topicsEl = document.getElementById('topics');
+  const result = document.getElementById('result');
+  const empty = document.getElementById('empty');
+  const groups = [...document.querySelectorAll('.group')];
+  const freq = {};
+  data.forEach((d) => d.topics.forEach((t) => { freq[t] = (freq[t] || 0) + 1; }));
+  const topicNames = ['전체', ...Object.keys(freq).sort((a, b) => freq[b] - freq[a] || a.localeCompare(b, 'ko'))];
+  let topic = '전체';
+  topicNames.forEach((t) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = t === '전체' ? `전체 ${data.length}` : `${t} ${freq[t]}`;
+    b.setAttribute('aria-pressed', String(t === topic));
+    b.addEventListener('click', () => {
+      topic = t;
+      topicsEl.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      apply();
+    });
+    topicsEl.append(b);
+  });
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let shown = 0;
+    data.forEach((d) => {
+      const ok = (topic === '전체' || d.topics.includes(topic)) && (!term || term.split(/\s+/).every((w) => d.text.includes(w)));
+      d.li.hidden = !ok;
+      if (ok) shown++;
+    });
+    groups.forEach((g) => { g.hidden = !g.querySelector('li:not([hidden])'); });
+    empty.hidden = shown > 0;
+    result.textContent = shown === data.length ? '' : `${shown}편을 찾았습니다.`;
+    const first = data.find((d) => !d.li.hidden);
+    if (first && (!cur || cur.li.hidden)) activate(first);
+  }
+  q.addEventListener('input', apply);
+  // 첫 페이지의 주제 바로가기(list.html?topic=철학)로 들어오면 그 주제만 보여 줍니다.
+  const want = new URLSearchParams(location.search).get('topic');
+  if (want) [...topicsEl.querySelectorAll('button')].find((b) => b.textContent.startsWith(want + ' '))?.click();
+  document.getElementById('aside-count').innerHTML = `<b>${data.length}편</b>슬라이드 ${total}장`;
+
+  // 각 섹션 요소가 처음 보일 때 한 번 떠오릅니다.
+  const io = new IntersectionObserver((es) => {
+    for (const e of es) if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('[data-reveal]').forEach((el, i) => { el.style.setProperty('--d', i % 2); io.observe(el); });
+})();
+</script>
+</body>
+</html>

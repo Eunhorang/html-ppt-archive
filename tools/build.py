@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""decks.json을 읽어 첫 페이지(index.html)의 목록과 README.md의 목록 표를 다시 만듭니다.
+"""decks.json을 읽어 전체 목록(list.html), 첫 페이지(index.html)의 표지·숫자 자료, README.md의 목록 표를 다시 만듭니다.
 
     python3 tools/build.py
 
@@ -23,9 +23,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "decks.json"
 INDEX = ROOT / "index.html"
+LIST = ROOT / "list.html"
 README = ROOT / "README.md"
 START, END = "<!-- DECKS:START -->", "<!-- DECKS:END -->"
 VSTART, VEND = "<!-- VIDEOS:START -->", "<!-- VIDEOS:END -->"
+DSTART, DEND = "<!-- DATA:START -->", "<!-- DATA:END -->"
 
 
 def read_deck(slug):
@@ -123,6 +125,13 @@ def render_list(decks):
     return "\n".join(out)
 
 
+def render_data(decks):
+    """첫 페이지의 표지 모자이크·편수·주제 바로가기가 읽는 자료(JSON)."""
+    rows = [{k: d[k] for k in ("slug", "title", "topics", "date", "slides", "youtube") if d.get(k) is not None} for d in decks]
+    body = json.dumps(rows, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    return f'<script type="application/json" id="decks-data">{body}</script>'
+
+
 def render_readme(decks):
     rows = ["| 폴더 | 제목 | 주제 | 장수 | 영상 | 등록일 |", "|---|---|---|---|---|---|"]
     for d in decks:
@@ -165,8 +174,9 @@ def main():
 
     DATA.write_text(json.dumps([{k: d[k] for k in ("slug", "title", "description", "topics", "date", "youtube") if k in d} for d in decks],
                                ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    page = replace_between(INDEX.read_text(encoding="utf-8"), render_list(decks), INDEX)
-    page = replace_between(page, render_videos(decks), INDEX, VSTART, VEND)
+    LIST.write_text(replace_between(LIST.read_text(encoding="utf-8"), render_list(decks), LIST), encoding="utf-8")
+    page = replace_between(INDEX.read_text(encoding="utf-8"), render_videos(decks), INDEX, VSTART, VEND)
+    page = replace_between(page, render_data(decks), INDEX, DSTART, DEND)
     INDEX.write_text(page, encoding="utf-8")
     README.write_text(replace_between(README.read_text(encoding="utf-8"), render_readme(decks), README), encoding="utf-8")
 

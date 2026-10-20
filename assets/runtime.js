@@ -978,8 +978,8 @@
     document.head.appendChild(css);
     var a = document.createElement('a');
     a.className = 'archive-back';
-    a.href = '../../';
-    a.textContent = '← 정주샘의 슬라이드 모음';
+    a.href = '../../list.html';
+    a.textContent = '← 전체 목록';
     document.body.appendChild(a);
     var t;
     function show() {
