@@ -16,7 +16,8 @@ html-ppt-archive/
     └── <발표자료-이름>/
         ├── index.html       슬라이드 본문과 발표 대본
         ├── style.css        이 발표자료에만 쓰는 스타일
-        └── cover.jpg        첫 슬라이드 표지(보관함 첫 페이지 미리보기용)
+        ├── cover.jpg        첫 슬라이드 표지(보관함 첫 페이지 미리보기용)
+        └── intro.mp4·jpg    소개 영상과 포스터(있을 때만)
 ```
 
 새 발표자료는 `decks/` 아래에 영문 소문자와 하이픈으로 된 폴더를 하나 더 만들어 추가합니다. 공용 파일은 `../../assets/`로 참조합니다.
@@ -29,6 +30,13 @@ html-ppt-archive/
    - 2번을 건너뛰어도 스크립트가 새 폴더를 찾아 제목·설명을 읽어 넣습니다. 이때 주제는 `기타`가 되니 `decks.json`에서 고쳐 주세요.
 4. 커밋하고 `main`에 올립니다.
 
+### 소개 영상을 붙이는 순서
+
+1. 발표자료 폴더에 `intro.mp4`(1920×1080, 1~2분, 100MB 미만)를 넣습니다. 예: `decks/seneca-stoic-life/intro.mp4`
+2. `python3 tools/build.py`를 실행합니다. 포스터 그림(`intro.jpg`)이 자동으로 만들어지고, 첫 페이지 '영상으로 미리 보기'와 목록의 `· 영상` 표시, 아래 표의 '소개 영상' 칸이 채워집니다.
+
+영상은 HyperFrames로 만들며, 원본 프로젝트는 이 저장소 밖(`../videos/<이름>/`)에 둡니다.
+
 첫 페이지 목록은 등록일 기준 학기(3~8월 1학기, 9~2월 2학기)로 묶이고, 검색창과 주제 버튼으로 거를 수 있습니다.
 
 ## 발표자료 목록
@@ -36,14 +44,14 @@ html-ppt-archive/
 아래 표는 `tools/build.py`가 `decks.json`으로 만듭니다. 직접 고치지 마세요.
 
 <!-- DECKS:START -->
-| 폴더 | 제목 | 주제 | 장수 | 등록일 |
-|---|---|---|---|---|
-| `decks/nietzsche-philosophy/` | 니체 · 망치를 든 철학자 | 철학 | 33 | 2026-10-20 |
-| `decks/otrovert-gift-of-not-belonging/` | 이향인 · 무리 속에서도 섞이지 않는 사람들 | 심리 | 26 | 2026-10-20 |
-| `decks/schopenhauer-parerga/` | 쇼펜하우어 · 삶이 괴로울 때 읽는 철학 | 철학 | 27 | 2026-10-20 |
-| `decks/seneca-stoic-life/` | 세네카 · 2000년 전 로마에서 온 인생 상담 | 철학 | 22 | 2026-10-20 |
-| `decks/mac-studio-local-ai/` | 맥스튜디오 한 대로 만드는 나만의 AI 시스템 | AI | 10 | 2026-10-20 |
-| `decks/proust-in-search-of-lost-time/` | 잃어버린 시간을 찾아서 | 문학 | 21 | 2026-10-20 |
+| 폴더 | 제목 | 주제 | 장수 | 소개 영상 | 등록일 |
+|---|---|---|---|---|---|
+| `decks/nietzsche-philosophy/` | 니체 · 망치를 든 철학자 | 철학 | 33 |  | 2026-10-20 |
+| `decks/otrovert-gift-of-not-belonging/` | 이향인 · 무리 속에서도 섞이지 않는 사람들 | 심리 | 26 |  | 2026-10-20 |
+| `decks/schopenhauer-parerga/` | 쇼펜하우어 · 삶이 괴로울 때 읽는 철학 | 철학 | 27 |  | 2026-10-20 |
+| `decks/seneca-stoic-life/` | 세네카 · 2000년 전 로마에서 온 인생 상담 | 철학 | 22 | 1분 26초 | 2026-10-20 |
+| `decks/mac-studio-local-ai/` | 맥스튜디오 한 대로 만드는 나만의 AI 시스템 | AI | 10 |  | 2026-10-20 |
+| `decks/proust-in-search-of-lost-time/` | 잃어버린 시간을 찾아서 | 문학 | 21 |  | 2026-10-20 |
 <!-- DECKS:END -->
 
 ## 조작법
