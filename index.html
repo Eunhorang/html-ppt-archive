@@ -148,6 +148,8 @@
   .vid-list span{font-size:var(--step-small);color:var(--muted)}
   .vid-list:has(li:only-child){display:none}
   .vid-none{margin:0;color:var(--muted)}
+  /* 실을 영상이 없으면 칸과 바로가기를 통째로 숨깁니다. */
+  .videos:has(.vid-none),body:has(.vid-none) nav a[href="#videos"],body:has(.vid-none) li:has(> a[href="#videos"]){display:none}
 
   /* ── 사용법 (하늘색 띠, 목록 위) ── */
   .how{background:var(--accent);color:var(--accent-ink);padding-block:clamp(64px,9svh,112px)}
@@ -258,13 +260,7 @@
     <div class="videos-body" data-reveal>
       <!-- 아래는 tools/build.py가 decks/<이름>/intro.mp4를 찾아 만듭니다. 직접 고치지 마세요. -->
       <!-- VIDEOS:START -->
-      <figure class="vid-player">
-        <video id="vid" controls preload="none" playsinline width="1920" height="1080" poster="decks/seneca-stoic-life/intro.jpg" src="decks/seneca-stoic-life/intro.mp4"></video>
-        <figcaption id="vid-cap"><b>세네카 · 2000년 전 로마에서 온 인생 상담</b> <span>소개 영상 · 1분 26초</span> <a href="decks/seneca-stoic-life/">발표자료 열기 →</a></figcaption>
-      </figure>
-      <ol class="vid-list" id="vid-list">
-        <li><button type="button" aria-pressed="true" data-slug="seneca-stoic-life" data-title="세네카 · 2000년 전 로마에서 온 인생 상담" data-len="1분 26초"><img src="decks/seneca-stoic-life/intro.jpg" alt="" width="1280" height="720" loading="lazy"><b>세네카 · 2000년 전 로마에서 온 인생 상담</b><span>1분 26초</span></button></li>
-      </ol>
+      <p class="vid-none">아직 영상이 없습니다.</p>
       <!-- VIDEOS:END -->
     </div>
   </section>
@@ -338,11 +334,11 @@
               <span class="meta">27장 · 10.20</span>
             </a>
           </li>
-          <li data-topics="철학" data-video>
+          <li data-topics="철학">
             <a href="decks/seneca-stoic-life/">
               <h4>세네카 · 2000년 전 로마에서 온 인생 상담</h4>
               <p>철학이 처음인 사람을 위한 스토아 입문. 세네카의 생애, 대표 저서 네 권, 기억할 문장과 핵심 가치, 오늘부터 해 보는 연습.</p>
-              <span class="meta">22장 · 10.20 · 영상</span>
+              <span class="meta">22장 · 10.20</span>
             </a>
           </li>
           <li data-topics="AI">
