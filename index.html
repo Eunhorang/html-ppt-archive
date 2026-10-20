@@ -3,77 +3,509 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>발표자료 보관함</title>
-<link rel="stylesheet" href="assets/fonts.css">
-<link rel="stylesheet" href="assets/base.css">
-<link rel="stylesheet" href="assets/themes/editorial-serif.css">
+<title>정주샘의 슬라이드 모음</title>
+<meta name="description" content="정주샘이 만든 철학·문학·AI 발표 슬라이드 모음. 브라우저에서 바로 열고 키보드로 넘기며 발표할 수 있습니다.">
+<link rel="canonical" href="https://eunhorang.github.io/html-ppt-archive/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="정주샘의 슬라이드 모음">
+<meta property="og:title" content="정주샘의 슬라이드 모음">
+<meta property="og:description" content="철학·문학·AI를 다룬 발표 슬라이드. 브라우저에서 바로 열고 키보드로 넘기며 발표할 수 있습니다.">
+<meta property="og:url" content="https://eunhorang.github.io/html-ppt-archive/">
+<meta property="og:image" content="https://eunhorang.github.io/html-ppt-archive/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<!-- 맥·아이폰에서는 애플 시스템 글꼴(SF Pro·Apple SD Gothic Neo), 그 밖의 기기에서는 비슷한 인상의 Pretendard를 씁니다. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-  body{word-break:keep-all;min-height:100vh}
-  main{max-width:960px;margin:0 auto;padding:96px 24px 80px}
-  h1{font-family:var(--font-serif);font-size:clamp(36px,6vw,56px);font-weight:700;line-height:1.2;margin:8px 0 12px}
-  .intro{color:var(--text-2);font-size:18px;margin:0 0 48px}
-  .list{list-style:none;margin:0;padding:0;border-top:1px solid var(--border-strong)}
-  .list li{border-bottom:1px solid var(--border)}
-  .list a{display:grid;grid-template-columns:1fr auto;gap:8px 24px;padding:28px 4px;color:inherit;text-decoration:none}
-  .list a:hover h2{color:var(--accent)}
-  .list h2{font-family:var(--font-serif);font-size:28px;font-weight:700;margin:0;transition:color .2s}
-  .list p{grid-column:1;margin:0;color:var(--text-2);font-size:16px;line-height:1.6}
-  .list .meta{grid-column:2;grid-row:1/3;align-self:center;color:var(--text-3);font-size:14px;white-space:nowrap}
-  .help{margin-top:48px;color:var(--text-3);font-size:14px;line-height:1.8}
-  kbd{font-family:var(--font-mono);font-size:12px;padding:1px 6px;border:1px solid var(--border-strong);border-radius:3px;background:var(--surface)}
-  @media (max-width:600px){.list a{grid-template-columns:1fr}.list .meta{grid-column:1;grid-row:auto}}
+  :root{
+    --bg:#f5f8fb; --surface:#e6eef6; --ink:#0e2740; --muted:#4f6378; --muted-on-field:#24405c; --soft-on-ink:#a9bfd4;
+    --accent:#8fd0f2; --accent-ink:#0e2740;
+    --font:-apple-system,BlinkMacSystemFont,'Pretendard Variable',Pretendard,'Apple SD Gothic Neo',system-ui,sans-serif;
+    --step-small:clamp(.875rem,.85rem + .1vw,.9375rem);
+    --step-body:clamp(1.0625rem,1.02rem + .25vw,1.1875rem);
+    --step-lead:clamp(1.25rem,1.1rem + .6vw,1.5rem);
+    --step-head:clamp(2rem,1.3rem + 2.6vw,3.25rem);
+    --step-display:clamp(2.5rem,1rem + 4vw,4.75rem);
+    --margin:clamp(20px,3.4vw,48px);
+    --axis:42%;
+    --ease-out:cubic-bezier(.16,1,.3,1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--step-body);line-height:1.6;letter-spacing:-.01em;word-break:keep-all;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  ::selection{background:var(--accent);color:var(--accent-ink)}
+  .wrap{padding-inline:var(--margin)}
+
+  /* ── 머리 줄 ── */
+  .top{display:grid;grid-template-columns:var(--axis) 1fr auto;align-items:center;height:76px}
+  .wordmark{font-weight:600;text-decoration:none;font-size:var(--step-body)}
+  .top nav{display:flex;gap:28px}
+  .top nav a,.top .gh{font-size:var(--step-body);text-decoration:underline 2px transparent;text-underline-offset:6px;transition:text-decoration-color .25s}
+  .top nav a:hover,.top .gh:hover{text-decoration-color:currentColor}
+
+  /* ── 표지 모자이크 ── */
+  .mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:calc(100vw / 4 * 9 / 16);overflow:hidden;background:var(--ink)}
+  .mosaic a{position:relative;overflow:hidden;display:block}
+  .mosaic img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.04);transition:filter .5s ease,transform .8s var(--ease-out)}
+  .mosaic a:hover img,.mosaic a:focus-visible img{filter:none;transform:scale(1.03)}
+  .mosaic .tally{grid-column:span var(--span,1);background:var(--accent);color:var(--accent-ink);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(16px,2vw,28px);text-decoration:none}
+  .tally strong{font-size:var(--step-head);font-weight:700;line-height:1;letter-spacing:-.03em}
+  .tally span{font-size:var(--step-body)}
+  .fallback-tile{width:100%;height:100%;display:flex;align-items:flex-end;padding:20px;background:var(--surface);color:var(--ink);font-size:var(--step-lead);line-height:1.25}
+
+  /* ── 첫 화면 제목 ── */
+  .hero{display:grid;grid-template-columns:var(--axis) 1fr;align-items:end;padding-block:clamp(32px,5svh,56px) clamp(64px,10svh,120px)}
+  .hero .lede{grid-column:2;grid-row:2;max-width:56ch;margin-top:24px}
+  .hero .lede p{margin:0 0 24px;font-size:var(--step-body);line-height:1.6;color:var(--ink)}
+  .recent{grid-column:1;grid-row:1/3;align-self:end;padding-right:clamp(24px,3vw,48px)}
+  .recent h2{margin:0 0 12px;font-size:var(--step-body);font-weight:600}
+  .recent ol{list-style:none;margin:0;padding:0}
+  .recent a{display:grid;grid-template-columns:1fr auto;gap:16px;padding:8px 0;color:var(--ink);text-decoration:none;font-size:var(--step-body);line-height:1.4;max-width:320px}
+  .recent a span{color:var(--muted);font-size:var(--step-small);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .recent a:hover b{text-decoration:underline 2px var(--accent);text-underline-offset:5px}
+  .recent b{font-weight:500}
+  .hero h1{grid-column:2;grid-row:1;margin:0;font-size:var(--step-display);font-weight:700;line-height:1.05;letter-spacing:-.04em}
+  .lines .line{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+  .lines [data-line]{display:block}
+  .btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;background:var(--accent);color:var(--accent-ink);font:inherit;font-size:var(--step-body);font-weight:600;text-decoration:none;border:0;cursor:pointer;transition:transform .2s var(--ease-out),background-color .2s}
+  .btn:hover{background:#a7dcf7}
+  .btn:active{transform:translateY(2px)}
+  .btn .arr{transition:transform .3s var(--ease-out)}
+  .btn:hover .arr{transform:translateX(4px)}
+
+  /* ── 목록 ── */
+  .decks{display:grid;grid-template-columns:var(--axis) 1fr;padding-block:clamp(96px,14svh,180px)}
+  .figure{grid-column:1;grid-row:1/3;padding-right:clamp(24px,3vw,48px);display:none}
+  .js .figure{display:block}
+  .figure-in{position:sticky;top:12vh}
+  .screen{position:relative;aspect-ratio:16/9;background:var(--ink);overflow:hidden}
+  .screen img,.screen iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;transition:opacity .3s ease}
+  .screen img.out{opacity:0}
+  .screen iframe{opacity:0;pointer-events:none;background:var(--ink)}
+  .screen.live iframe{opacity:1}
+  .flip{display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+  .flip button{min-width:52px;min-height:48px;padding:0 16px;background:var(--surface);color:var(--ink);border:0;font:inherit;font-size:var(--step-body);cursor:pointer;transition:background-color .2s,transform .2s var(--ease-out)}
+  .flip button:hover{background:#d6e3f0}
+  .flip button:active{transform:translateY(2px)}
+  .flip .count{font-variant-numeric:tabular-nums;min-width:6ch;text-align:center;color:var(--ink)}
+  .flip .open{margin-left:auto}
+  .figure .caption{margin:12px 0 0;font-size:var(--step-small);color:var(--muted)}
+
+  .decks-body{grid-column:2;grid-row:2;max-width:760px}
+  .decks h2.title{grid-column:2;grid-row:1;margin:0 0 48px;font-size:var(--step-head);font-weight:700;line-height:1.15;letter-spacing:-.03em}
+  .list{list-style:none;margin:0;padding:0}
+  .list a{display:grid;grid-template-columns:1fr auto;column-gap:24px;padding:16px 0;text-decoration:none;color:var(--muted)}
+  .list h4{margin:0;font-size:clamp(1.25rem,.9rem + 1vw,1.5rem);font-weight:500;letter-spacing:-.02em;line-height:1.35;transition:color .25s}
+  .list .meta{grid-column:2;grid-row:1;align-self:baseline;font-size:var(--step-small);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .list p{grid-column:1;margin:10px 0 6px;max-width:44ch;font-size:var(--step-body);line-height:1.6;color:var(--ink)}
+  .list li.is-active a,.list a:hover,.list a:focus-visible{color:var(--ink)}
+  .list li.is-active h4{font-weight:600}
+  .js .list p{display:none}
+  .js .list li.is-active p{display:block;animation:open .35s var(--ease-out)}
+  @keyframes open{from{opacity:0;transform:translateY(-6px)}}
+  .decks-foot{margin-top:40px;font-size:var(--step-body);color:var(--ink)}
+  .tools{display:none;margin-bottom:40px}
+  .js .tools{display:block}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .search input{width:100%;height:56px;padding:0 20px;background:var(--surface);color:var(--ink);border:0;border-radius:0;font:inherit;font-size:var(--step-body);-webkit-appearance:none;appearance:none;transition:background-color .2s}
+  .search input::placeholder{color:var(--muted)}
+  .search input:focus{background:#dbe6f1}
+  .topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .topics button{min-height:44px;padding:0 18px;background:transparent;color:var(--ink);border:0;font:inherit;font-size:var(--step-body);cursor:pointer;transition:background-color .2s,transform .2s var(--ease-out)}
+  .topics button:hover{background:var(--surface)}
+  .topics button:active{transform:translateY(2px)}
+  .topics button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);font-weight:600}
+  .result{margin:16px 0 0;font-size:var(--step-small);color:var(--muted)}
+  .group+.group{margin-top:56px}
+  .group-title{margin:0 0 4px;font-size:var(--step-body);font-weight:600;letter-spacing:-.01em}
+  .group-title span{margin-left:8px;font-weight:400;color:var(--muted)}
+  .empty{margin:24px 0 0;font-size:var(--step-body)}
+
+  /* ── 사용법 (하늘색 띠, 목록 위) ── */
+  .how{background:var(--accent);color:var(--accent-ink);padding-block:clamp(64px,9svh,112px)}
+  .how-grid{display:grid;grid-template-columns:var(--axis) 1fr;align-items:start}
+  .how-head{grid-column:1;padding-right:clamp(24px,3vw,48px)}
+  .how h2{margin:0 0 16px;font-size:var(--step-head);font-weight:700;line-height:1.15;letter-spacing:-.03em}
+  .how-head p{margin:0;max-width:30ch;color:var(--muted-on-field)}
+  .steps{grid-column:2;display:grid;grid-template-columns:1fr 1fr;gap:48px 48px;list-style:none;margin:0;padding:0;max-width:880px}
+  .step .keys{display:flex;gap:8px;margin-bottom:14px}
+  kbd{display:inline-grid;place-items:center;min-width:48px;height:48px;padding:0 12px;background:var(--ink);color:var(--accent);font-family:var(--font);font-size:var(--step-lead);font-weight:500;line-height:1;transition:transform .15s}
+  .step:hover kbd{transform:translateY(2px)}
+  .step p{margin:0;color:var(--muted-on-field)}
+  .step b{color:var(--ink);font-weight:600}
+  .shots{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:72px 0 0}
+  .shots figure{margin:0}
+  .shots img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:var(--ink)}
+  .shots figcaption{margin-top:12px;font-size:var(--step-body);color:var(--muted-on-field)}
+  .shots figcaption b{color:var(--ink);font-weight:600}
+
+  /* ── 바닥글 ── */
+  .site-foot{background:var(--ink);color:var(--bg);padding-block:72px 32px}
+  .foot-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+  .foot-cols h3{margin:0 0 6px;font-size:var(--step-body);font-weight:600;color:var(--bg)}
+  .foot-cols ul{list-style:none;margin:0;padding:0}
+  .foot-cols li,.foot-cols p{margin:0;font-size:var(--step-body);line-height:1.7;color:var(--soft-on-ink)}
+  .foot-cols a{text-decoration:underline 1.5px transparent;text-underline-offset:5px;transition:text-decoration-color .25s,color .2s}
+  .foot-cols a:hover{text-decoration-color:currentColor;color:var(--bg)}
+  .legal{margin:72px 0 0;font-size:var(--step-small);color:var(--soft-on-ink)}
+
+  /* ── 움직임 ── */
+  @media (prefers-reduced-motion:no-preference){
+    .js .lines [data-line]{transform:translateY(105%);animation:line-up .9s var(--ease-out) forwards;animation-delay:calc(var(--i)*110ms + 250ms)}
+    .js .hero .lede{opacity:0;transform:translateY(16px);animation:fade-up .7s var(--ease-out) .55s forwards}
+    .js .mosaic>*{opacity:0;transform:scale(1.06);animation:tile-in 1s var(--ease-out) forwards;animation-delay:calc(var(--t,0)*70ms)}
+    .js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-out),transform .9s var(--ease-out);transition-delay:calc(var(--d,0)*80ms)}
+    .js [data-reveal].is-in{opacity:1;transform:none}
+  }
+  @keyframes line-up{to{transform:none}}
+  @keyframes fade-up{to{opacity:1;transform:none}}
+  @keyframes tile-in{to{opacity:1;transform:none}}
+
+  /* ── 태블릿·휴대폰 ── */
+  @media (max-width:900px){
+    :root{--axis:0%}
+    .mosaic{grid-template-columns:repeat(3,1fr);grid-auto-rows:calc(100vw / 3 * 9 / 16)}
+    .mosaic a.cover:nth-child(n+6){display:none}
+    .mosaic .tally{grid-column:span var(--span-sm,1)}
+    .top{grid-template-columns:1fr auto;height:64px}
+    .top nav{display:none}
+    .hero{grid-template-columns:1fr;padding-block:40px 56px}
+    .hero h1{grid-column:1;grid-row:1;font-size:clamp(2.5rem,10vw,4rem);margin-bottom:24px}
+    .hero .lede{grid-column:1;grid-row:2;max-width:40ch;margin-top:0}
+    .recent{display:none}
+    .decks{grid-template-columns:1fr;padding-block:72px 96px}
+    .js .figure{display:none}
+    .decks-body{grid-column:1;grid-row:2;max-width:none}
+    .list a{color:var(--ink)}
+    .decks h2.title{grid-column:1;grid-row:1;margin-bottom:32px}
+    .how-grid{grid-template-columns:1fr}
+    .how-head{grid-column:1;padding:0 0 28px}
+    .steps{grid-column:1;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--margin);margin-inline:calc(var(--margin)*-1);padding:0 var(--margin) 8px}
+    .step{flex:0 0 min(78%,340px);scroll-snap-align:start}
+    .shots{grid-template-columns:1fr;gap:32px;margin-top:48px}
+    .js .list p{display:block;animation:none}
+    .foot-cols{grid-template-columns:1fr 1fr;row-gap:32px}
+  }
+  @media (max-width:560px){
+    .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:calc(100vw / 2 * 9 / 16)}
+    .hero{padding-block:28px 48px}
+    kbd{min-width:44px;height:44px}
+  }
 </style>
 </head>
 <body>
+<header class="wrap top">
+  <a class="wordmark" href="./">정주샘</a>
+  <nav aria-label="페이지 안 바로가기"><a href="#decks">목록</a><a href="#how">사용법</a></nav>
+  <a class="gh" href="https://github.com/Eunhorang/html-ppt-archive">GitHub</a>
+</header>
+
+<div class="mosaic" id="mosaic" aria-label="최근 발표자료 표지"></div>
+
 <main>
-  <p class="kicker">Presentation Archive</p>
-  <h1>발표자료 보관함</h1>
-  <p class="intro">html-ppt로 만든 발표자료를 모아 둔 곳입니다. 제목을 누르면 슬라이드가 열립니다.</p>
-  <ul class="list">
-    <li>
-      <a href="decks/nietzsche-philosophy/">
-        <h2>니체 · 망치를 든 철학자</h2>
-        <p>니체의 생애와 핵심 사상(신의 죽음, 허무주의, 힘에의 의지, 위버멘쉬, 영원회귀, 운명애), 세 시기의 저서, 국내외 번역서·해설서·연구서·전기 안내와 독서 순서.</p>
-        <span class="meta">33장 · 2026.10</span>
-      </a>
-    </li>
-    <li>
-      <a href="decks/otrovert-gift-of-not-belonging/">
-        <h2>이향인 · 무리 속에서도 섞이지 않는 사람들</h2>
-        <p>라미 카민스키 『이향인(The Gift of Not Belonging)』을 4부 19장 구조로 정리. 성향 지도, 블루투스 현상, 소속과 연결의 차이, 국내외 반응과 비판까지 표와 도표로.</p>
-        <span class="meta">26장 · 2026.10</span>
-      </a>
-    </li>
-    <li>
-      <a href="decks/schopenhauer-parerga/">
-        <h2>쇼펜하우어 · 삶이 괴로울 때 읽는 철학</h2>
-        <p>쇼펜하우어의 생애와 철학, 저서를 정리하고 『소품과 부록(소품집)』의 행복론·인생론을 쉽게 풀어낸 안내. 고통과 권태의 시계추, 행복을 결정하는 세 가지, 고슴도치의 거리.</p>
-        <span class="meta">27장 · 2026.10</span>
-      </a>
-    </li>
-    <li>
-      <a href="decks/seneca-stoic-life/">
-        <h2>세네카 · 2000년 전 로마에서 온 인생 상담</h2>
-        <p>철학이 처음인 사람을 위한 스토아 입문. 세네카의 생애, 대표 저서 네 권, 기억할 문장과 핵심 가치, 오늘부터 해 보는 연습.</p>
-        <span class="meta">22장 · 2026.10</span>
-      </a>
-    </li>
-    <li>
-      <a href="decks/mac-studio-local-ai/">
-        <h2>맥스튜디오 한 대로 만드는 나만의 AI 시스템</h2>
-        <p>맥스튜디오 M5 Ultra 96GB 소개와 로컬 LLM·옵시디언 볼트·클로드 코드를 함께 쓰는 하이브리드 AI 작업실 구축 방법.</p>
-        <span class="meta">10장 · 2026.10</span>
-      </a>
-    </li>
-    <li>
-      <a href="decks/proust-in-search-of-lost-time/">
-        <h2>잃어버린 시간을 찾아서</h2>
-        <p>마르셀 프루스트의 소설을 처음 만나는 사람을 위한 안내. 작가와 시대, 등장인물, 7권 줄거리, 핵심 주제.</p>
-        <span class="meta">21장 · 2026.10</span>
-      </a>
-    </li>
-  </ul>
-  <p class="help">슬라이드 조작: <kbd>←</kbd> <kbd>→</kbd> 넘기기 · <kbd>F</kbd> 전체 화면 · <kbd>S</kbd> 발표자 창 · <kbd>O</kbd> 전체 보기</p>
+  <section class="wrap hero">
+    <h1 class="lines">
+      <span class="line"><span data-line style="--i:0">정주샘의</span></span>
+      <span class="line"><span data-line style="--i:1">슬라이드 모음</span></span>
+    </h1>
+    <div class="recent" id="recent" hidden>
+      <h2>주제별로 보기</h2>
+      <ol></ol>
+    </div>
+    <div class="lede">
+      <p>철학과 문학, AI를 다룬 발표자료를 모아 둔 곳입니다. 브라우저에서 바로 열리고, 키보드로 넘기며 발표할 수 있습니다.</p>
+      <a class="btn" id="latest" href="#decks">최신 발표 열기 <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-title">
+    <div class="wrap how-grid">
+      <div class="how-head">
+        <h2 id="how-title" data-reveal>발표할 때는 이렇게</h2>
+        <p data-reveal>모든 발표자료가 같은 단축키로 움직입니다.</p>
+      </div>
+      <ul class="steps">
+        <li class="step" data-reveal><div class="keys" aria-hidden="true"><kbd>←</kbd><kbd>→</kbd></div><p><b>처음 열면,</b> 방향키나 스페이스로 한 장씩 넘깁니다. 주소 끝에 <b>#/5</b>를 붙이면 다섯 번째 슬라이드에서 시작합니다.</p></li>
+        <li class="step" data-reveal><div class="keys" aria-hidden="true"><kbd>F</kbd></div><p><b>교실이나 강당에서는,</b> F를 눌러 전체 화면으로 띄웁니다. 어떤 화면에서도 16:9 비율이 유지됩니다.</p></li>
+        <li class="step" data-reveal><div class="keys" aria-hidden="true"><kbd>S</kbd><kbd>N</kbd></div><p><b>대본이 필요하면,</b> S로 발표자 창을 엽니다. 다음 슬라이드, 대본, 타이머가 한 창에 모입니다. N은 대본만 띄웁니다.</p></li>
+        <li class="step" data-reveal><div class="keys" aria-hidden="true"><kbd>O</kbd><kbd>T</kbd></div><p><b>흐름을 훑어보려면,</b> O로 모든 슬라이드를 펼칩니다. T를 누르면 테마가 바뀝니다.</p></li>
+      </ul>
+      <div class="shots">
+        <figure data-reveal><img src="assets/howto-presenter.jpg" alt="발표자 창: 지금 슬라이드, 다음 슬라이드, 발표 대본, 타이머가 한 화면에 나온 모습" width="1200" height="750" loading="lazy"><figcaption><b>S 발표자 창.</b> 청중 화면과 따로 띄워, 대본을 보며 발표합니다.</figcaption></figure>
+        <figure data-reveal><img src="assets/howto-overview.jpg" alt="전체 보기: 니체 발표자료의 슬라이드들이 격자로 펼쳐진 모습" width="1200" height="750" loading="lazy"><figcaption><b>O 전체 보기.</b> 모든 슬라이드를 펼쳐 놓고 원하는 장으로 바로 갑니다.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap decks" id="decks" aria-labelledby="decks-title">
+    <h2 class="title" id="decks-title" data-reveal>전체 목록</h2>
+    <div class="figure" aria-live="polite">
+      <div class="figure-in">
+        <div class="screen" id="screen">
+          <img id="cover" alt="" width="1280" height="720">
+          <iframe id="peek" title="발표자료 미리보기" tabindex="-1" loading="lazy"></iframe>
+        </div>
+        <div class="flip">
+          <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+          <span class="count" id="count">표지</span>
+          <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+          <a class="btn open" id="open" href="#">발표 열기</a>
+        </div>
+        <p class="caption">← → 를 누르면 이 자리에서 실제 슬라이드를 넘겨 볼 수 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="decks-body">
+      <div class="tools">
+        <label class="search"><span class="sr">발표자료 검색</span><input type="search" id="q" placeholder="제목이나 내용으로 찾기" autocomplete="off"></label>
+        <div class="topics" id="topics" role="group" aria-label="주제로 거르기"></div>
+        <p class="result" id="result" aria-live="polite"></p>
+      </div>
+      <!-- 아래 목록은 tools/build.py가 decks.json으로 만듭니다. 직접 고치지 마세요. -->
+      <!-- DECKS:START -->
+      <div class="group">
+        <h3 class="group-title">2026년 2학기 <span>6편</span></h3>
+        <ul class="list">
+          <li data-topics="철학">
+            <a href="decks/nietzsche-philosophy/">
+              <h4>니체 · 망치를 든 철학자</h4>
+              <p>니체의 생애와 핵심 사상(신의 죽음, 허무주의, 힘에의 의지, 위버멘쉬, 영원회귀, 운명애), 세 시기의 저서, 국내외 번역서·해설서·연구서·전기 안내와 독서 순서.</p>
+              <span class="meta">33장 · 10.20</span>
+            </a>
+          </li>
+          <li data-topics="심리">
+            <a href="decks/otrovert-gift-of-not-belonging/">
+              <h4>이향인 · 무리 속에서도 섞이지 않는 사람들</h4>
+              <p>라미 카민스키 『이향인(The Gift of Not Belonging)』을 4부 19장 구조로 정리. 성향 지도, 블루투스 현상, 소속과 연결의 차이, 국내외 반응과 비판까지 표와 도표로.</p>
+              <span class="meta">26장 · 10.20</span>
+            </a>
+          </li>
+          <li data-topics="철학">
+            <a href="decks/schopenhauer-parerga/">
+              <h4>쇼펜하우어 · 삶이 괴로울 때 읽는 철학</h4>
+              <p>쇼펜하우어의 생애와 철학, 저서를 정리하고 『소품과 부록(소품집)』의 행복론·인생론을 쉽게 풀어낸 안내. 고통과 권태의 시계추, 행복을 결정하는 세 가지, 고슴도치의 거리.</p>
+              <span class="meta">27장 · 10.20</span>
+            </a>
+          </li>
+          <li data-topics="철학">
+            <a href="decks/seneca-stoic-life/">
+              <h4>세네카 · 2000년 전 로마에서 온 인생 상담</h4>
+              <p>철학이 처음인 사람을 위한 스토아 입문. 세네카의 생애, 대표 저서 네 권, 기억할 문장과 핵심 가치, 오늘부터 해 보는 연습.</p>
+              <span class="meta">22장 · 10.20</span>
+            </a>
+          </li>
+          <li data-topics="AI">
+            <a href="decks/mac-studio-local-ai/">
+              <h4>맥스튜디오 한 대로 만드는 나만의 AI 시스템</h4>
+              <p>맥스튜디오 M5 Ultra 96GB 소개와 로컬 LLM·옵시디언 볼트·클로드 코드를 함께 쓰는 하이브리드 AI 작업실 구축 방법.</p>
+              <span class="meta">10장 · 10.20</span>
+            </a>
+          </li>
+          <li data-topics="문학">
+            <a href="decks/proust-in-search-of-lost-time/">
+              <h4>잃어버린 시간을 찾아서</h4>
+              <p>마르셀 프루스트의 소설을 처음 만나는 사람을 위한 안내. 작가와 시대, 등장인물, 7권 줄거리, 핵심 주제.</p>
+              <span class="meta">21장 · 10.20</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- DECKS:END -->
+      <p class="empty" id="empty" hidden>찾는 발표자료가 없습니다. 다른 낱말로 찾아보세요.</p>
+      <p class="decks-foot" id="tally-line" data-reveal></p>
+    </div>
+  </section>
+
 </main>
+
+<footer class="wrap site-foot">
+  <div class="foot-cols">
+    <div><h3>소개</h3><p>html-ppt로 만든 발표 슬라이드를 한곳에 모았습니다. 새 발표자료가 생기면 목록 맨 위에 더해집니다.</p></div>
+    <div><h3>바로가기</h3><ul><li><a href="#decks">전체 목록</a></li><li><a href="#how">사용법</a></li><li><a href="#" id="foot-latest">최신 발표</a></li></ul></div>
+    <div><h3>GitHub</h3><ul><li><a href="https://github.com/Eunhorang/html-ppt-archive">저장소 보기</a></li><li><a href="https://github.com/Eunhorang">GitHub 프로필</a></li></ul></div>
+    <div><h3>만든 도구</h3><ul><li>슬라이드 엔진 html-ppt</li><li>MIT 라이선스</li></ul></div>
+  </div>
+  <p class="legal">© 2026 정주샘 · 발표자료의 내용과 인용문의 저작권은 각 원저작자에게 있습니다.</p>
+</footer>
+
+<script>
+(() => {
+  const items = [...document.querySelectorAll('.list li')];
+  const data = items.map((li) => {
+    const a = li.querySelector('a');
+    const href = a.getAttribute('href');
+    const title = li.querySelector('h4').textContent.trim();
+    const meta = (li.querySelector('.meta') || {}).textContent || '';
+    const n = parseInt((meta.match(/(\d+)\s*장/) || [])[1], 10) || 0;
+    const topics = (li.dataset.topics || '').split(/\s+/).filter(Boolean);
+    const text = (title + ' ' + ((li.querySelector('p') || {}).textContent || '') + ' ' + topics.join(' ')).toLowerCase();
+    return { li, href, title, n, topics, text, cover: href.replace(/\/?$/, '/') + 'cover.jpg' };
+  });
+  if (!data.length) return;
+
+  // 표지가 아직 없는 발표자료는 제목을 적은 면으로 대신합니다.
+  const fallbackTile = (title) => { const d = document.createElement('div'); d.className = 'fallback-tile'; d.textContent = title; return d; };
+  const coverImg = (d, eager) => {
+    const img = new Image(1280, 720);
+    img.src = d.cover; img.alt = d.title + ' 표지';
+    if (!eager) img.loading = 'lazy';
+    img.onerror = () => img.replaceWith(fallbackTile(d.title));
+    return img;
+  };
+
+  // 모자이크: 최근 일곱 편의 표지(16:9 그대로)와 하늘색 집계 칸. 표지가 적으면 집계 칸이 남은 자리를 채웁니다.
+  const total = data.reduce((s, d) => s + d.n, 0);
+  const mosaic = document.getElementById('mosaic');
+  const tiles = data.slice(0, 7).map((d) => {
+    const a = document.createElement('a');
+    a.className = 'cover'; a.href = d.href; a.setAttribute('aria-label', d.title);
+    a.append(coverImg(d, true));
+    return a;
+  });
+  const tally = document.createElement('a');
+  tally.className = 'tally'; tally.href = '#decks';
+  tally.innerHTML = `<strong>${data.length}편</strong><span>슬라이드 ${total}장</span>`;
+  tally.style.setProperty('--span', Math.max(1, 8 - tiles.length));
+  tally.style.setProperty('--span-sm', Math.max(1, 6 - Math.min(5, tiles.length)));
+  tiles.push(tally);
+  tiles.forEach((el, i) => { el.style.setProperty('--t', i); mosaic.append(el); });
+
+
+  document.getElementById('tally-line').textContent = `지금까지 ${data.length}편, 슬라이드 ${total}장이 모였습니다.`;
+  document.getElementById('latest').href = data[0].href;
+  document.getElementById('foot-latest').href = data[0].href;
+
+  // 왼쪽 화면: 고른 발표자료의 표지, 넘기면 실제 슬라이드
+  const screen = document.getElementById('screen');
+  const cover = document.getElementById('cover');
+  const peek = document.getElementById('peek');
+  const count = document.getElementById('count');
+  const open = document.getElementById('open');
+  let cur = null, idx = 0, ready = false;
+
+  const label = () => { count.textContent = idx === 0 ? `표지 · ${cur.n}장` : `${idx + 1} / ${cur.n}`; };
+  function activate(d) {
+    if (cur === d) return;
+    cur = d; idx = 0; ready = false;
+    items.forEach((li) => li.classList.toggle('is-active', li === d.li));
+    screen.classList.remove('live');
+    peek.onload = null;
+    peek.removeAttribute('src');
+    cover.classList.add('out');
+    setTimeout(() => {
+      cover.onerror = () => { cover.removeAttribute('src'); };
+      cover.src = d.cover; cover.alt = d.title + ' 표지';
+      cover.classList.remove('out');
+    }, 150);
+    open.href = d.href;
+    open.textContent = '발표 열기';
+    label();
+  }
+  function flip(step) {
+    if (!cur) return;
+    const max = Math.max(cur.n, 1) - 1;
+    idx = Math.min(max, Math.max(0, idx + step));
+    label();
+    const send = () => peek.contentWindow.postMessage({ type: 'preview-goto', idx }, '*');
+    if (ready) { send(); screen.classList.add('live'); return; }
+    if (!peek.getAttribute('src')) {
+      const mine = cur;
+      peek.onload = () => { if (cur !== mine) return; ready = true; send(); screen.classList.add('live'); };
+      peek.src = cur.href.replace(/\/?$/, '/') + '?preview=1';
+    }
+  }
+  document.getElementById('prev').addEventListener('click', () => flip(-1));
+  document.getElementById('next').addEventListener('click', () => flip(1));
+  open.addEventListener('click', () => { if (idx > 0) open.href = cur.href + '#/' + (idx + 1); });
+
+  data.forEach((d) => {
+    const a = d.li.querySelector('a');
+    a.addEventListener('mouseenter', () => activate(d));
+    a.addEventListener('focus', () => activate(d));
+  });
+  // 스크롤: 화면 가운데(휴대폰은 위쪽 그림 바로 아래)에 온 줄을 고릅니다.
+  const narrow = matchMedia('(max-width:900px)');
+  let ticking = false;
+  const pick = () => {
+    ticking = false;
+    const line = narrow.matches ? screen.getBoundingClientRect().bottom + 80 : innerHeight / 2;
+    let best = null, dist = Infinity;
+    for (const d of data) {
+      if (d.li.hidden) continue;
+      const r = d.li.getBoundingClientRect();
+      const dd = Math.abs((r.top + Math.min(r.height, 60) / 2) - line);
+      if (dd < dist) { dist = dd; best = d; }
+    }
+    const list = document.querySelector('.list').getBoundingClientRect();
+    if (best && list.bottom > 0 && list.top < innerHeight) activate(best);
+  };
+  addEventListener('scroll', () => { if (narrow.matches) return; if (!ticking) { ticking = true; requestAnimationFrame(pick); } }, { passive: true });
+  activate(data[0]);
+
+  // 검색과 주제 거르기
+  const q = document.getElementById('q');
+  const topicsEl = document.getElementById('topics');
+  const result = document.getElementById('result');
+  const empty = document.getElementById('empty');
+  const groups = [...document.querySelectorAll('.group')];
+  const freq = {};
+  data.forEach((d) => d.topics.forEach((t) => { freq[t] = (freq[t] || 0) + 1; }));
+  const topicNames = ['전체', ...Object.keys(freq).sort((a, b) => freq[b] - freq[a] || a.localeCompare(b, 'ko'))];
+  let topic = '전체';
+  topicNames.forEach((t) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = t === '전체' ? `전체 ${data.length}` : `${t} ${freq[t]}`;
+    b.setAttribute('aria-pressed', String(t === topic));
+    b.addEventListener('click', () => {
+      topic = t;
+      topicsEl.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      apply();
+    });
+    topicsEl.append(b);
+  });
+  // 첫 화면 왼쪽: 주제별 바로가기. 누르면 목록으로 내려가 그 주제만 보여 줍니다.
+  const recent = document.getElementById('recent');
+  topicNames.slice(1).forEach((t) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="#decks"><b></b><span></span></a>`;
+    li.querySelector('b').textContent = t;
+    li.querySelector('span').textContent = `${freq[t]}편`;
+    li.querySelector('a').addEventListener('click', () => {
+      [...topicsEl.querySelectorAll('button')].find((b) => b.textContent.startsWith(t + ' '))?.click();
+    });
+    recent.querySelector('ol').append(li);
+  });
+  recent.hidden = topicNames.length < 3;
+
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let shown = 0;
+    data.forEach((d) => {
+      const ok = (topic === '전체' || d.topics.includes(topic)) && (!term || term.split(/\s+/).every((w) => d.text.includes(w)));
+      d.li.hidden = !ok;
+      if (ok) shown++;
+    });
+    groups.forEach((g) => { g.hidden = !g.querySelector('li:not([hidden])'); });
+    empty.hidden = shown > 0;
+    result.textContent = shown === data.length ? '' : `${shown}편을 찾았습니다.`;
+    const first = data.find((d) => !d.li.hidden);
+    if (first && (!cur || cur.li.hidden)) activate(first);
+  }
+  q.addEventListener('input', apply);
+
+  // 각 섹션 요소가 처음 보일 때 한 번 떠오릅니다.
+  const io = new IntersectionObserver((es) => {
+    for (const e of es) if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('[data-reveal]').forEach((el, i) => { el.style.setProperty('--d', i % 2); io.observe(el); });
+})();
+</script>
 </body>
 </html>

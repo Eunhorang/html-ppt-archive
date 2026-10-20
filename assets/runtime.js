@@ -958,3 +958,38 @@
     go(idx);
   });
 })();
+
+/* ===== 보관함으로 돌아가기 (html-ppt-archive 추가) =====
+ * decks/<이름>/ 아래에서 열린 발표자료에만 왼쪽 위에 작은 링크를 띄웁니다.
+ * 마우스를 움직이거나 화면을 만지면 나타나고, 2.5초 동안 가만히 있으면 사라져 발표를 가리지 않습니다.
+ * 미리보기(?preview=)와 인쇄에서는 나오지 않습니다. */
+(function () {
+  if (window.top !== window || /[?&]preview=/.test(location.search) || !/\/decks\/[^/]+\/?(index\.html)?$/.test(location.pathname)) return;
+  function start() {
+    var css = document.createElement('style');
+    css.textContent =
+      '.archive-back{position:fixed;top:16px;left:16px;z-index:60;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;' +
+      'background:#0e2740;color:#f5f8fb;font:600 14px/1 -apple-system,BlinkMacSystemFont,"Pretendard Variable",Pretendard,"Apple SD Gothic Neo",system-ui,sans-serif;' +
+      'letter-spacing:-.01em;text-decoration:none;opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity .25s,transform .25s}' +
+      '.archive-back.is-on,.archive-back:focus-visible{opacity:1;transform:none;pointer-events:auto}' +
+      '.archive-back:hover{background:#8fd0f2;color:#0e2740}' +
+      '.archive-back:focus-visible{outline:3px solid #8fd0f2;outline-offset:2px}' +
+      '@media print{.archive-back{display:none}}';
+    document.head.appendChild(css);
+    var a = document.createElement('a');
+    a.className = 'archive-back';
+    a.href = '../../';
+    a.textContent = '← 정주샘의 슬라이드 모음';
+    document.body.appendChild(a);
+    var t;
+    function show() {
+      a.classList.add('is-on');
+      clearTimeout(t);
+      t = setTimeout(function () { a.classList.remove('is-on'); }, 2500);
+    }
+    addEventListener('mousemove', show, { passive: true });
+    addEventListener('touchstart', show, { passive: true });
+    show();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
