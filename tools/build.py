@@ -10,6 +10,7 @@
 - 링크 공유용 그림(assets/og.jpg)을 최신 표지로 다시 만듭니다(tools/make-og.py).
 - 발표자료 폴더에 소개 영상(intro.mp4)이 있으면 첫 페이지 '영상으로 미리 보기'에 싣고,
   포스터 그림(intro.jpg)이 없으면 ffmpeg로 만듭니다.
+- decks.json 항목에 "youtube" 주소가 있으면 목록 카드 아래에 'YouTube에서 보기' 링크를 답니다.
 """
 import html
 import json
@@ -113,6 +114,9 @@ def render_list(decks):
             vid = " · 영상" if d.get("video") else ""
             out.append(f'              <span class="meta">{d["slides"]}장 · {int(m)}.{int(dd)}{vid}</span>')
             out.append('            </a>')
+            if d.get("youtube"):
+                out.append(f'            <a class="yt" href="{esc(d["youtube"])}" target="_blank" rel="noopener">'
+                           f'<span aria-hidden="true">▶</span> YouTube에서 보기</a>')
             out.append('          </li>')
         out.append('        </ul>')
         out.append('      </div>')
@@ -120,9 +124,11 @@ def render_list(decks):
 
 
 def render_readme(decks):
-    rows = ["| 폴더 | 제목 | 주제 | 장수 | 소개 영상 | 등록일 |", "|---|---|---|---|---|---|"]
+    rows = ["| 폴더 | 제목 | 주제 | 장수 | 영상 | 등록일 |", "|---|---|---|---|---|---|"]
     for d in decks:
         vid = length_ko(d["video"]) if d.get("video") else ""
+        if d.get("youtube"):
+            vid = f'[YouTube]({d["youtube"]})'
         rows.append(f'| `decks/{d["slug"]}/` | {d["title"]} | {", ".join(d["topics"])} | {d["slides"]} | {vid} | {d["date"]} |')
     return "\n".join(rows)
 
@@ -157,7 +163,7 @@ def main():
         d["video"] = video_info(d["slug"])
     decks = [d for _, d in sorted(enumerate(decks), key=lambda x: (x[1]["date"], -x[0]), reverse=True)]
 
-    DATA.write_text(json.dumps([{k: d[k] for k in ("slug", "title", "description", "topics", "date")} for d in decks],
+    DATA.write_text(json.dumps([{k: d[k] for k in ("slug", "title", "description", "topics", "date", "youtube") if k in d} for d in decks],
                                ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     page = replace_between(INDEX.read_text(encoding="utf-8"), render_list(decks), INDEX)
     page = replace_between(page, render_videos(decks), INDEX, VSTART, VEND)

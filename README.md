@@ -44,13 +44,13 @@ html-ppt-archive/
 아래 표는 `tools/build.py`가 `decks.json`으로 만듭니다. 직접 고치지 마세요.
 
 <!-- DECKS:START -->
-| 폴더 | 제목 | 주제 | 장수 | 소개 영상 | 등록일 |
+| 폴더 | 제목 | 주제 | 장수 | 영상 | 등록일 |
 |---|---|---|---|---|---|
 | `decks/marcus-aurelius-meditations/` | 마르쿠스 아우렐리우스 · 황제가 자신에게 쓴 일기 | 철학 | 26 |  | 2026-10-20 |
 | `decks/nietzsche-philosophy/` | 니체 · 망치를 든 철학자 | 철학 | 33 |  | 2026-10-20 |
 | `decks/otrovert-gift-of-not-belonging/` | 이향인 · 무리 속에서도 섞이지 않는 사람들 | 심리 | 26 |  | 2026-10-20 |
 | `decks/schopenhauer-parerga/` | 쇼펜하우어 · 삶이 괴로울 때 읽는 철학 | 철학 | 27 |  | 2026-10-20 |
-| `decks/seneca-stoic-life/` | 세네카 · 2000년 전 로마에서 온 인생 상담 | 철학 | 22 |  | 2026-10-20 |
+| `decks/seneca-stoic-life/` | 세네카 · 2000년 전 로마에서 온 인생 상담 | 철학 | 22 | [YouTube](https://youtu.be/TupSjoRAFL0) | 2026-10-20 |
 | `decks/mac-studio-local-ai/` | 맥스튜디오 한 대로 만드는 나만의 AI 시스템 | AI | 10 |  | 2026-10-20 |
 | `decks/proust-in-search-of-lost-time/` | 잃어버린 시간을 찾아서 | 문학 | 21 |  | 2026-10-20 |
 <!-- DECKS:END -->
