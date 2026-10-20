@@ -24,6 +24,7 @@ html-ppt-archive/
 
 | 폴더 | 제목 | 장수 |
 |---|---|---|
+| `decks/nietzsche-philosophy/` | 니체 · 망치를 든 철학자 | 33 |
 | `decks/otrovert-gift-of-not-belonging/` | 이향인 · 무리 속에서도 섞이지 않는 사람들 | 26 |
 | `decks/schopenhauer-parerga/` | 쇼펜하우어 · 삶이 괴로울 때 읽는 철학 | 27 |
 | `decks/seneca-stoic-life/` | 세네카 · 2000년 전 로마에서 온 인생 상담 | 22 |
