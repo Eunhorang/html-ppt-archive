@@ -46,7 +46,7 @@ html-ppt-archive/
 <!-- DECKS:START -->
 | 폴더 | 제목 | 주제 | 장수 | 영상 | 등록일 |
 |---|---|---|---|---|---|
-| `decks/charlie-munger/` | 찰리 멍거 · 어리석음을 피하는 기술 | 투자 | 28 |  | 2026-10-21 |
+| `decks/charlie-munger/` | 찰리 멍거 · 어리석음을 피하는 기술 | 투자 | 28 | [YouTube](https://youtu.be/GIFvJtn5_i0) | 2026-10-21 |
 | `decks/marcus-aurelius-meditations/` | 마르쿠스 아우렐리우스 · 황제가 자신에게 쓴 일기 | 철학 | 26 | [YouTube](https://youtu.be/-DIFBZy_oQY) | 2026-10-20 |
 | `decks/nietzsche-philosophy/` | 니체 · 망치를 든 철학자 | 철학 | 33 | [YouTube](https://youtu.be/MyNHAkq_26E) | 2026-10-20 |
 | `decks/otrovert-gift-of-not-belonging/` | 이향인 · 무리 속에서도 섞이지 않는 사람들 | 심리 | 26 | [YouTube](https://youtu.be/VGmj-kfY7aY) | 2026-10-20 |
