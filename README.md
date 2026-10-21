@@ -46,6 +46,7 @@ html-ppt-archive/
 <!-- DECKS:START -->
 | 폴더 | 제목 | 주제 | 장수 | 영상 | 등록일 |
 |---|---|---|---|---|---|
+| `decks/pause-at-one-sentence/` | 책을 많이 읽었는데, 왜 내 삶은 그대로일까? | 독서 | 22 |  | 2026-10-21 |
 | `decks/claude-html-slides-howto/` | 코딩 없이, 말로 만드는 HTML 발표자료 | AI | 25 |  | 2026-10-21 |
 | `decks/charlie-munger/` | 찰리 멍거 · 어리석음을 피하는 기술 | 투자 | 28 | [YouTube](https://youtu.be/GIFvJtn5_i0) | 2026-10-21 |
 | `decks/marcus-aurelius-meditations/` | 마르쿠스 아우렐리우스 · 황제가 자신에게 쓴 일기 | 철학 | 26 | [YouTube](https://youtu.be/-DIFBZy_oQY) | 2026-10-20 |
