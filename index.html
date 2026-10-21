@@ -127,7 +127,7 @@
       const yt = document.createElement('a');
       yt.className = 'yt-badge'; yt.href = d.youtube; yt.target = '_blank'; yt.rel = 'noopener';
       yt.setAttribute('aria-label', d.title + ' 영상, YouTube에서 보기');
-      yt.innerHTML = '<span aria-hidden="true">▶</span> YouTube';
+      yt.innerHTML = '<svg viewBox="0 0 8 9" aria-hidden="true"><path d="M0 0l8 4.5L0 9z"/></svg>YouTube';
       tile.append(yt);
     }
     return tile;

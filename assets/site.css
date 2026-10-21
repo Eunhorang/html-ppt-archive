@@ -70,10 +70,12 @@ img{display:block;max-width:100%}
 .mosaic .cover-link{display:block;width:100%;height:100%}
 .mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-out)}
 .mosaic .cover:hover img,.mosaic .cover-link:focus-visible img{transform:scale(1.04)}
-/* 유튜브에 올린 영상이 있는 발표자료는 표지 오른쪽 아래에 바로가기를 둡니다. */
-.mosaic .yt-badge{position:absolute;right:clamp(8px,1vw,16px);bottom:clamp(8px,1vw,16px);display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;background:#e60000;color:#fff;font-size:var(--step-small);font-weight:700;text-decoration:none;transition:background-color .2s}
-.mosaic .yt-badge span{font-size:.75em}
-.mosaic .yt-badge:hover,.mosaic .yt-badge:focus-visible{background:#c00000}
+/* 유튜브에 올린 영상이 있는 발표자료는 표지 오른쪽 위에 작은 바로가기를 둡니다(아래쪽은 표지 제목과 겹쳐서 위로). */
+.mosaic .yt-badge{position:absolute;top:clamp(6px,.7vw,10px);right:clamp(6px,.7vw,10px);display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 9px 0 7px;border-radius:6px;background:#e60000;color:#fff;font-size:12px;font-weight:700;line-height:1;letter-spacing:0;text-decoration:none;box-shadow:0 1px 2px rgba(14,39,64,.18),0 2px 8px rgba(14,39,64,.16);transition:background-color .2s,transform .2s var(--ease-out)}
+.mosaic .yt-badge svg{width:8px;height:9px;flex:none;fill:currentColor}
+/* 버튼은 작아도 손가락으로 누르기 쉽게 누르는 자리를 사방으로 넓힙니다. */
+.mosaic .yt-badge::after{content:"";position:absolute;inset:-10px}
+.mosaic .yt-badge:hover,.mosaic .yt-badge:focus-visible{background:#c00000;transform:translateY(-1px)}
 .mosaic .tally{grid-column:span var(--span,1);aspect-ratio:auto;background:var(--accent);color:var(--accent-ink);display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:clamp(16px,2vw,28px);text-decoration:none;transition:background-color .2s}
 .mosaic .tally:hover{background:#a7dcf7}
 .tally strong{font-size:var(--step-lead);font-weight:800;letter-spacing:-.03em;line-height:1.2}
