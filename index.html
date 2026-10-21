@@ -16,6 +16,9 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta name="theme-color" content="#f3ecdf">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
@@ -23,7 +26,7 @@
 <body>
 <header class="top">
   <div class="wrap top-in">
-    <a class="wordmark" href="./" aria-current="page">정주샘</a>
+    <a class="wordmark" href="./" aria-current="page" aria-label="정주샘 처음으로"><svg viewBox="0 0 873 360" aria-hidden="true"><use href="assets/brand/brand.svg#lockup"/></svg></a>
     <nav aria-label="사이트"><a href="list.html">목록</a><a href="how.html">사용법</a><a href="https://github.com/Eunhorang/html-ppt-archive">GitHub</a></nav>
   </div>
 </header>
@@ -31,9 +34,9 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <h1 class="lines">
-          <span class="line"><span data-line style="--i:0">정주샘의</span></span>
-          <span class="line"><span data-line style="--i:1">슬라이드 모음</span></span>
+        <h1 class="sheet">
+          <span class="row"><span class="cell mark"><span class="sr">정</span><svg viewBox="0 0 360 360" aria-hidden="true"><use href="assets/brand/brand.svg#mark"/></svg></span><span class="cell"><b style="--i:0">주</b></span><span class="cell"><b style="--i:1">샘</b></span><span class="cell"><b style="--i:2">의</b></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="sr"> </span></span>
+          <span class="row"><span class="cell"><b style="--i:3">슬</b></span><span class="cell"><b style="--i:4">라</b></span><span class="cell"><b style="--i:5">이</b></span><span class="cell"><b style="--i:6">드</b></span><span class="cell"> </span><span class="cell"><b style="--i:7">모</b></span><span class="cell"><b style="--i:8">음</b></span></span>
         </h1>
         <p class="lede rise" style="--i:0">철학과 문학, AI를 다룬 발표자료를 모아 둔 곳입니다. 브라우저에서 바로 열리고, 키보드로 넘기며 발표할 수 있습니다.</p>
         <div class="actions rise" style="--i:1">
@@ -72,6 +75,10 @@
 </main>
 
 <footer class="wrap site-foot">
+  <div class="foot-brand">
+    <svg viewBox="0 0 470 480" role="img" aria-label="정주샘 로고: 원고지 칸에 손글씨로 쓴 정, 받침 자리의 빨간 하트, 주샘이라고 쓴 쪽지"><use href="assets/brand/brand.svg#emblem"/></svg>
+    <p>원고지에 한 글자씩 쓰듯, 발표자료를 한 장씩 만듭니다.</p>
+  </div>
   <div class="foot-cols">
     <div><h3>소개</h3><p>html-ppt로 만든 발표 슬라이드를 한곳에 모았습니다. 새 발표자료가 생기면 목록 맨 위에 더해집니다.</p></div>
     <div><h3>바로가기</h3><ul><li><a href="./">처음으로</a></li><li><a href="list.html">전체 목록</a></li><li><a href="how.html">사용법</a></li><li><a href="list.html" id="foot-latest">최신 발표</a></li></ul></div>

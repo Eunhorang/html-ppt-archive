@@ -2,7 +2,7 @@
 """링크 공유용 미리보기 그림(assets/og.jpg, 1200×630)을 만듭니다.
 
 카카오톡·밴드·메신저에 주소를 붙이면 이 그림이 뜹니다.
-위쪽은 최신 발표자료 표지 6장, 아래 하늘색 띠에는 사이트 이름과 편수를 적습니다.
+위쪽은 먹색 바탕에 최신 발표자료 표지 6장, 아래 종이색 띠에는 원고지 칸 로고와 사이트 이름, 편수를 적습니다.
 tools/build.py가 목록을 만들 때마다 함께 실행합니다. (맥의 Pillow와 Apple SD Gothic Neo 글꼴 필요)
 """
 import json
@@ -16,7 +16,8 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 FONT = "/System/Library/Fonts/AppleSDGothicNeo.ttc"
-INK, SKY, BG = (14, 39, 64), (143, 208, 242), (230, 238, 246)
+INK, PAPER, BG, MUTED = (31, 28, 24), (243, 236, 223), (233, 223, 204), (102, 93, 80)
+MARK = ROOT / "assets" / "brand" / "mark.png"  # 원고지 칸 + 손글씨 '정'과 하트
 W, H, BAND = 1200, 630, 180
 
 
@@ -37,16 +38,21 @@ def main():
         else:
             ImageDraw.Draw(img).rectangle((x, y, x + cw, y + ch), fill=BG)
     d = ImageDraw.Draw(img)
-    d.rectangle((0, H - BAND, W, H), fill=SKY)
-    bold = ImageFont.truetype(FONT, 64, index=6)
-    medium = ImageFont.truetype(FONT, 30, index=2)
-    d.text((56, H - BAND + 36), "정주샘의 슬라이드 모음", font=bold, fill=INK)
+    d.rectangle((0, H - BAND, W, H), fill=PAPER)
+    x0 = 56
+    if MARK.exists():
+        mark = Image.open(MARK).convert("RGB").resize((124, 124), Image.LANCZOS)
+        img.paste(mark, (48, H - BAND + 28))
+        x0 = 200
+    bold = ImageFont.truetype(FONT, 60, index=6)
+    medium = ImageFont.truetype(FONT, 28, index=2)
+    d.text((x0, H - BAND + 38), "정주샘의 슬라이드 모음", font=bold, fill=INK)
     freq = {}
     for deck in decks:
         for t in deck["topics"]:
             freq[t] = freq.get(t, 0) + 1
     topics = " · ".join(sorted(freq, key=lambda t: -freq[t])[:4])
-    d.text((58, H - BAND + 118), f"{topics} 발표자료 {len(decks)}편", font=medium, fill=INK)
+    d.text((x0 + 2, H - BAND + 116), f"{topics} 발표자료 {len(decks)}편", font=medium, fill=MUTED)
     out = ROOT / "assets" / "og.jpg"
     img.save(out, "JPEG", quality=85, optimize=True)
     print(f"공유 그림을 만들었습니다: {out.relative_to(ROOT)}")
