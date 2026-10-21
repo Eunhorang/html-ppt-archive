@@ -49,7 +49,7 @@ html-ppt-archive/
 | `decks/marcus-aurelius-meditations/` | 마르쿠스 아우렐리우스 · 황제가 자신에게 쓴 일기 | 철학 | 26 | [YouTube](https://youtu.be/-DIFBZy_oQY) | 2026-10-20 |
 | `decks/nietzsche-philosophy/` | 니체 · 망치를 든 철학자 | 철학 | 33 | [YouTube](https://youtu.be/MyNHAkq_26E) | 2026-10-20 |
 | `decks/otrovert-gift-of-not-belonging/` | 이향인 · 무리 속에서도 섞이지 않는 사람들 | 심리 | 26 |  | 2026-10-20 |
-| `decks/schopenhauer-parerga/` | 쇼펜하우어 · 삶이 괴로울 때 읽는 철학 | 철학 | 27 |  | 2026-10-20 |
+| `decks/schopenhauer-parerga/` | 쇼펜하우어 · 삶이 괴로울 때 읽는 철학 | 철학 | 27 | [YouTube](https://youtu.be/T9bq1fWaFu0) | 2026-10-20 |
 | `decks/seneca-stoic-life/` | 세네카 · 2000년 전 로마에서 온 인생 상담 | 철학 | 22 | [YouTube](https://youtu.be/TupSjoRAFL0) | 2026-10-20 |
 | `decks/mac-studio-local-ai/` | 맥스튜디오 한 대로 만드는 나만의 AI 시스템 | AI | 10 |  | 2026-10-20 |
 | `decks/proust-in-search-of-lost-time/` | 잃어버린 시간을 찾아서 | 문학 | 21 |  | 2026-10-20 |
