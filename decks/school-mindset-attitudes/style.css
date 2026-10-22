@@ -1,0 +1,156 @@
+/* 학교를 다니는 동안, 내 안에 무엇을 길러야 할까 — deck-specific styles (xiaohongshu-white 바탕)
+   학생이 직접 보는 화면이라 글자를 크게, 학교급마다 색을 하나씩: 초등 주황 · 중등 파랑 · 고등 보라 */
+
+:root{
+  --accent:#c8402b;
+  --text-3:#7d6a62;
+  --el:#d9601a;--el-ink:#a8470c;--el-bg:#fff1e6;
+  --mid:#2563c9;--mid-ink:#1d4f9f;--mid-bg:#eaf1fc;
+  --hi:#5b3fa8;--hi-ink:#47308a;--hi-bg:#f0ecfa;
+  --safe:#b42318;--safe-bg:#fdecea;
+  --rule:rgba(60,30,20,.14);
+}
+body{word-break:keep-all;overflow-wrap:break-word}
+.slide{padding:96px 140px 130px}
+p{margin:0}
+.h1,.h2,.h3{font-family:var(--font-sans);font-style:normal}
+.h1{font-size:84px;line-height:1.28;font-weight:900;letter-spacing:-.03em}
+.h2{font-size:54px;line-height:1.32;font-weight:800;letter-spacing:-.025em;margin:0 0 16px;color:var(--text-1)}
+.h2 em,.big em{font-style:normal;color:var(--c,var(--accent))}
+.mt{margin-top:34px}
+
+/* 학교급 색: 슬라이드에 el · mid · hi 를 붙이면 --c 가 바뀐다 */
+.el{--c:var(--el);--c-ink:var(--el-ink);--c-bg:var(--el-bg)}
+.mid{--c:var(--mid);--c-ink:var(--mid-ink);--c-bg:var(--mid-bg)}
+.hi{--c:var(--hi);--c-ink:var(--hi-ink);--c-bg:var(--hi-bg)}
+
+.kicker{display:flex;align-items:center;gap:14px;font-size:24px;font-weight:700;color:var(--c-ink,var(--accent));margin-bottom:20px;letter-spacing:0;text-transform:none}
+.kicker .stage{display:inline-block;padding:6px 18px;border-radius:999px;background:var(--c,var(--accent));color:#fff;font-size:21px;font-weight:800}
+.kicker .no{font-size:24px;color:var(--text-3);font-weight:800}
+
+.lede{font-size:30px;line-height:1.7;color:var(--text-2);max-width:none}
+.big{font-size:44px;line-height:1.5;font-weight:800;letter-spacing:-.02em}
+.small{font-size:24px;line-height:1.65;color:var(--text-2)}
+
+/* ---------- 각주 줄 ---------- */
+.fn{position:absolute;left:140px;right:140px;bottom:62px;padding-top:12px;border-top:1px solid var(--rule);font-size:18px;line-height:1.55;color:var(--text-3)}
+.fn a{color:var(--c-ink,var(--accent))}
+sup.cn{font-size:.5em;font-weight:800;color:var(--c-ink,var(--accent));margin-left:3px}
+.ex-tag{display:inline-block;align-self:flex-start;font-size:18px;font-weight:700;color:var(--text-3);border:1px solid var(--border-strong);border-radius:999px;padding:4px 14px}
+
+/* ---------- 표지 ---------- */
+.cover{justify-content:center}
+.cover .meta{font-size:24px;font-weight:700;color:var(--text-3);margin-bottom:34px}
+.cover .h1{max-width:none}
+.cover .sub{margin-top:28px;font-size:36px;font-weight:700;color:var(--text-2)}
+.cover .steps{display:flex;gap:18px;margin-top:56px}
+.cover .steps span{padding:14px 30px;border-radius:999px;font-size:28px;font-weight:800;color:#fff;background:var(--c)}
+
+/* ---------- 선생님께 ---------- */
+.guide{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:30px}
+.guide div{padding:28px 32px;border-radius:var(--radius);background:var(--surface-2)}
+.guide h4{font-size:30px;margin:0 0 10px;line-height:1.35}
+.guide p{font-size:24px;line-height:1.6;color:var(--text-2)}
+
+/* ---------- 네 가지 태도 · 카드 ---------- */
+.cards{display:grid;gap:24px;margin-top:30px}
+.cards.c2{grid-template-columns:repeat(2,1fr)}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.cards.c4{grid-template-columns:repeat(4,1fr)}
+.cards>div{padding:28px 30px;border-radius:var(--radius);background:var(--surface);border:2px solid var(--rule)}
+.cards .n{display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;border-radius:50%;background:var(--c,var(--accent));color:#fff;font-size:24px;font-weight:900}
+.cards h4{font-size:30px;line-height:1.4;margin:16px 0 8px}
+.cards p{font-size:24px;line-height:1.6;color:var(--text-2)}
+.cards.tint>div{background:var(--c-bg,var(--surface-2));border-color:transparent}
+
+/* ---------- 학교급 지도 ---------- */
+.map{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:34px}
+.map>div{border-radius:var(--radius-lg);padding:34px 34px 36px;background:var(--c-bg);border-top:10px solid var(--c)}
+.map .lv{font-size:26px;font-weight:900;color:var(--c-ink)}
+.map h4{font-size:36px;line-height:1.35;margin:14px 0 14px}
+.map ul{margin:0;padding-left:1.1em;font-size:24px;line-height:1.75;color:var(--text-2)}
+
+/* ---------- 부 표지 ---------- */
+.slide.part{background:var(--c);color:#fff;justify-content:center}
+.part .lv{font-size:30px;font-weight:800;opacity:.9}
+.part .h1{color:#fff;margin-top:14px;max-width:none}
+.part ol{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.part li{padding:22px 22px 24px;border-radius:var(--radius);background:rgba(255,255,255,.14);font-size:24px;line-height:1.5;font-weight:700}
+.part li b{display:block;font-size:30px;margin-bottom:8px}
+
+/* ---------- 말풍선 ---------- */
+.bubbles{display:flex;flex-direction:column;gap:20px;margin-top:26px}
+.bub{position:relative;align-self:flex-start;max-width:1300px;padding:20px 32px;border-radius:30px;background:var(--c-bg,var(--surface-2));font-size:34px;line-height:1.5;font-weight:700;color:var(--text-1)}
+.bub::before{content:"";position:absolute;left:-12px;top:24px;border:12px solid transparent;border-right-color:var(--c-bg,var(--surface-2));border-left:0}
+.bubbles.row2{flex-direction:row;flex-wrap:wrap}
+
+/* ---------- 바꾸어 말하기 ---------- */
+.swap{display:grid;grid-template-columns:1fr 90px 1.35fr;align-items:center;gap:0;margin-top:30px}
+.swap .from,.swap .to{border-radius:var(--radius);padding:26px 32px;font-size:32px;line-height:1.5;font-weight:700}
+.swap .from{background:#f3efed;color:var(--text-3)}
+.swap .to{background:var(--c-bg);color:var(--text-1);border:3px solid var(--c)}
+.swap .arr{text-align:center;font-size:52px;color:var(--c);font-weight:900}
+.swap .lbl{display:block;font-size:19px;font-weight:800;color:var(--text-3);margin-bottom:6px}
+.swap .to .lbl{color:var(--c-ink)}
+
+/* ---------- 두 칸 비교 ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+.two>div{border-radius:var(--radius);padding:30px 34px}
+.two .yes{background:var(--c-bg)}
+.two .no{background:#f3efed}
+.two h4{font-size:30px;margin:0 0 14px;line-height:1.35}
+.two .yes h4{color:var(--c-ink)}
+.two ul{margin:0;padding-left:1.1em;font-size:26px;line-height:1.7;color:var(--text-2)}
+
+/* ---------- 목록 ---------- */
+.ticks{list-style:none;margin:24px 0 0;padding:0}
+.ticks li{position:relative;padding:14px 0 14px 54px;font-size:30px;line-height:1.5;border-bottom:1px solid var(--rule)}
+.ticks li::before{content:"";position:absolute;left:6px;top:24px;width:24px;height:24px;border-radius:7px;border:3px solid var(--c,var(--accent))}
+.ticks li b{color:var(--c-ink,var(--accent))}
+.ticks.q li::before{content:"?";border:0;top:14px;width:auto;height:auto;font-size:30px;font-weight:900;color:var(--c,var(--accent))}
+
+/* ---------- 안전 알림 ---------- */
+.safe{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;margin-top:30px;padding:24px 30px;border-radius:var(--radius);background:var(--safe-bg);border-left:8px solid var(--safe)}
+.safe .ic{display:inline-flex;width:46px;height:46px;border-radius:50%;background:var(--safe);color:#fff;align-items:center;justify-content:center;font-size:28px;font-weight:900}
+.safe p{font-size:27px;line-height:1.6;color:var(--text-1)}
+.safe b{color:var(--safe)}
+
+/* ---------- 메모 상자 ---------- */
+.note{margin-top:30px;padding:22px 30px;border-radius:var(--radius);background:var(--surface-2);font-size:26px;line-height:1.6;color:var(--text-2)}
+.note b{color:var(--text-1)}
+
+/* ---------- 기록 카드 ---------- */
+.diary{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.diary div{padding:30px 32px 34px;border-radius:var(--radius);background:#fff;border:2px dashed var(--c);font-size:30px;line-height:1.55;font-weight:700;min-height:190px}
+.diary small{display:block;font-size:20px;color:var(--text-3);font-weight:700;margin-bottom:10px}
+
+/* ---------- 마무리 질문 · 활동 ---------- */
+.closeq{margin-top:10px;padding:40px 46px;border-radius:var(--radius-lg);background:var(--c-bg);border:3px solid var(--c)}
+.closeq .big{color:var(--text-1)}
+.act{display:grid;gap:22px;margin-top:30px}
+.act.c2{grid-template-columns:1fr 1fr}
+.act.c3{grid-template-columns:repeat(3,1fr)}
+.act>div{padding:22px 28px 26px;border-radius:var(--radius);border:2px dashed var(--border-strong)}
+.act h5{font-size:24px;margin:0 0 6px;color:var(--c-ink)}
+.act p{font-size:22px;line-height:1.55;color:var(--text-3)}
+.act .line{height:2px;background:var(--rule);margin-top:44px}
+
+/* ---------- 계획 점검 ---------- */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px;counter-reset:f}
+.flow div{padding:26px 28px;border-radius:var(--radius);background:var(--surface);border:2px solid var(--rule);font-size:26px;line-height:1.55}
+.flow div::before{counter-increment:f;content:counter(f);display:flex;width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;align-items:center;justify-content:center;font-weight:900;font-size:22px;margin-bottom:12px}
+
+/* ---------- 근거 구분 표 ---------- */
+.tbl{width:100%;border-collapse:collapse;margin-top:24px;font-size:22px}
+.tbl th,.tbl td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.45}
+.tbl thead th{background:var(--surface-2);font-size:19px;color:var(--text-3);font-weight:800}
+.tbl td:first-child{font-weight:800;width:420px}
+.tbl td:nth-child(2){width:120px;color:var(--accent);font-weight:800}
+
+/* ---------- 참고 자료 ---------- */
+.refs{list-style:none;margin:24px 0 0;padding:0}
+.refs li{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:21px;line-height:1.55;color:var(--text-2)}
+.refs .n{font-weight:900;color:var(--accent)}
+.refs a{color:var(--accent);word-break:break-all}
+.vault{margin-top:20px;font-size:19px;line-height:1.6;color:var(--text-3)}
+.vault b{color:var(--text-2)}
