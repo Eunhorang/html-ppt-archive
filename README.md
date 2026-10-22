@@ -46,7 +46,7 @@ html-ppt-archive/
 <!-- DECKS:START -->
 | 폴더 | 제목 | 주제 | 장수 | 영상 | 등록일 |
 |---|---|---|---|---|---|
-| `decks/why-read-long-texts/` | AI가 요약해 주는데, 우리는 왜 긴 글을 읽어야 할까? | 독서, AI | 27 |  | 2026-10-22 |
+| `decks/why-read-long-texts/` | AI가 요약해 주는데, 우리는 왜 긴 글을 읽어야 할까? | 독서, AI | 27 | [YouTube](https://youtu.be/5GeWfmEPsp0) | 2026-10-22 |
 | `decks/is-this-right-question/` | 아이가 ‘이거 맞아요?’라고 물을 때, 바로 답하지 않는 이유 | 교육 | 26 |  | 2026-10-22 |
 | `decks/pause-at-one-sentence/` | 책을 많이 읽었는데, 왜 내 삶은 그대로일까? | 독서 | 22 | [YouTube](https://youtu.be/RdLauBjbM_I) | 2026-10-21 |
 | `decks/claude-html-slides-howto/` | 코딩 없이, 말로 만드는 HTML 발표자료 | AI | 25 |  | 2026-10-21 |
