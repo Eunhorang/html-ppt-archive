@@ -1,0 +1,227 @@
+/* AI가 요약해 주는데, 우리는 왜 긴 글을 읽어야 할까 — deck-specific styles (academic-paper 바탕, tokens only) */
+
+/* 한글 명조에는 이탤릭이 없어 기울임을 쓰지 않는다 */
+.h1,.h2,.kicker,h1.title,h2.title{font-style:normal}
+body{word-break:keep-all;overflow-wrap:break-word}
+.slide{padding:100px 140px 130px}
+p{margin:0}
+:root{--del:#8a1a1a;--ins:#1a3a7a;--hl:#f3e3a6;--rule:rgba(20,20,20,.18)}
+.h1{font-size:86px;line-height:1.28;font-weight:700;letter-spacing:-.02em}
+.h2{font-size:56px;line-height:1.32;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:var(--text-1)}
+.h2 em,.statement em{font-style:normal;color:var(--accent)}
+.kicker{display:flex;align-items:center;gap:14px;font-size:22px;letter-spacing:.04em;font-weight:700;color:var(--accent);margin-bottom:22px}
+.kicker .sec{font-family:'Playfair Display',Georgia,serif;font-size:24px;color:var(--text-3);font-weight:600}
+.lede{font-size:28px;line-height:1.75;color:var(--text-2);max-width:none}
+.body{font-size:28px;line-height:1.75;color:var(--text-2)}
+.body b{color:var(--text-1)}
+.mt{margin-top:34px}
+sup.cn{font-size:.55em;color:var(--accent);font-weight:700;margin-left:2px;font-family:'Playfair Display',Georgia,serif}
+.ex-tag{display:inline-block;font-size:18px;font-weight:700;letter-spacing:.04em;color:var(--text-3);border:1px solid var(--border-strong);padding:4px 12px;margin-bottom:14px}
+
+/* ---------- 각주 줄 ---------- */
+.fn{position:absolute;left:140px;right:140px;bottom:62px;padding-top:12px;border-top:1px solid var(--rule);font-size:17px;line-height:1.55;color:var(--text-3)}
+.fn a{color:var(--accent)}
+.fn b{color:var(--text-2);font-weight:700}
+
+/* ---------- cover ---------- */
+.cover{justify-content:center}
+.cover .rule{width:100%;height:2px;background:var(--text-1);margin:0 0 40px}
+.cover .rule.thin{height:1px;margin:44px 0 26px}
+.cover .h1{max-width:20ch}
+.cover .sub{margin-top:26px;font-size:34px;color:var(--text-2);line-height:1.55}
+.cover .meta{display:flex;justify-content:space-between;font-size:22px;color:var(--text-3)}
+.cover .abstract{margin-top:12px;font-size:22px;line-height:1.7;color:var(--text-2);max-width:1400px}
+.cover .abstract b{font-family:'Playfair Display',Georgia,serif;letter-spacing:.08em;font-size:18px;color:var(--text-1);margin-right:12px}
+
+/* ---------- big question ---------- */
+.bigq{font-size:60px;line-height:1.5;font-weight:700;letter-spacing:-.02em;max-width:26ch}
+.bigq em{font-style:normal;color:var(--accent)}
+.bigq .or{color:var(--text-3)}
+.thesis{margin-top:54px;padding:30px 0 0;border-top:2px solid var(--text-1);display:grid;grid-template-columns:200px 1fr;gap:30px}
+.thesis .lbl{font-family:'Playfair Display',Georgia,serif;font-size:22px;letter-spacing:.1em;color:var(--text-3);font-weight:600}
+.thesis p{font-size:30px;line-height:1.65}
+.thesis p b{color:var(--accent)}
+
+/* ---------- table of contents ---------- */
+.toc{list-style:none;margin:30px 0 0;padding:0;columns:2;column-gap:80px}
+.toc li{break-inside:avoid;display:grid;grid-template-columns:70px 1fr;gap:10px;padding:16px 0;border-bottom:1px solid var(--rule);font-size:28px;line-height:1.45}
+.toc .n{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--accent)}
+.toc small{display:block;font-size:20px;color:var(--text-3)}
+
+/* ---------- uses ---------- */
+.uses{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border-top:2px solid var(--text-1);border-bottom:1px solid var(--rule)}
+.uses>div{padding:28px 34px 30px 0}
+.uses>div+div{padding-left:34px;border-left:1px solid var(--rule)}
+.uses .n{font-family:'Playfair Display',Georgia,serif;font-size:44px;font-weight:700;color:var(--accent);line-height:1}
+.uses h4{font-size:32px;margin:14px 0 10px;line-height:1.35}
+.uses p{font-size:24px;line-height:1.6;color:var(--text-2)}
+.note{margin-top:36px;padding:24px 30px;background:var(--surface-2);font-size:27px;line-height:1.65;color:var(--text-2)}
+.note b{color:var(--text-1)}
+
+/* ---------- purpose table ---------- */
+.ptab{width:100%;border-collapse:collapse;margin-top:30px;font-size:26px}
+.ptab th,.ptab td{text-align:left;padding:20px 22px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
+.ptab thead th{border-top:2px solid var(--text-1);border-bottom:1px solid var(--text-1);font-size:21px;letter-spacing:.06em;color:var(--text-3);font-weight:700}
+.ptab tbody tr:last-child td{border-bottom:2px solid var(--text-1)}
+.ptab td:first-child{font-weight:700;width:300px}
+.ptab td b{color:var(--accent)}
+.ask{margin-top:40px;font-size:42px;font-weight:700;line-height:1.45}
+.ask em{font-style:normal;color:var(--accent)}
+
+/* ---------- diff (original vs summary) ---------- */
+.vq{margin:6px 0 30px;font-size:30px;color:var(--text-2)}
+.vq q{quotes:none;font-weight:700;color:var(--accent)}
+.diff{display:grid;grid-template-columns:150px 1fr;gap:0;border-top:2px solid var(--text-1)}
+.diff .k{padding:26px 0;font-size:22px;font-weight:700;color:var(--text-3);letter-spacing:.06em;border-bottom:1px solid var(--rule)}
+.diff .v{padding:22px 0;font-size:38px;line-height:1.55;font-weight:700;border-bottom:1px solid var(--rule)}
+.diff del{color:var(--del);text-decoration:none;background:color-mix(in srgb,var(--del) 12%,transparent);padding:0 6px}
+.diff ins{color:var(--ins);text-decoration:none;background:color-mix(in srgb,var(--ins) 12%,transparent);padding:0 6px}
+.changes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:30px}
+.changes div{font-size:24px;line-height:1.6;color:var(--text-2);padding-left:20px;border-left:4px solid var(--del)}
+.changes b{display:block;color:var(--text-1);font-size:26px;margin-bottom:4px}
+
+/* ---------- small words ---------- */
+.words{display:flex;gap:22px;margin-top:40px}
+.words span{font-size:46px;font-weight:700;padding:22px 34px;border:2px solid var(--text-1);background:var(--surface)}
+.words span:nth-child(odd){border-color:var(--accent);color:var(--accent)}
+.statement{font-size:44px;line-height:1.55;font-weight:700;max-width:30ch}
+
+/* ---------- conclusion vs path ---------- */
+.claim{display:inline-block;font-size:44px;font-weight:700;padding:20px 34px;border:2px solid var(--text-1);margin-top:10px}
+.qlist{list-style:none;margin:34px 0 0;padding:0}
+.qlist li{position:relative;padding:18px 0 18px 54px;border-bottom:1px solid var(--rule);font-size:30px;line-height:1.5}
+.qlist li::before{content:"?";position:absolute;left:0;top:16px;width:36px;height:36px;border:2px solid var(--accent);color:var(--accent);font-weight:700;font-size:22px;line-height:32px;text-align:center;font-family:'Playfair Display',Georgia,serif}
+
+/* ---------- three levels (Kintsch) ---------- */
+.levels{display:flex;flex-direction:column;gap:14px;margin-top:30px}
+.lv{display:grid;grid-template-columns:330px 1fr;gap:30px;align-items:center;padding:24px 30px;border:1px solid var(--rule);background:var(--surface)}
+.lv .nm{font-size:32px;font-weight:700}
+.lv .nm small{display:block;font-family:'Playfair Display',Georgia,serif;font-size:20px;color:var(--text-3);font-weight:400;font-style:italic}
+.lv p{font-size:25px;line-height:1.6;color:var(--text-2)}
+.lv.l3{border:2px solid var(--accent);background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+.lv.l3 .nm{color:var(--accent)}
+.interp{margin-top:30px;font-size:30px;line-height:1.6;font-weight:700}
+.interp small{display:block;font-size:20px;font-weight:700;color:var(--text-3);letter-spacing:.08em;margin-bottom:6px}
+
+/* ---------- study cards ---------- */
+.study{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px}
+.st{padding:30px 34px;border-top:3px solid var(--text-1);background:var(--surface)}
+.st .who{font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;color:var(--accent)}
+.st .who small{display:block;font-family:var(--font-serif);font-size:20px;color:var(--text-3);font-weight:400;margin-top:4px}
+.st h4{font-size:32px;line-height:1.4;margin:16px 0 12px}
+.st p{font-size:24px;line-height:1.6;color:var(--text-2)}
+.st .lim{margin-top:16px;padding-top:14px;border-top:1px dashed var(--rule);font-size:21px;color:var(--text-3);line-height:1.55}
+.st .lim b{color:var(--del)}
+.bars{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:170px 1fr;gap:16px;align-items:center;font-size:22px}
+.bar i{display:block;height:22px;background:var(--text-3)}
+.bar i.hi{background:var(--accent)}
+
+/* ---------- literature ---------- */
+.lit{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;margin-top:20px;align-items:start}
+.prose{padding:36px 40px;background:var(--surface);border:1px solid var(--rule);font-size:31px;line-height:1.95}
+.prose .s{display:inline}
+.sum{padding:30px 34px;background:var(--surface-2);font-size:30px;line-height:1.65;font-weight:700}
+.lost{margin-top:24px;font-size:24px;line-height:1.7;color:var(--text-2)}
+.lost b{color:var(--del)}
+
+/* ---------- quote (vault memo) ---------- */
+.memo-slide{justify-content:center}
+.memo{font-size:58px;line-height:1.6;font-weight:700;max-width:24ch;padding-left:44px;border-left:6px solid var(--accent)}
+.memo-src{margin-top:26px;padding-left:50px;font-size:22px;color:var(--text-3)}
+.memo-qs{margin-top:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px 40px}
+.memo-qs p{font-size:27px;line-height:1.55;color:var(--text-2);padding-left:20px;border-left:2px solid var(--rule)}
+
+/* ---------- accuracy vs sufficiency ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px}
+.two .c{padding:30px 34px;border-top:3px solid var(--text-1);background:var(--surface)}
+.two .c.blue{border-top-color:var(--accent)}
+.two h4{font-size:32px;margin:0 0 12px;line-height:1.4}
+.two p,.two li{font-size:25px;line-height:1.65;color:var(--text-2)}
+.two ul{margin:0;padding-left:26px}
+.big-line{margin-top:40px;font-size:44px;line-height:1.5;font-weight:700;text-align:center}
+.big-line em{font-style:normal;color:var(--accent)}
+
+/* ---------- reading process (PISA) ---------- */
+.proc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:30px;border-top:2px solid var(--text-1)}
+.proc>div{padding:24px 30px 24px 0}
+.proc>div+div{padding-left:30px;border-left:1px solid var(--rule)}
+.proc .n{font-family:'Playfair Display',Georgia,serif;font-size:22px;color:var(--text-3);letter-spacing:.06em}
+.proc h4{font-size:32px;margin:8px 0 8px}
+.proc p{font-size:23px;line-height:1.55;color:var(--text-2)}
+.proc>div:last-child h4{color:var(--accent)}
+.checks{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:12px 40px}
+.checks p{font-size:25px;line-height:1.5;padding:12px 0 12px 40px;position:relative;border-bottom:1px solid var(--rule)}
+.checks p::before{content:"□";position:absolute;left:0;top:10px;color:var(--accent);font-size:26px}
+
+/* ---------- prompt card ---------- */
+.prompt{margin-top:30px;padding:30px 36px;border:2px solid var(--text-1);background:var(--surface);font-family:'JetBrains Mono','IBM Plex Mono',monospace;font-size:26px;line-height:1.7;color:var(--text-1)}
+.prompt .pl{font-family:var(--font-serif);display:block;font-size:20px;font-weight:700;color:var(--text-3);margin-bottom:8px;letter-spacing:.06em}
+
+/* ---------- three reading levels ---------- */
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.md{padding:30px 32px;border:1px solid var(--rule);background:var(--surface)}
+.md .lvl{display:flex;gap:6px;margin-bottom:16px}
+.md .lvl i{width:42px;height:10px;background:var(--rule)}
+.md .lvl i.on{background:var(--accent)}
+.md h4{font-size:30px;margin:0 0 10px;line-height:1.4}
+.md .how{font-size:25px;font-weight:700;color:var(--accent);margin-bottom:12px}
+.md p{font-size:23px;line-height:1.6;color:var(--text-2)}
+
+/* ---------- weight question ---------- */
+.weight{justify-content:center}
+.weight .bigq{max-width:none}
+.weight .examples{margin-top:44px;display:flex;gap:20px;flex-wrap:wrap}
+.weight .examples span{font-size:28px;padding:14px 26px;border:1px solid var(--border-strong);background:var(--surface)}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px;border-top:2px solid var(--text-1)}
+.steps>div{padding:24px 26px 26px 0}
+.steps>div+div{padding-left:26px;border-left:1px solid var(--rule)}
+.steps .n{font-family:'Playfair Display',Georgia,serif;font-size:46px;font-weight:700;color:var(--accent);line-height:1}
+.steps h4{font-size:29px;margin:14px 0 10px;line-height:1.35}
+.steps p{font-size:22px;line-height:1.6;color:var(--text-2)}
+.steps q{quotes:none;display:block;margin-top:10px;font-size:22px;color:var(--text-1);font-weight:700}
+.caution{margin-top:28px;padding:22px 28px;background:var(--surface-2);font-size:23px;line-height:1.65;color:var(--text-2)}
+.caution b{color:var(--text-1)}
+
+/* ---------- children ---------- */
+.kid{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:24px;align-items:start}
+.kq{display:flex;flex-direction:column;gap:16px}
+.kq p{font-size:32px;font-weight:700;padding:20px 28px;background:var(--surface);border:1px solid var(--rule);border-left:6px solid var(--accent)}
+.kid ul{margin:0;padding-left:28px;font-size:26px;line-height:1.75;color:var(--text-2)}
+.kid ul b{color:var(--text-1)}
+
+/* ---------- delegate vs keep ---------- */
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:30px;border-top:2px solid var(--text-1);border-bottom:2px solid var(--text-1)}
+.ledger>div{padding:28px 36px 30px 0}
+.ledger>div+div{padding-left:36px;border-left:1px solid var(--rule)}
+.ledger h4{font-size:30px;margin:0 0 14px}
+.ledger ul{margin:0;padding-left:26px;font-size:26px;line-height:1.8;color:var(--text-2)}
+.ledger>div+div h4{color:var(--accent)}
+
+/* ---------- closing ---------- */
+.closing{justify-content:center}
+.closing .statement{font-size:54px;max-width:28ch;line-height:1.55}
+.closing .rule{width:160px;height:3px;background:var(--accent);margin-bottom:44px}
+.closing .tail{margin-top:40px;font-size:28px;line-height:1.7;color:var(--text-2);max-width:60ch}
+
+/* ---------- not claimed ---------- */
+.notclaim{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 50px}
+.notclaim li{padding:18px 0 18px 46px;border-bottom:1px solid var(--rule);font-size:25px;line-height:1.55;position:relative;color:var(--text-2)}
+.notclaim li::before{content:"✕";position:absolute;left:4px;top:16px;color:var(--del);font-weight:700}
+
+/* ---------- references ---------- */
+.refs{list-style:none;margin:20px 0 0;padding:0}
+.refs li{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.refs .n{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;color:var(--accent)}
+.refs p{font-size:18.5px;line-height:1.5;color:var(--text-2)}
+.refs p b{color:var(--text-1)}
+.refs a{word-break:break-all}
+.vault{margin-top:16px;padding:16px 22px;background:var(--surface-2);font-size:18px;line-height:1.6;color:var(--text-2)}
+.vault b{color:var(--text-1)}
+
+/* ---------- fixed 1920×1080 stage, scaled to any window ---------- */
+html,body{height:100%;overflow:hidden}
+.deck{position:absolute;left:50%;top:50%;width:1920px;height:1080px;
+  transform:translate(-50%,-50%) scale(var(--stage-scale,1));transform-origin:center}
