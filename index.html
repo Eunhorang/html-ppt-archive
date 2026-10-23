@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>정주샘의 슬라이드 모음</title>
-<meta name="description" content="정주샘이 만든 철학·문학·AI 발표 슬라이드 모음. 브라우저에서 바로 열고 키보드로 넘기며 발표할 수 있습니다.">
+<meta name="description" content="메모에서 꺼낸 배움과 생각, 정주샘의 슬라이드 모음. 읽고 배우고 가르치며 쌓아 온 메모로 교육·인문학·독서 이야기를 발표자료로 나눕니다.">
 <link rel="canonical" href="https://eunhorang.github.io/html-ppt-archive/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="정주샘의 슬라이드 모음">
 <meta property="og:title" content="정주샘의 슬라이드 모음">
-<meta property="og:description" content="정주샘이 만든 철학·문학·AI 발표 슬라이드 모음. 브라우저에서 바로 열고 키보드로 넘기며 발표할 수 있습니다.">
+<meta property="og:description" content="메모에서 꺼낸 배움과 생각, 정주샘의 슬라이드 모음. 읽고 배우고 가르치며 쌓아 온 메모로 교육·인문학·독서 이야기를 발표자료로 나눕니다.">
 <meta property="og:url" content="https://eunhorang.github.io/html-ppt-archive/">
 <meta property="og:image" content="https://eunhorang.github.io/html-ppt-archive/assets/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -33,12 +33,13 @@
 <main>
   <section class="hero">
     <div class="wrap hero-grid">
-      <div>
+      <div class="hero-main">
         <h1 class="sheet">
           <span class="row"><span class="cell mark"><span class="sr">정</span><svg viewBox="0 0 360 360" aria-hidden="true"><use href="assets/brand/brand.svg#mark"/></svg></span><span class="cell"><b style="--i:0">주</b></span><span class="cell"><b style="--i:1">샘</b></span><span class="cell"><b style="--i:2">의</b></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="sr"> </span></span>
           <span class="row"><span class="cell"><b style="--i:3">슬</b></span><span class="cell"><b style="--i:4">라</b></span><span class="cell"><b style="--i:5">이</b></span><span class="cell"><b style="--i:6">드</b></span><span class="cell"> </span><span class="cell"><b style="--i:7">모</b></span><span class="cell"><b style="--i:8">음</b></span></span>
         </h1>
-        <p class="lede rise" style="--i:0">철학과 문학, AI를 다룬 발표자료를 모아 둔 곳입니다. 브라우저에서 바로 열리고, 키보드로 넘기며 발표할 수 있습니다.</p>
+        <p class="memo-note"><span class="sr">메모에서 꺼낸 배움과 생각</span><svg viewBox="-6 -24 848 196" aria-hidden="true"><use href="assets/brand/brand.svg#memo"/></svg></p>
+        <p class="lede rise" style="--i:0">읽고, 배우고, 가르치며 쌓아 온 메모를 꺼내 교육·인문학·독서 이야기를 슬라이드로 나눕니다.</p>
         <div class="actions rise" style="--i:1">
           <a class="btn" href="list.html">전체 목록 보기 <span class="arr" aria-hidden="true">→</span></a>
           <a class="plain" id="latest" href="list.html">최신 발표 열기 <span class="arr" aria-hidden="true">→</span></a>
@@ -60,6 +61,19 @@
     <div class="mosaic" id="mosaic"></div>
   </section>
 
+  <section class="wrap memos" aria-labelledby="memos-title">
+    <div class="memos-head">
+      <h2 id="memos-title" data-reveal>세 갈래로 모은 메모</h2>
+      <p data-reveal>책에서 얻은 배움이 교실과 일상으로 이어지고, 작은 메모 하나가 새로운 생각의 시작이 되기를 바랍니다.</p>
+    </div>
+    <!-- 갈래마다 맞는 주제의 최신 발표자료 세 편을 아래 스크립트가 채웁니다. -->
+    <ul class="memo-list">
+      <li class="memo" data-reveal data-topics="교육" data-more="list.html?topic=%EA%B5%90%EC%9C%A1"><h3>교육 <span></span></h3><p>학생들과 함께 배우고 성장하기 위한 교육 자료와 생각</p><ul class="memo-decks"></ul></li>
+      <li class="memo" data-reveal data-topics="철학,심리,문학" data-more="list.html"><h3>인문학 <span></span></h3><p>인간과 삶을 이해하고, 스스로 질문하는 힘을 기르는 이야기</p><ul class="memo-decks"></ul></li>
+      <li class="memo" data-reveal data-topics="독서" data-more="list.html?topic=%EB%8F%85%EC%84%9C"><h3>독서 <span></span></h3><p>책의 핵심 내용과 인상 깊은 문장, 읽고 난 뒤의 생각 정리</p><ul class="memo-decks"></ul></li>
+    </ul>
+  </section>
+
   <section class="wrap videos" id="videos" aria-labelledby="videos-title">
     <div class="videos-head">
       <h2 id="videos-title" data-reveal>영상으로 미리 보기</h2>
@@ -77,10 +91,10 @@
 <footer class="wrap site-foot">
   <div class="foot-brand">
     <svg viewBox="0 0 470 480" role="img" aria-label="정주샘 로고: 원고지 칸에 손글씨로 쓴 정, 받침 자리의 빨간 하트, 주샘이라고 쓴 쪽지"><use href="assets/brand/brand.svg#emblem"/></svg>
-    <p>원고지에 한 글자씩 쓰듯, 발표자료를 한 장씩 만듭니다.</p>
+    <p>함께 읽고, 생각하고, 배워요.</p>
   </div>
   <div class="foot-cols">
-    <div><h3>소개</h3><p>html-ppt로 만든 발표 슬라이드를 한곳에 모았습니다. 새 발표자료가 생기면 목록 맨 위에 더해집니다.</p></div>
+    <div><h3>소개</h3><p>옵시디언에 차곡차곡 모은 메모를 꺼내 만든 발표자료를 한곳에 모았습니다. 새 발표자료가 생기면 목록 맨 위에 더해집니다.</p></div>
     <div><h3>바로가기</h3><ul><li><a href="./">처음으로</a></li><li><a href="list.html">전체 목록</a></li><li><a href="how.html">사용법</a></li><li><a href="list.html" id="foot-latest">최신 발표</a></li></ul></div>
     <div><h3>GitHub</h3><ul><li><a href="https://github.com/Eunhorang/html-ppt-archive">저장소 보기</a></li><li><a href="https://github.com/Eunhorang">GitHub 프로필</a></li></ul></div>
     <div><h3>만든 도구</h3><ul><li>슬라이드 엔진 html-ppt</li><li>MIT 라이선스</li></ul></div>
@@ -146,6 +160,27 @@
   tally.style.setProperty('--span-sm', tiles.length % 2 ? 1 : 2);
   tiles.push(tally);
   tiles.forEach((el, i) => { el.style.setProperty('--t', i); mosaic.append(el); });
+
+  // 세 갈래 메모: 갈래에 속한 주제의 발표자료 편수와 최신 세 편
+  document.querySelectorAll('.memo').forEach((m) => {
+    const topics = m.dataset.topics.split(',');
+    const hits = data.filter((d) => d.topics.some((t) => topics.includes(t)));
+    m.querySelector('h3 span').textContent = hits.length ? `${hits.length}편` : '';
+    const list = m.querySelector('.memo-decks');
+    hits.slice(0, 3).forEach((d) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = href(d); a.textContent = d.title;
+      li.append(a); list.append(li);
+    });
+    if (hits.length > 3) {
+      const li = document.createElement('li'); li.className = 'more-li';
+      li.innerHTML = '<a class="more" href=""></a>';
+      li.querySelector('a').href = m.dataset.more;
+      li.querySelector('a').innerHTML = `${hits.length}편 모두 보기 <span class="arr" aria-hidden="true">→</span>`;
+      list.append(li);
+    }
+  });
 
   // 영상 목록에서 고르면 위 재생기의 영상이 바뀝니다.
   const vid = document.getElementById('vid');
