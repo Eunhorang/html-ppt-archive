@@ -160,7 +160,7 @@ html,body{height:100%;overflow:hidden}
 .goalbar{top:24px;left:50%;transform:translateX(-50%);z-index:6;display:flex;gap:12px;align-items:center;background:rgba(255,250,240,.94);border:4px solid var(--line-c);border-radius:999px;padding:8px 14px 8px 18px}
 .goalbar i{width:38px;height:38px;border-radius:50%;border:3px solid var(--line-c);background:#fff;font-style:normal;font-family:var(--font-fun);font-size:22px;color:var(--text-3);display:flex;align-items:center;justify-content:center}
 .goalbar i.done{background:var(--sun);color:var(--ink)}
-.goalbar i.now{background:var(--c);color:#fff;transform:scale(1.2)}
+.goalbar i.now{background:var(--c-ink);color:#fff;transform:scale(1.2)}
 .goalbar .g{display:flex;margin-left:4px}
 .goalbar .g svg{width:44px;height:44px;color:var(--ink)}
 
