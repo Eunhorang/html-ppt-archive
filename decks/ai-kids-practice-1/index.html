@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI를 잘 쓰는 어린이는 무엇을 연습할까? ① 도구를 움직이는 기초</title>
+<meta name="description" content="초등 중·고학년이 함께 보는 AI 시대 기초 연습 1편. 서영샘이 진행하고 정주샘이 잠깐씩 함께하며, AI는 정답 도장이 아니라는 것, 내 말을 정확히 쓰고 고치기, 저장하고 다시 찾기, 컴퓨터·인터넷·검색·AI의 말 구분하기, 읽고 쓰고 수를 살피는 기본 공부를 익힌다. 퀴즈 3개와 출처 장.">
+<link rel="stylesheet" href="../../assets/fonts.css">
+<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" id="theme-link" href="../../assets/themes/rainbow-gradient.css">
+<link rel="stylesheet" href="../../assets/animations/animations.css">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body data-themes="rainbow-gradient" data-theme-base="../../assets/themes/">
+<!-- 원본: videos/샘샘교실/ai-kids-1-basics/deck-src/index.src.html → build.py가 그림과 발표자 노트(tools/script.py의 대사)를 채워 이 파일을 만든다
+     배치: 장면마다 주인공 한 명은 화면 안에 서 있고(class="who … free", 자리는 style), 다른 캐릭터는 data-cameo로 잠깐 들어왔다 나간다.
+     data-at1…은 영상에서 그 캐릭터가 걸어갈 가로 자리. 캐릭터 그림: -stand 팔 내림 · -point 검지 · 이름만 = 손 흔들기(처음·끝 인사만) -->
+<div class="deck">
+
+  <!-- 1. 표지 -->
+  <section class="slide bg-living dim t2" data-title="표지">
+    <div class="cover-t left">
+      <span class="meta">샘샘교실 · AI를 잘 쓰는 어린이 ①</span>
+      <h1><span class="block"><span class="em">AI</span>를 잘 쓰는 어린이는</span><span class="block">무엇을 연습할까?</span></h1>
+      <p class="sub">도구를 움직이는 <b>기초</b></p>
+      <div class="chips rv1"><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="m3 17 2 2 4-4" />
+  <path d="m3 7 2 2 4-4" /></g></svg>기초 연습 네 가지</span></div>
+      <div class="chips rv2"><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8h.01" />
+  <path d="M12 12h.01" />
+  <path d="M14 8h.01" />
+  <path d="M16 12h.01" />
+  <path d="M18 8h.01" />
+  <path d="M6 8h.01" />
+  <path d="M7 16h10" />
+  <path d="M8 12h.01" />
+  <rect width="20" height="16" x="2" y="4" rx="2" /></g></svg>도구를 움직이는 기초</span><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18" />
+  <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" />
+  <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
+  <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" />
+  <path d="M7 21h10" /></g></svg>답을 판단하는 힘</span></div>
+      <p class="tip rv3"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></g></svg> AI를 써 본 적 없어도, <b>가입하지 않아도</b> 할 수 있어요</p>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung.png" alt="서영샘" style="right:150px;bottom:30px;height:640px">
+    <img class="who jj free" data-cameo src="img/char/jeongju-stand.png" alt="정주샘" style="right:560px;bottom:30px;height:430px">
+    <div class="say r" style="top:170px;right:110px;--d:.8s"><b>서영샘</b>AI가 글도 써 주는데, 나는 무엇을 연습해야 할까요?</div>
+    <aside class="notes">
+서영샘: AI가 글도 써 주는데, 나는 무엇을 연습해야 할까요?
+서영샘: 끝까지 보면, AI 시대에도 꼭 필요한 기초 연습 네 가지를 가져가요.
+정주샘: 말로 물어볼 수도 있는데, 한글 타자는 왜 연습해요?
+서영샘: 좋은 질문이에요. 오늘의 대답을 먼저 짧게 말하면 이거예요. 도구를 움직이는 기초와, 도구의 답을 판단하는 힘을 함께 기르기!
+서영샘: AI를 써 본 적이 없어도 괜찮아요. 가입하지 않고 할 수 있는 연습도 많답니다.
+    </aside>
+  </section>
+
+  <!-- 2. AI는 정답 도장이 아니에요 -->
+  <section class="slide bg-day t2" data-title="AI는 정답 도장이 아니에요">
+    <div class="card at-r dense">
+      <span class="tag"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+  <path d="M20 2v4" />
+  <path d="M22 4h-4" />
+  <circle cx="4" cy="20" r="2" /></g></svg>AI는 답을 만드는 도구, 정답 도장은 아니에요</span>
+      <div class="ex rv1"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8" />
+  <rect width="16" height="12" x="4" y="8" rx="2" />
+  <path d="M2 14h2" />
+  <path d="M20 14h2" />
+  <path d="M15 13v2" />
+  <path d="M9 13v2" /></g></svg><span><b>생성형 AI</b> · 질문에 답하고, 글과 그림 같은 내용을 만들어 줘요</span></div>
+      <p class="lead rv2">아주 많은 글에서 익힌 <b>패턴</b>으로 답을 만들어요<br>→ 그럴듯한 문장이라고 <b class="hl">내용까지 다 맞는 건 아니에요</b></p>
+      <div class="warn rv3"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+  <path d="M12 9v4" />
+  <path d="M12 17h.01" /></g></svg><span>날짜를 틀리거나, <b>세상에 없는 책·출처</b>를 있는 것처럼 말할 수도 있어요</span></div>
+      <div class="chips rv4"><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></g></svg>마음을 느끼는 친구는 아니에요</span></div>
+      <div class="promise rv5"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18" />
+  <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" />
+  <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
+  <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" />
+  <path d="M7 21h10" /></g></svg><span>도움은 받되, <em>판단은 전부 맡기지 않기</em></span></div>
+      <p class="src-line rv6">참고: UNESCO 학생 AI 역량 프레임워크(사람 중심 · 윤리 · 비판적 판단) · OpenAI 도움말</p>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-point.png" alt="서영샘" style="left:330px;bottom:40px;height:540px">
+    <img class="who jj free" data-cameo src="img/char/jeongju-stand.png" alt="정주샘" style="left:70px;bottom:40px;height:420px">
+    <aside class="notes">
+서영샘: 오늘 이야기할 AI는 질문에 답하거나, 글과 그림을 만들어 주는 생성형 AI예요.
+서영샘: 이런 AI는 아주 많은 글에서 익힌 패턴을 바탕으로 답을 만들어요. 그런데 그럴듯한 문장이라고 해서, 내용까지 다 맞는 건 아니에요.
+정주샘: 말을 아주 자신 있게 해도 틀릴 수 있다는 거네요?
+서영샘: 맞아요. 날짜를 틀리거나, 세상에 없는 책이나 출처를 있는 것처럼 말할 수도 있어요.
+서영샘: 그리고 대화가 자연스러워도, AI를 사람처럼 마음을 느끼는 친구라고 생각하지는 말아요.
+서영샘: 그래서 오늘의 연습은 모두 이걸 위한 거예요. 도움은 받되, 판단을 전부 맡기지는 않기!
+서영샘: 유네스코도 학생에게 필요한 AI 역량으로, 사람 중심의 생각과 비판적인 판단을 중요하게 다뤄요.
+    </aside>
+  </section>
+
+  <!-- 3. 연습 1 · 내 말을 정확히 쓰기 -->
+  <section class="slide bg-classroom t1" data-title="연습 1 · 내 말을 정확히 쓰기">
+    <div class="card at-l dense">
+      <span class="tag"><span class="no">1</span>연습 1 · 타자 속도보다 내 말을 정확히</span>
+      <div class="chips rv1"><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+  <path d="m15 5 4 4" /></g></svg>직접 쓰기</span><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21" />
+  <path d="m5.082 11.09 8.828 8.828" /></g></svg>고치기</span><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /></g></svg>정리하기</span></div>
+      <div class="mission rv2"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="12" r="6" />
+  <circle cx="12" cy="12" r="2" /></g></svg><span>목표는 속도 경쟁이 아니라, <b>내 생각을 읽을 수 있는 문장</b>으로 남기기</span></div>
+      <div class="editor rv3">
+        <div class="bar"><i></i><i></i><i></i>좋아하는 놀이 · 연습 문서</div>
+        <p class="txt">나는 <span class="bad">숨바꾹질을</span><span class="good">숨바꼭질을</span> 좋아해요<span class="good">.</span> 친구를 찾을 때 <span class="bad">두근거리기때문</span><span class="good">두근거리기 때문</span>이에요<span class="good">.</span><span class="caret"></span></p>
+      </div>
+      <div class="chips rv4"><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m20 15-5.5 5.5L12 18" />
+  <path d="m4 16 6-12 5.115 10.23" />
+  <path d="M6 12h8" /></g></svg>띄어쓰기 · 마침표</span><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8h.01" />
+  <path d="M12 12h.01" />
+  <path d="M14 8h.01" />
+  <path d="M16 12h.01" />
+  <path d="M18 8h.01" />
+  <path d="M6 8h.01" />
+  <path d="M7 16h10" />
+  <path d="M8 12h.01" />
+  <rect width="20" height="16" x="2" y="4" rx="2" /></g></svg>영어 글자 · 숫자 · ? ! 기호도 조금씩</span></div>
+      <p class="tip rv5"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19v3" />
+  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+  <rect x="9" y="2" width="6" height="13" rx="3" /></g></svg> 음성 입력·보조 도구도 좋아요 → <b>나온 문장을 확인하고 다듬기</b></p>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-stand.png" alt="서영샘" style="right:300px;bottom:40px;height:540px" data-at1="right:400px">
+    <img class="who jj free" data-cameo src="img/char/jeongju-stand.png" alt="정주샘" style="right:50px;bottom:40px;height:400px">
+    <aside class="notes">
+서영샘: 첫 번째 연습은 한글 타자예요. 음성으로도 입력할 수 있는데, 왜 키보드를 연습할까요?
+서영샘: 문장을 직접 쓰고, 필요한 곳을 고치고, 자료를 정리할 수 있기 때문이에요.
+서영샘: 하지만 몇 타 이상 쳐야 한다는 기준은 필요 없어요. 목표는 속도 경쟁이 아니라, 내 생각을 읽을 수 있는 문장으로 남기는 거예요.
+서영샘: 이렇게 해 봐요. 내가 좋아하는 놀이와 그 이유를 짧게 써요. 띄어쓰기를 하고, 틀린 글자는 지우고, 끝에는 마침표!
+서영샘: 그다음 처음부터 읽으면서 뜻이 이상한 곳을 고쳐요. 쓰기와, 읽고 고치기가 한 묶음이에요.
+서영샘: 한글 자리가 익숙해지면 영어 글자, 숫자, 물음표 같은 기호도 조금씩 찾아봐요.
+정주샘: 손으로 입력하기 어려운 친구는요?
+서영샘: 음성 입력이나 나에게 맞는 보조 도구를 써도 좋아요. 중요한 건 입력 방식이 아니라, 나온 문장을 확인하고 내 뜻에 맞게 다듬는 거예요.
+    </aside>
+  </section>
+
+  <!-- 4. 연습 2 · 저장하고 다시 찾기 -->
+  <section class="slide bg-living t3" data-title="연습 2 · 저장하고 다시 찾기">
+    <div class="card at-r dense">
+      <span class="tag"><span class="no">2</span>연습 2 · 내 파일을 저장하고 다시 찾기</span>
+      <div class="grid2 files rv1">
+        <div class="box"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" /></g></svg><h3>파일</h3><p>문서·사진 같은 자료 하나 · <i>공책 한 권</i></p></div>
+        <div class="box"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /></g></svg><h3>폴더</h3><p>파일을 묶어 정리하는 곳 · <i>공책을 담는 서랍</i></p></div>
+      </div>
+      <p class="src-line rv2">공책과 서랍은 이해를 돕는 비유예요 · 완전히 같지는 않아요</p>
+      <div class="flow rv3">
+        <div class="st"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
+  <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7" />
+  <path d="M7 3v4a1 1 0 0 0 1 1h7" /></g></svg><b>이름 붙여 저장</b><span>'좋아하는 놀이'</span></div><span class="to"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></g></svg></span>
+        <div class="st"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" />
+  <path d="m6 6 12 12" /></g></svg><b>닫기</b><span>프로그램 끄기</span></div><span class="to"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></g></svg></span>
+        <div class="st"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /></g></svg><b>다시 찾아 열기</b><span>고친 내용 남았나?</span></div>
+      </div>
+      <div class="chips rv4"><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12" />
+  <path d="m17 8-5-5-5 5" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /></g></svg>업로드 · 내 자료 → 인터넷</span><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" /></g></svg>다운로드 · 인터넷 자료 → 내 기기</span></div>
+      <div class="promise rv5"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="m3 17 2 2 4-4" />
+  <path d="m3 7 2 2 4-4" /></g></svg><span>무엇을? <em>어디에?</em> 누구에게 보이지?</span></div>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-stand.png" alt="서영샘" style="left:330px;bottom:40px;height:520px" data-at1="left:140px">
+    <img class="who jj free" data-cameo src="img/char/jeongju-stand.png" alt="정주샘" style="left:60px;bottom:40px;height:410px">
+    <aside class="notes">
+정주샘: 열심히 글을 썼는데, 어디에 저장했는지 모르겠어요!
+서영샘: 그래서 파일과 폴더를 알아 두면 좋아요. 파일은 문서나 사진 같은 자료 하나, 폴더는 그런 파일을 묶어 정리하는 곳이에요.
+서영샘: 공책 한 권과, 공책을 담는 서랍을 떠올리면 쉬워요. 완전히 같지는 않지만, 이해를 돕는 비유예요.
+서영샘: 아까 쓴 글에 좋아하는 놀이처럼 알아보기 쉬운 이름을 붙여 저장해 봐요. 프로그램을 닫았다가 다시 찾아 열고, 고친 내용이 남아 있는지 확인해요.
+서영샘: 업로드와 다운로드도 구분해요. 업로드는 내 자료를 인터넷으로 올리는 것, 다운로드는 인터넷의 자료를 내 기기로 가져오는 거예요.
+서영샘: 올리기는 버튼 하나지만, 내 자료가 기기 밖으로 나갈 수 있어요. 그래서 아무 사진이나 AI에 올리면 안 돼요.
+서영샘: 이 세 가지를 확인하는 습관을 길러요. 무엇을 저장했지? 어디에 있지? 누구에게 보이지?
+    </aside>
+  </section>
+
+  <!-- 5. 퀴즈 1 -->
+  <section class="slide bg-night t1" data-title="퀴즈 1">
+    <div class="card at-q dense">
+      <div class="timer manual"><span>10</span></div>
+      <span class="tag"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" /></g></svg>잠깐 퀴즈 · 다시 찾기 쉬운 이름은?</span>
+      <div class="quiz">
+        <div class="scene-box"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <circle cx="11.5" cy="14.5" r="2.5" />
+  <path d="M13.3 16.3 15 18" /></g></svg><span>어제 쓴 글을 오늘 다시 찾으려고 해요.<b>어떤 파일 이름이 가장 찾기 쉬울까요?</b></span></div>
+        <div class="opts col">
+          <span class="opt"><b>①</b>새 문서(1)</span>
+          <span class="opt"><b>②</b>ㅁㄴㅇㄹ</span>
+          <span class="opt" data-ok><b>③</b>좋아하는 놀이</span>
+        </div>
+      </div>
+      <div class="after-wrap"><p class="lead after"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /></g></svg> 이름만 봐도 <b>무엇이 들어 있는지</b> 알 수 있게!</p></div>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-stand.png" alt="서영샘" style="left:90px;bottom:40px;height:520px">
+    <aside class="notes">
+서영샘: 잠깐 퀴즈! 어제 쓴 글을 오늘 다시 찾으려고 해요. 어떤 파일 이름이 가장 찾기 쉬울까요? 첫 번째, 새 문서. 두 번째, 아무렇게나 친 글자. 세 번째, 좋아하는 놀이.
+서영샘: 하나, 둘, 셋! 세 번째예요. 이름만 봐도 무엇이 들어 있는지 알 수 있으니까요.
+    </aside>
+  </section>
+
+  <!-- 6. 연습 3 · 컴퓨터 말 구분하기 -->
+  <section class="slide bg-day t2" data-title="연습 3 · 컴퓨터, 인터넷, 검색을 구분하기">
+    <div class="card at-l dense">
+      <span class="tag"><span class="no">3</span>연습 3 · 컴퓨터, 인터넷, 검색을 구분하기</span>
+      <div class="grid5 sm words">
+        <div class="box rv1"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2" />
+  <line x1="8" x2="16" y1="21" y2="21" />
+  <line x1="12" x2="12" y1="17" y2="21" /></g></svg><h3>하드웨어</h3><p>키보드·화면 같은 실제 기기</p></div>
+        <div class="box rv1"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" /></g></svg><h3>소프트웨어</h3><p>기기에서 실행하는 프로그램</p></div>
+        <div class="box rv2"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+  <path d="M2 12h20" /></g></svg><h3>인터넷</h3><p>기기와 네트워크가 연결된 큰 통신망</p></div>
+        <div class="box rv2"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /></g></svg><h3>브라우저</h3><p>웹사이트를 열어 보는 프로그램</p></div>
+        <div class="box rv2"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" /></g></svg><h3>검색 서비스</h3><p>필요한 정보를 찾아 주는 서비스</p></div>
+      </div>
+      <div class="row2 rv3">
+        <div class="ex"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></g></svg><span><b>원래 자료</b>검색으로 찾은 기관·책의 글</span></div>
+        <div class="ex"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8" />
+  <rect width="16" height="12" x="4" y="8" rx="2" />
+  <path d="M2 14h2" />
+  <path d="M20 14h2" />
+  <path d="M15 13v2" />
+  <path d="M9 13v2" /></g></svg><span><b>AI가 정리한 말</b>그 자료에 정말 그 말이 있나?</span></div>
+      </div>
+      <div class="chips rv4"><span class="chip say-it">"이 창은 무엇을 하는 곳이지?"</span><span class="chip say-it">"원래 자료일까, AI가 정리한 말일까?"</span></div>
+      <p class="tip rv5"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4.1 12 6" />
+  <path d="m5.1 8-2.9-.8" />
+  <path d="m6 12-1.9 2" />
+  <path d="M7.2 2.2 8 5.1" />
+  <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" /></g></svg> 막히면 마구 누르기 전에 · <b>어떤 프로그램에서 무엇을 하다가?</b></p>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-stand.png" alt="서영샘" style="right:110px;bottom:40px;height:520px" data-at1="right:330px">
+    <img class="who jj free" data-cameo src="img/char/jeongju-stand.png" alt="정주샘" style="right:470px;bottom:40px;height:400px">
+    <aside class="notes">
+서영샘: 세 번째 연습은 컴퓨터를 쓰며 만나는 말을 구분하기예요. 키보드나 화면처럼 실제 기기는 하드웨어, 기기에서 실행하는 프로그램은 소프트웨어라고 해요.
+서영샘: 인터넷은 여러 기기와 네트워크가 연결된 큰 통신망이에요. 웹사이트를 열어 보는 프로그램은 브라우저, 웹에서 필요한 정보를 찾아 주는 서비스는 검색 서비스고요.
+정주샘: 그러면 인터넷, 브라우저, 검색창은 전부 같은 말이 아니군요!
+서영샘: 맞아요. 그리고 검색으로 찾은 원래 자료와, AI가 만들어 준 설명도 구분해야 해요. AI가 자료를 인용해도, 그 자료에 정말 그 말이 있는지 확인이 필요해요.
+서영샘: 연습할 때는 이렇게 물어봐요. 이 창은 무엇을 하는 곳이지? 지금 보는 건 원래 자료일까, AI가 정리한 말일까?
+서영샘: 문제가 생기면 마구 누르기보다, 어떤 프로그램에서 무엇을 하다가 막혔는지 말해 보세요. 그것도 좋은 연습이에요.
+    </aside>
+  </section>
+
+  <!-- 7. 퀴즈 2 -->
+  <section class="slide bg-night t2" data-title="퀴즈 2">
+    <div class="card at-q dense">
+      <div class="timer manual"><span>10</span></div>
+      <span class="tag"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" /></g></svg>잠깐 퀴즈 · 이 프로그램의 이름은?</span>
+      <div class="quiz">
+        <div class="scene-box"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /></g></svg><span>컴퓨터나 태블릿에서<b>웹사이트를 열어 보는 프로그램은?</b></span></div>
+        <div class="opts col">
+          <span class="opt"><b>①</b>하드웨어</span>
+          <span class="opt" data-ok><b>②</b>브라우저</span>
+          <span class="opt"><b>③</b>폴더</span>
+        </div>
+      </div>
+      <div class="after-wrap"><p class="lead after"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" /></g></svg> 브라우저에서 <b>검색 서비스를 열어</b> 정보를 찾아요</p></div>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-stand.png" alt="서영샘" style="right:70px;bottom:40px;height:520px">
+    <img class="who jj free" data-cameo src="img/char/jeongju-point.png" alt="정주샘" style="left:110px;bottom:40px;height:480px">
+    <aside class="notes">
+서영샘: 두 번째 퀴즈! 웹사이트를 열어 보는 프로그램은 무엇일까요? 첫 번째, 하드웨어. 두 번째, 브라우저. 세 번째, 폴더.
+정주샘: 하나, 둘, 셋! 브라우저예요. 그 안에서 검색 서비스를 열어 정보를 찾는 거지요.
+    </aside>
+  </section>
+
+  <!-- 8. 연습 4 · 읽고 쓰고 수를 살피기 -->
+  <section class="slide bg-classroom t3" data-title="연습 4 · 읽고, 쓰고, 수를 살피기">
+    <div class="card at-r dense">
+      <span class="tag"><span class="no">4</span>연습 4 · 읽고, 쓰고, 수를 살피는 기본 공부</span>
+      <div class="grid3 rv1">
+        <div class="box"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></g></svg><h3>읽기</h3><p>AI의 설명을 이해하려면</p></div>
+        <div class="box"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+  <path d="m15 5 4 4" /></g></svg><h3>쓰기 · 말하기</h3><p>내 생각과 다른 곳을 말하려면</p></div>
+        <div class="box rv2"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" />
+  <line x1="8" x2="16" y1="6" y2="6" />
+  <line x1="16" x2="16" y1="14" y2="18" />
+  <path d="M16 10h.01" />
+  <path d="M12 10h.01" />
+  <path d="M8 10h.01" />
+  <path d="M12 14h.01" />
+  <path d="M8 14h.01" />
+  <path d="M12 18h.01" />
+  <path d="M8 18h.01" /></g></svg><h3>수</h3><p>단위와 계산 과정 살피기</p></div>
+      </div>
+      <div class="ex rv3"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" />
+  <path d="m9 9.5 2 2 4-4" /></g></svg><span><b>책을 덮고 내 말로</b>"이 글은 무엇을 말했지?"</span></div>
+      <div class="chips rv4"><span class="chip say-it">"무엇을 구하는 문제지?"</span><span class="chip say-it">"단위가 뭐지?"</span><span class="chip say-it">"이 정도 크기의 답이 나올 만할까?"</span><span class="chip"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11-6 6v3h9l3-3" />
+  <path d="m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4" /></g></svg>모르는 곳 표시하기</span></div>
+      <div class="mission rv5"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18V5" />
+  <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4" />
+  <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5" />
+  <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77" />
+  <path d="M18 18a4 4 0 0 0 2-7.464" />
+  <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517" />
+  <path d="M6 18a4 4 0 0 1-2-7.464" />
+  <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77" /></g></svg><span>외우기가 아니라, <b>다른 사람이 준 답을 읽고 따져 볼 바탕</b> 만들기</span></div>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-stand.png" alt="서영샘" style="left:330px;bottom:40px;height:520px" data-at1="left:140px">
+    <img class="who jj free" data-cameo src="img/char/jeongju-stand.png" alt="정주샘" style="left:60px;bottom:40px;height:410px">
+    <aside class="notes">
+정주샘: 그런데 AI 시대에는 국어나 수학 공부가 덜 중요해질까요?
+서영샘: 오히려 우리가 무엇을 확인해야 하는지 생각해 봐요. AI가 쓴 설명을 이해하려면 문장을 읽어야 하고, 내 생각과 다른 곳을 말하려면 글이나 말로 표현해야 해요.
+서영샘: 숫자가 나오면 단위와 계산 과정도 살펴봐야 하지요. 그래서 네 번째 연습은, 읽고 쓰고 수를 살피는 기본 공부예요.
+서영샘: 짧은 글을 읽고 책을 덮은 뒤, 이 글은 무엇을 말했지? 하고 내 말로 설명해 봐요.
+서영샘: 수학에서는 답만 보지 말고 물어봐요. 무엇을 구하는 문제지? 단위가 뭐지? 이 정도 크기의 답이 나올 만할까?
+서영샘: 잘 모르겠는 부분을 표시하는 것도 좋아요. 모른다는 걸 알아차려야 도움을 요청할 수 있으니까요.
+서영샘: 모든 걸 외우라는 뜻이 아니에요. 다른 사람이 준 답을 읽고 따져 볼 바탕을 만들자는 거예요.
+    </aside>
+  </section>
+
+  <!-- 9. 퀴즈 3 -->
+  <section class="slide bg-night t4" data-title="퀴즈 3">
+    <div class="card at-q dense">
+      <div class="timer manual"><span>10</span></div>
+      <span class="tag"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" /></g></svg>잠깐 퀴즈 · 자신 있는 답이라면?</span>
+      <div class="quiz">
+        <div class="scene-box"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8" />
+  <rect width="16" height="12" x="4" y="8" rx="2" />
+  <path d="M2 14h2" />
+  <path d="M20 14h2" />
+  <path d="M15 13v2" />
+  <path d="M9 13v2" /></g></svg><span>AI가 답을 아주 자신 있게 말했어요.<b>그 답은 어떻게 할까요?</b></span></div>
+        <div class="opts col">
+          <span class="opt"><b>①</b>자신 있게 말했으니 그대로 믿는다</span>
+          <span class="opt" data-ok><b>②</b>틀릴 수도 있으니 원래 자료와 비교한다</span>
+          <span class="opt"><b>③</b>다시는 AI를 쓰지 않는다</span>
+        </div>
+      </div>
+      <div class="after-wrap"><p class="lead after"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18" />
+  <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" />
+  <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
+  <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" />
+  <path d="M7 21h10" /></g></svg> 자신 있는 말투와 <b>맞는 내용은 달라요</b></p></div>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-stand.png" alt="서영샘" style="left:90px;bottom:40px;height:520px">
+    <aside class="notes">
+서영샘: 마지막 퀴즈! AI가 답을 아주 자신 있게 말했어요. 그 답은 어떻게 할까요? 첫 번째, 자신 있게 말했으니 그대로 믿는다. 두 번째, 틀릴 수도 있으니 원래 자료와 비교한다. 세 번째, 다시는 AI를 쓰지 않는다.
+서영샘: 하나, 둘, 셋! 두 번째예요. 자신 있는 말투와 맞는 내용은 다른 거예요. AI를 무조건 피할 필요도 없고요.
+    </aside>
+  </section>
+
+  <!-- 10. 오늘의 기초 연습 네 가지 -->
+  <section class="slide bg-dawn t2" data-title="오늘의 기초 연습 네 가지">
+    <div class="card at-c">
+      <span class="tag"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="m3 17 2 2 4-4" />
+  <path d="m3 7 2 2 4-4" /></g></svg>오늘의 기초 연습</span>
+      <div class="grid2 four">
+        <div class="box rv1"><span class="num">연습 1</span><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8h.01" />
+  <path d="M12 12h.01" />
+  <path d="M14 8h.01" />
+  <path d="M16 12h.01" />
+  <path d="M18 8h.01" />
+  <path d="M6 8h.01" />
+  <path d="M7 16h10" />
+  <path d="M8 12h.01" />
+  <rect width="20" height="16" x="2" y="4" rx="2" /></g></svg><h3>내 말 쓰고<br>읽고 고치기</h3></div>
+        <div class="box rv2" style="--c:#d9731f;--c-ink:#9c4a0c"><span class="num">연습 2</span><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2" /></g></svg><h3>저장하고<br>다시 찾기</h3></div>
+        <div class="box rv3" style="--c:#7b4fc9;--c-ink:#5530a0"><span class="num">연습 3</span><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+  <path d="M2 12h20" /></g></svg><h3>기기·자료·AI의 말<br>구분하기</h3></div>
+        <div class="box rv4" style="--c:#d0517a;--c-ink:#a3284f"><span class="num">연습 4</span><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></g></svg><h3>읽고 쓰고<br>수 살피기</h3></div>
+      </div>
+      <p class="tip rv5"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></g></svg> 다음 편 · <b>묻고, 확인하고, 내 것으로</b></p>
+    </div>
+    <img class="who sy free" src="img/char/seoyoung-stand-happy.png" alt="서영샘" style="left:110px;bottom:40px;height:540px">
+    <img class="who jj free" data-cameo src="img/char/jeongju-stand-happy.png" alt="정주샘" style="right:110px;bottom:40px;height:500px">
+    <div class="say r" style="top:230px;left:60px;right:auto;--d:1.4s"><b>서영샘</b>도움은 받되, 생각은 내 것으로!</div>
+    <aside class="notes">
+서영샘: 오늘은 AI를 잘 쓰기 위한 바탕을 연습했어요. 하나씩 다시 볼까요?
+정주샘: 첫 번째, 내 말을 정확히 쓰고, 읽고 고치기!
+서영샘: 두 번째, 저장하고 다시 찾기. 무엇을, 어디에, 누구에게!
+정주샘: 세 번째, 기기와 프로그램, 원래 자료와 AI의 설명을 구분하기!
+서영샘: 네 번째, 읽고, 쓰고, 수를 살피는 기본 공부!
+서영샘: 다음 편에서는 AI에게 필요한 도움을 말하고, 정말 맞는지 확인하고, 내 것으로 만드는 연습을 해 볼게요.
+서영샘: 도움은 받되, 생각은 내 것으로!
+    </aside>
+  </section>
+
+  <!-- 11. 출처 · 선생님과 부모님께 -->
+  <section class="slide bg-night tn" data-title="출처 · 선생님과 부모님께">
+    <div class="card wide">
+      <span class="tag"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></g></svg>선생님·부모님께 · 출처(확인일 2026-10-24)</span>
+      <ul class="src">
+        <li><b>AI 역량</b><span>사람 중심의 생각·윤리·기술 이해·비판적 판단 — <a href="https://www.unesco.org/en/articles/ai-competency-framework-students">UNESCO: AI competency framework for students</a></span></li>
+        <li><b>디지털 기초</b><span>키보드·마우스, 글 편집, 저장과 다시 열기, 자료 정리 — <a href="https://static.teachcomputing.org/Digital-Literacy-Within-the-Computing-Curriculum.pdf">NCCE: Digital Literacy Within the Computing Curriculum</a>(영국 자료)</span></li>
+        <li><b>역량 기준</b><span>기술 이해, 정보의 정확성·출처 평가, 데이터 — <a href="https://iste.org/standards/students">ISTE Standards for Students</a></span></li>
+        <li><b>AI의 한계</b><span>그럴듯한 오류, 없는 출처, 원래 자료 확인 — <a href="https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth">OpenAI: Does ChatGPT tell the truth?</a></span></li>
+        <li><b>보호자 안내</b><span>개인정보, 함께 탐색하기, 사람과의 관계 — <a href="https://www.unicef.org/parenting/digital-parenting/how-approach-ai-children">UNICEF Parenting: Parenting in the AI age</a></span></li>
+      </ul>
+      <p class="note">타자 속도 기준이나 연습 시간, 특정 서비스 가입을 권하지 않아요. 문서·질문·퀴즈는 설명을 위해 만든 예시이고, 실제 AI 화면이나 실제 학생 자료가 아니에요. AI 활동은 서비스의 이용 나이·보호자 동의 조건과 학교의 허용 범위를 확인한 뒤에 해 주세요.</p>
+    </div>
+    <aside class="notes">
+선생님·부모님께 드리는 출처 장이에요. 영상에서는 쓰지 않아요.
+    </aside>
+  </section>
+
+</div>
+<script>
+  // 1920×1080 무대를 창 크기에 맞춰 비율 그대로 축소·확대
+  function fitStage(){document.documentElement.style.setProperty('--stage-scale',Math.min(innerWidth/1920,innerHeight/1080))}
+  addEventListener('resize',fitStage);fitStage();
+
+  function again(el,c){el.classList.remove(c);void el.offsetWidth;el.classList.add(c)}
+  document.addEventListener('click',function(e){
+    var t=e.target, el;
+    if((el=t.closest('.opt'))){            // 고르기: 맞으면 노란색 + 숨은 칸 열림, 아니면 흔들기
+      if(el.hasAttribute('data-ok')){el.classList.add('ok');el.closest('.slide').classList.add('solved')}
+      else again(el,'no');
+      return;
+    }
+    if((el=t.closest('.timer.manual'))){ again(el,'run'); return }   // 10초 생각 타이머: 누르면 시작
+    if((el=t.closest('.editor'))){ el.classList.toggle('fixed'); return }   // 문서 창: 누르면 고친 글
+  });
+
+  // 검수 캡처용: ?solved 가 있으면 모든 문제를 푼 화면으로
+  if(/[?&]solved/.test(location.search)){
+    document.querySelectorAll('.slide').forEach(function(s){s.classList.add('solved')});
+    document.querySelectorAll('.opt[data-ok]').forEach(function(o){o.classList.add('ok')});
+    document.querySelectorAll('.editor').forEach(function(o){o.classList.add('fixed')});
+  }
+</script>
+<script src="../../assets/runtime.js"></script>
+</body>
+</html>
