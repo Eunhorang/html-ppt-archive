@@ -46,6 +46,7 @@ html-ppt-archive/
 <!-- DECKS:START -->
 | 폴더 | 제목 | 주제 | 장수 | 영상 | 등록일 |
 |---|---|---|---|---|---|
+| `decks/football-dream/` | 꿈을 향해 뛰는 너에게 | 교육 | 10 |  | 2026-10-24 |
 | `decks/flip-thinking-riddles/` | 생각을 뒤집는 수수께끼 10 | 교육 | 28 |  | 2026-10-24 |
 | `decks/school-mindset-elementary/` | 학교에서 키우는 다섯 가지 마음 씨앗 | 교육 | 28 |  | 2026-10-24 |
 | `decks/school-mindset-attitudes/` | 학교를 다니는 동안, 내 안에 무엇을 길러야 할까 | 교육 | 30 | [YouTube](https://youtu.be/C8FV3VkqsHY) | 2026-10-23 |
