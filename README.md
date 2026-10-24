@@ -46,6 +46,7 @@ html-ppt-archive/
 <!-- DECKS:START -->
 | 폴더 | 제목 | 주제 | 장수 | 영상 | 등록일 |
 |---|---|---|---|---|---|
+| `decks/roblox-play-safe-1/` | 로블록스, 재미있으면 다 괜찮을까? ① 재미·시간·돈 | 교육 | 10 |  | 2026-10-24 |
 | `decks/football-dream/` | 꿈을 향해 뛰는 너에게 | 교육 | 10 |  | 2026-10-24 |
 | `decks/flip-thinking-riddles/` | 생각을 뒤집는 수수께끼 10 | 교육 | 28 |  | 2026-10-24 |
 | `decks/school-mindset-elementary/` | 학교에서 키우는 다섯 가지 마음 씨앗 | 교육 | 28 |  | 2026-10-24 |
