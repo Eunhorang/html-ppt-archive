@@ -5,39 +5,40 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>I도 E도 아니라면, 나는 뭘까?</title>
 <meta name="description" content="MBTI가 묻지 않는 질문 하나로 내 성격 지도를 다시 그리기. E와 I가 실제로 재는 것(에너지의 방향, 가운데에 몰린 눈금), 라미 카민스키의 ‘이향인’, 선 하나가 네 칸 평면이 되는 지도, 사소한 기준으로도 생기는 ‘우리’(최소 집단 실험), 소속의 두 갈래와 검증 수준, 교실과 집에서 건넬 질문까지.">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="../../assets/fonts.css">
 <link rel="stylesheet" href="../../assets/base.css">
-<link rel="stylesheet" id="theme-link" href="../../assets/themes/bauhaus.css">
+<link rel="stylesheet" id="theme-link" href="../../assets/themes/minimal-white.css">
 <link rel="stylesheet" href="../../assets/animations/animations.css">
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
-<body data-themes="bauhaus,magazine-bold,minimal-white" data-theme-base="../../assets/themes/">
+<body data-themes="minimal-white" data-theme-base="../../assets/themes/">
 <div class="deck">
 
   <!-- 1. 표지 -->
   <section class="slide cover" data-title="표지">
     <div data-anim="fade-up">
       <p class="kicker"><span class="no">?</span>정주샘 · 책에서 꺼낸 질문</p>
-      <h1 class="h1">I도 E도 아니라면,<br>나는 뭘까?</h1>
+      <h1 class="h1"><span class="mb i">I</span>도 <span class="mb e">E</span>도 아니라면,<br>나는 뭘까?</h1>
       <p class="sub">MBTI가 묻지 않는 질문 하나로,<br>내 성격 지도를 다시 그려 보기</p>
       <p class="meta"><b>■</b> 라미 카민스키 『이향인』에서 출발하는 이야기</p>
     </div>
-    <svg class="mini-plane" viewBox="0 0 640 640" data-anim="fade-left" aria-hidden="true">
-      <rect x="20" y="20" width="600" height="600" fill="#fbf8f1" stroke="#111" stroke-width="6"/>
-      <rect x="23" y="23" width="297" height="297" fill="#1d4eaf" opacity=".18"/>
-      <rect x="320" y="23" width="297" height="297" fill="#e03c27" opacity=".18"/>
-      <rect x="23" y="320" width="297" height="297" fill="#f4c430" opacity=".32"/>
-      <rect x="320" y="320" width="297" height="297" fill="#111"/>
-      <line x1="320" y1="20" x2="320" y2="620" stroke="#111" stroke-width="6"/>
-      <line x1="0" y1="320" x2="640" y2="320" stroke="#e03c27" stroke-width="10" stroke-dasharray="26 16"/>
-      <circle cx="120" cy="320" r="14" fill="#111"/><circle cx="250" cy="320" r="14" fill="#111"/><circle cx="380" cy="320" r="14" fill="#111"/><circle cx="520" cy="320" r="14" fill="#111"/>
-      <text x="44" y="296" font-size="44" font-weight="900" fill="#111">I</text>
-      <text x="580" y="296" font-size="44" font-weight="900" fill="#111">E</text>
-      <circle cx="480" cy="480" r="38" fill="#e03c27" stroke="#fff" stroke-width="8"/>
+    <div class="cover-art" data-anim="fade-left">
+    <svg class="mini-plane" viewBox="0 0 640 640" aria-hidden="true">
+      <rect x="20" y="20" width="600" height="600" fill="#FBF7EE" stroke="#202E2C" stroke-width="6"/>
+      <rect x="23" y="23" width="297" height="297" fill="#4F6A5C" opacity=".18"/>
+      <rect x="320" y="23" width="297" height="297" fill="#D36C4E" opacity=".18"/>
+      <rect x="23" y="320" width="297" height="297" fill="#E2C48A" opacity=".32"/>
+      <rect x="320" y="320" width="297" height="297" fill="#202E2C"/>
+      <line x1="320" y1="20" x2="320" y2="620" stroke="#202E2C" stroke-width="6"/>
+      <line x1="0" y1="320" x2="640" y2="320" stroke="#D36C4E" stroke-width="10" stroke-dasharray="26 16"/>
+      <circle cx="120" cy="320" r="14" fill="#202E2C"/><circle cx="250" cy="320" r="14" fill="#202E2C"/><circle cx="380" cy="320" r="14" fill="#202E2C"/><circle cx="520" cy="320" r="14" fill="#202E2C"/>
+      <text x="44" y="296" font-size="44" font-weight="900" fill="#202E2C">I</text>
+      <text x="580" y="296" font-size="44" font-weight="900" fill="#202E2C">E</text>
+      <circle cx="480" cy="480" r="38" fill="#D36C4E" stroke="#fff" stroke-width="8"/>
       <text x="480" y="410" fill="#fff" text-anchor="middle" font-size="36" font-weight="900">나는?</text>
     </svg>
-    <i class="geo t" style="left:130px;bottom:90px"></i>
+    <img class="obj" src="img/vane.webp" alt="">
+    </div>
     <aside class="notes"><p>사람은 좋은데, 무리는 어색합니다.</p><p>MBTI는 분명 <strong>E</strong>라는데 말이죠.</p><p>오늘은 <strong>MBTI가 묻지 않는 질문 하나</strong>로, 내 성격 지도를 다시 그려 보겠습니다.</p></aside>
   </section>
 
@@ -46,17 +47,9 @@
     <p class="kicker" data-anim="fade-up"><span class="no">!</span>이 강의에서 얻을 것</p>
     <h2 class="h2" data-anim="fade-up">오늘 함께 살펴볼 것, 세 가지</h2>
     <div class="grid3" data-anim="stagger-list">
-      <div class="card red"><span class="n">1</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 7-3 5h4l-3 5" />
-  <path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935" />
-  <path d="M22 14v-4" />
-  <path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936" /></g></svg></span><h3>E와 I가 실제로<br>재고 있는 것</h3><p>사교성이 아니라 에너지의 방향, 그리고 두 무더기가 아닌 한 줄의 눈금</p></div>
-      <div class="card yel"><span class="n">2</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18" />
-  <path d="M3 12h18" />
-  <rect x="3" y="3" width="18" height="18" rx="2" /></g></svg></span><h3>질문 하나를 더 세운<br>네 칸의 지도</h3><p>“얼마나 ‘우리’가 되고 싶나요?” 내 점을 직접 찍어 봅니다</p></div>
-      <div class="card blue"><span class="n">3</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
-  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-  <circle cx="9" cy="7" r="4" /></g></svg></span><h3>소속을 두 갈래로<br>나누어 보는 법</h3><p>몇 사람과 이어지는 소속, 무리에 녹아드는 소속</p></div>
+      <div class="card red"><span class="n">1</span><img class="obj" src="img/brain.webp" alt=""><h3>E와 I가 실제로<br>재고 있는 것</h3><p>사교성이 아니라 에너지의 방향, 그리고 두 무더기가 아닌 한 줄의 눈금</p></div>
+      <div class="card yel"><span class="n">2</span><img class="obj" src="img/map.webp" alt=""><h3>질문 하나를 더 세운<br>네 칸의 지도</h3><p>“얼마나 ‘우리’가 되고 싶나요?” 내 점을 직접 찍어 봅니다</p></div>
+      <div class="card blue"><span class="n">3</span><img class="obj" src="img/chat.webp" alt=""><h3>소속을 두 갈래로<br>나누어 보는 법</h3><p>몇 사람과 이어지는 소속, 무리에 녹아드는 소속</p></div>
     </div>
     <aside class="notes"><p>함께 살펴볼 것은 세 가지입니다.</p><p>첫째, <strong>E와 I가 실제로 무엇을 재고 있는지.</strong></p><p>둘째, 그 옆에 질문 하나를 더 세우면 보이는 <strong>네 칸의 지도.</strong></p><p>셋째, <strong>소속을 두 갈래로</strong> 나누어 보는 법입니다.</p></aside>
   </section>
@@ -69,17 +62,17 @@
       <div class="crowd" data-anim="fade-up">
         <svg viewBox="0 0 760 560" aria-hidden="true">
           <defs><g id="pp"><circle cx="0" cy="0" r="34"/><path d="M-50 140 V92 a50 50 0 0 1 100 0 V140 Z"/></g></defs>
-          <rect x="20" y="340" width="480" height="40" fill="#111"/>
-          <use href="#pp" x="90" y="230" fill="#e03c27"/><use href="#pp" x="200" y="200" fill="#1d4eaf"/><use href="#pp" x="310" y="220" fill="#f4c430"/>
-          <use href="#pp" x="420" y="235" fill="#111"/><use href="#pp" x="145" y="290" fill="#1d4eaf" opacity=".85"/><use href="#pp" x="360" y="295" fill="#e03c27" opacity=".85"/>
-          <g stroke="#111" stroke-width="6" fill="#fff" stroke-linejoin="round">
+          <rect x="20" y="340" width="480" height="40" fill="#202E2C"/>
+          <use href="#pp" x="90" y="230" fill="#D36C4E"/><use href="#pp" x="200" y="200" fill="#4F6A5C"/><use href="#pp" x="310" y="220" fill="#E2C48A"/>
+          <use href="#pp" x="420" y="235" fill="#202E2C"/><use href="#pp" x="145" y="290" fill="#4F6A5C" opacity=".85"/><use href="#pp" x="360" y="295" fill="#D36C4E" opacity=".85"/>
+          <g stroke="#202E2C" stroke-width="6" fill="#fff" stroke-linejoin="round">
             <path d="M150 120 l28 0 l-4 36 l-20 0 Z"/><path d="M226 104 l28 0 l-4 36 l-20 0 Z"/><path d="M300 112 l28 0 l-4 36 l-20 0 Z"/><path d="M372 124 l28 0 l-4 36 l-20 0 Z"/>
           </g>
-          <rect x="170" y="20" width="200" height="70" fill="#f4c430" stroke="#111" stroke-width="6"/>
-          <text x="270" y="68" text-anchor="middle" font-size="38" font-weight="900" fill="#111">건배!</text>
-          <line x1="510" y1="290" x2="620" y2="290" stroke="#111" stroke-width="5" stroke-dasharray="14 12"/>
-          <text x="565" y="270" text-anchor="middle" font-size="26" font-weight="900" fill="#e03c27">한 발짝</text>
-          <g fill="#fbf8f1" stroke="#111" stroke-width="6"><use href="#pp" x="680" y="250"/></g>
+          <rect x="170" y="20" width="200" height="70" fill="#E2C48A" stroke="#202E2C" stroke-width="6"/>
+          <text x="270" y="68" text-anchor="middle" font-size="38" font-weight="900" fill="#202E2C">건배!</text>
+          <line x1="510" y1="290" x2="620" y2="290" stroke="#202E2C" stroke-width="5" stroke-dasharray="14 12"/>
+          <text x="565" y="270" text-anchor="middle" font-size="26" font-weight="900" fill="#D36C4E">한 발짝</text>
+          <g fill="#FBF7EE" stroke="#202E2C" stroke-width="6"><use href="#pp" x="680" y="250"/></g>
         </svg>
       </div>
       <div class="chatbox" data-anim="fade-left">
@@ -97,23 +90,11 @@
   <!-- 4. 나는 대체 뭘까 -->
   <section class="slide" data-title="나는 대체 뭘까">
     <p class="kicker" data-anim="fade-up"><span class="no">1</span>사람은 좋은데, 무리는 어색하다</p>
-    <h2 class="h2" data-anim="fade-up">E라기에도, I라기에도 어딘가 맞지 않는다</h2>
+    <h2 class="h2" data-anim="fade-up"><span class="mb e">E</span>라기에도, <span class="mb i">I</span>라기에도 어딘가 맞지 않는다</h2>
     <div class="ask">
-      <div class="card red" data-anim="fade-up"><span class="x">✕</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 2 22l10.7-3.79" />
-  <path d="M4 3h.01" />
-  <path d="M22 8h.01" />
-  <path d="M15 2h.01" />
-  <path d="M22 20h.01" />
-  <path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10" />
-  <path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17" />
-  <path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7" />
-  <path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z" /></g></svg></span><h3>E라면?</h3><p>이런 자리가 즐거워야 할 것 같은데, 즐겁지 않다</p></div>
+      <div class="card red" data-anim="fade-up"><span class="x">✕</span><img class="obj" src="img/megaphone.webp" alt=""><h3>E라면?</h3><p>이런 자리가 즐거워야 할 것 같은데, 즐겁지 않다</p></div>
       <div class="qmark" data-anim="zoom-pop">?</div>
-      <div class="card blue" data-anim="fade-up"><span class="x">✕</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10v4" />
-  <path d="M14 10v4" />
-  <path d="M22 14v-4" />
-  <path d="M6 10v4" />
-  <rect x="2" y="6" width="16" height="12" rx="2" /></g></svg></span><h3>I라면?</h3><p>사람이 싫지도, 만나서 피곤하지도 않다</p></div>
+      <div class="card blue" data-anim="fade-up"><span class="x">✕</span><img class="obj" src="img/armchair.webp" alt=""><h3>I라면?</h3><p>사람이 싫지도, 만나서 피곤하지도 않다</p></div>
     </div>
     <div class="teaser" data-anim="fade-up"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16" />
   <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></g></svg></span><span>이런 사람을 설명하려고 한 정신과 의사가 만든 <b>새 낱말</b> · 잠시 뒤에</span></div>
@@ -126,21 +107,11 @@
     <h2 class="h2" data-anim="fade-up">사교성이 아니라, <em>에너지의 방향</em><span class="cite">1·2</span></h2>
     <p class="myth" data-anim="fade-up"><s>E = 사교적인 사람, I = 수줍은 사람</s><span class="arrow">→</span><b>어디에서 힘을 얻는가</b></p>
     <div class="energy" data-anim="stagger-list">
-      <div class="card red"><span class="lt">E</span><div><h3>바깥에서 충전</h3><p>바깥의 사람과 일에서 힘을 얻는다</p><div class="flow"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
-  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-  <circle cx="9" cy="7" r="4" /></g></svg></span><span class="ar">→</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 7-3 5h4l-3 5" />
+      <div class="card red"><span class="lt">E</span><div><h3>바깥에서 충전</h3><p>바깥의 사람과 일에서 힘을 얻는다</p><div class="flow"><img class="obj" src="img/chat.webp" alt=""><span class="ar">→</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 7-3 5h4l-3 5" />
   <path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935" />
   <path d="M22 14v-4" />
   <path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936" /></g></svg></span></div></div></div>
-      <div class="card blue"><span class="lt">I</span><div><h3>안쪽에서 충전</h3><p>안쪽의 생각과 기억에서 힘을 얻는다</p><div class="flow"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18V5" />
-  <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4" />
-  <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5" />
-  <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77" />
-  <path d="M18 18a4 4 0 0 0 2-7.464" />
-  <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517" />
-  <path d="M6 18a4 4 0 0 1-2-7.464" />
-  <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77" /></g></svg></span><span class="ar">→</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 7-3 5h4l-3 5" />
+      <div class="card blue"><span class="lt">I</span><div><h3>안쪽에서 충전</h3><p>안쪽의 생각과 기억에서 힘을 얻는다</p><div class="flow"><img class="obj" src="img/brain.webp" alt=""><span class="ar">→</span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 7-3 5h4l-3 5" />
   <path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935" />
   <path d="M22 14v-4" />
   <path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936" /></g></svg></span></div></div></div>
@@ -156,18 +127,18 @@
       <div class="card chart guess" data-anim="fade-up">
         <h4>사람이 정말 두 종류라면 (예상)</h4>
         <svg viewBox="0 0 600 330" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 320 C50 320 80 50 135 50 C190 50 210 300 300 300 C390 300 410 50 465 50 C520 50 550 320 600 320 Z" fill="#f4c430" stroke="#111" stroke-width="5"/>
-          <line x1="300" y1="0" x2="300" y2="330" stroke="#111" stroke-width="3" stroke-dasharray="10 10"/>
-          <line x1="0" y1="322" x2="600" y2="322" stroke="#111" stroke-width="6"/>
+          <path d="M0 320 C50 320 80 50 135 50 C190 50 210 300 300 300 C390 300 410 50 465 50 C520 50 550 320 600 320 Z" fill="#E2C48A" stroke="#202E2C" stroke-width="5"/>
+          <line x1="300" y1="0" x2="300" y2="330" stroke="#202E2C" stroke-width="3" stroke-dasharray="10 10"/>
+          <line x1="0" y1="322" x2="600" y2="322" stroke="#202E2C" stroke-width="6"/>
         </svg>
         <div class="ax"><span>I 쪽 끝</span><span>가운데</span><span>E 쪽 끝</span></div>
       </div>
       <div class="card chart real" data-anim="fade-left">
         <h4>실제로 모아 보면</h4>
         <svg viewBox="0 0 600 330" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 320 C140 320 200 40 300 40 C400 40 460 320 600 320 Z" fill="#1d4eaf" stroke="#111" stroke-width="5"/>
+          <path d="M0 320 C140 320 200 40 300 40 C400 40 460 320 600 320 Z" fill="#4F6A5C" stroke="#202E2C" stroke-width="5"/>
           <line x1="300" y1="0" x2="300" y2="330" stroke="#fff" stroke-width="3" stroke-dasharray="10 10"/>
-          <line x1="0" y1="322" x2="600" y2="322" stroke="#111" stroke-width="6"/>
+          <line x1="0" y1="322" x2="600" y2="322" stroke="#202E2C" stroke-width="6"/>
         </svg>
         <div class="ax"><span>I 쪽 끝</span><span>대부분 가운데 어딘가</span><span>E 쪽 끝</span></div>
       </div>
@@ -182,20 +153,20 @@
     <h2 class="h2" data-anim="fade-up">두 개의 방이 아니라, <em>한 줄 위의 눈금</em></h2>
     <div class="retest">
       <div class="card flip" data-anim="fade-up">
-        <p class="when">5주 뒤에 다시 검사하면</p>
+        <img class="obj" src="img/exam.webp" alt=""><p class="when">5주 뒤에 다시 검사하면</p>
         <div class="types"><span class="a">ENFP</span><span class="arr">→</span><span class="b"><em>I</em>NFP</span></div>
         <p class="stat">많게는 <em>절반</em>이 다른 유형으로 나온 연구들<span class="cite">3</span></p>
       </div>
       <div class="ruler" data-anim="fade-left">
         <svg viewBox="0 0 900 240" aria-hidden="true">
-          <line x1="20" y1="120" x2="880" y2="120" stroke="#111" stroke-width="10"/>
-          <g stroke="#111" stroke-width="5"><line x1="20" y1="90" x2="20" y2="150"/><line x1="235" y1="100" x2="235" y2="140"/><line x1="665" y1="100" x2="665" y2="140"/><line x1="880" y1="90" x2="880" y2="150"/></g>
-          <line x1="450" y1="60" x2="450" y2="180" stroke="#e03c27" stroke-width="6" stroke-dasharray="10 8"/>
-          <g fill="#1d4eaf"><circle cx="300" cy="120" r="15"/><circle cx="360" cy="120" r="15"/><circle cx="540" cy="120" r="15"/><circle cx="600" cy="120" r="15"/><circle cx="190" cy="120" r="15"/><circle cx="700" cy="120" r="15"/></g>
-          <g fill="#e03c27"><circle cx="420" cy="120" r="17"/><circle cx="478" cy="120" r="17"/></g>
-          <text x="20" y="210" font-size="32" font-weight="900" fill="#111">I</text>
-          <text x="880" y="210" text-anchor="end" font-size="32" font-weight="900" fill="#111">E</text>
-          <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="800" fill="#e03c27">기준점 · 가까울수록 잘 바뀜</text>
+          <line x1="20" y1="120" x2="880" y2="120" stroke="#202E2C" stroke-width="10"/>
+          <g stroke="#202E2C" stroke-width="5"><line x1="20" y1="90" x2="20" y2="150"/><line x1="235" y1="100" x2="235" y2="140"/><line x1="665" y1="100" x2="665" y2="140"/><line x1="880" y1="90" x2="880" y2="150"/></g>
+          <line x1="450" y1="60" x2="450" y2="180" stroke="#D36C4E" stroke-width="6" stroke-dasharray="10 8"/>
+          <g fill="#4F6A5C"><circle cx="300" cy="120" r="15"/><circle cx="360" cy="120" r="15"/><circle cx="540" cy="120" r="15"/><circle cx="600" cy="120" r="15"/><circle cx="190" cy="120" r="15"/><circle cx="700" cy="120" r="15"/></g>
+          <g fill="#D36C4E"><circle cx="420" cy="120" r="17"/><circle cx="478" cy="120" r="17"/></g>
+          <text x="20" y="210" font-size="32" font-weight="900" fill="#202E2C">I</text>
+          <text x="880" y="210" text-anchor="end" font-size="32" font-weight="900" fill="#202E2C">E</text>
+          <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="800" fill="#D36C4E">기준점 · 가까울수록 잘 바뀜</text>
         </svg>
         <p class="lede">점수가 가운데에 가까운 사람일수록 글자가 잘 바뀝니다.<span class="cite">3·4</span></p>
       </div>
@@ -218,6 +189,7 @@
   <circle cx="10" cy="8" r="5" />
   <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" /></g></svg></span><span>무리에 녹아들어 ‘우리’가 되고 싶은가</span><span class="st none">묻는 칸 없음</span></div>
     </div>
+    <div class="float-obj" style="right:120px;top:400px;width:330px" data-anim="fade-left"><img class="obj" src="img/clipboard.webp" alt=""></div>
     <aside class="notes"><p>그런데 처음의 그 사람은, 눈금 문제가 아니었습니다.</p><p>사람을 만나도 지치지 않고, 오히려 즐겁습니다.</p><p>어색한 건 사람이 아니라, <strong>‘무리’</strong>였죠.</p><p>그리고 E와 I의 눈금 어디에도, <strong>‘무리’를 묻는 칸은 없습니다.</strong></p></aside>
   </section>
 
@@ -233,26 +205,9 @@
   <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
   <path d="M8 15a6 6 0 0 0 12 0v-3" />
   <circle cx="20" cy="10" r="2" /></g></svg></span><div><b>라미 카민스키</b><br>뉴욕의 정신과 의사 · 어릴 때 인기가 많았지만 늘 바깥사람 같았다고 말함 · 진료실에서 닮은 고민을 계속 만남<span class="cite">5</span></div></div>
-        <span class="bookchip"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16" />
-  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></g></svg></span>한국어판 『이향인』 · 21세기북스<span class="cite">6</span></span>
+        <span class="bookchip"><img class="obj" src="img/book.webp" alt="">한국어판 『이향인』 · 21세기북스<span class="cite">6</span></span>
       </div>
-      <div class="box arrows" data-anim="fade-left">
-        <span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span>
-        <span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic odd"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span>
-        <span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" /></g></svg></span>
-      </div>
+      <div class="box vane-card" data-anim="fade-left"><img class="obj" src="img/vane.webp" alt=""><p>모두가 같은 쪽을 볼 때,<br><em>다른 쪽</em>을 가리키는 풍향계</p></div>
     </div>
     <aside class="notes"><p>앞에서 말한 정신과 의사는, 뉴욕의 <strong>라미 카민스키</strong>입니다.</p><p>그는 어릴 때 인기가 많았지만, 늘 자신이 바깥사람 같았다고 말합니다.</p><p>의사가 된 뒤에는 진료실에서, 이상하게 닮은 고민을 가진 사람들을 계속 만났습니다.</p><p>사람과는 잘 지내는데, 어떤 무리에도 녹아들지 못하는 사람들이었죠.</p><p>그는 이들에게 이름을 붙였습니다.</p><p><strong>오트로버트.</strong> 다른 쪽을 향한 사람이라는 뜻입니다.</p><p>이 이야기를 담은 책은 한국에서 <strong>『이향인』</strong>이라는 제목으로 나왔습니다.</p></aside>
   </section>
@@ -278,22 +233,22 @@
     <div class="bt">
       <div class="card blue" data-anim="fade-up">
         <svg class="net" viewBox="0 0 520 330" aria-hidden="true">
-          <g stroke="#1d4eaf" stroke-width="6"><line x1="260" y1="165" x2="90" y2="70"/><line x1="260" y1="165" x2="430" y2="70"/><line x1="260" y1="165" x2="70" y2="230"/><line x1="260" y1="165" x2="450" y2="230"/><line x1="260" y1="165" x2="170" y2="300"/><line x1="260" y1="165" x2="350" y2="300"/></g>
-          <circle cx="260" cy="165" r="62" fill="#1d4eaf" stroke="#111" stroke-width="6"/>
+          <g stroke="#4F6A5C" stroke-width="6"><line x1="260" y1="165" x2="90" y2="70"/><line x1="260" y1="165" x2="430" y2="70"/><line x1="260" y1="165" x2="70" y2="230"/><line x1="260" y1="165" x2="450" y2="230"/><line x1="260" y1="165" x2="170" y2="300"/><line x1="260" y1="165" x2="350" y2="300"/></g>
+          <circle cx="260" cy="165" r="62" fill="#4F6A5C" stroke="#202E2C" stroke-width="6"/>
           <path d="M238 142 L282 184 L260 206 V124 L282 146 L238 188" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-          <g fill="#fbf8f1" stroke="#111" stroke-width="6"><circle cx="90" cy="70" r="30"/><circle cx="430" cy="70" r="30"/><circle cx="70" cy="230" r="30"/><circle cx="450" cy="230" r="30"/><circle cx="170" cy="300" r="26"/><circle cx="350" cy="300" r="26"/></g>
+          <g fill="#FBF7EE" stroke="#202E2C" stroke-width="6"><circle cx="90" cy="70" r="30"/><circle cx="430" cy="70" r="30"/><circle cx="70" cy="230" r="30"/><circle cx="450" cy="230" r="30"/><circle cx="170" cy="300" r="26"/><circle cx="350" cy="300" r="26"/></g>
         </svg>
         <h3>대부분: 무리에 들어가면 저절로 연결</h3><p>같은 노래에 같이 들뜨고, 같은 편을 같이 응원한다</p>
       </div>
       <div class="card red" data-anim="fade-left">
         <svg class="net" viewBox="0 0 520 330" aria-hidden="true">
-          <g stroke="#1d4eaf" stroke-width="6"><line x1="200" y1="165" x2="60" y2="80"/><line x1="200" y1="165" x2="300" y2="60"/><line x1="200" y1="165" x2="60" y2="250"/><line x1="200" y1="165" x2="300" y2="270"/></g>
-          <circle cx="200" cy="165" r="56" fill="#1d4eaf" stroke="#111" stroke-width="6"/>
+          <g stroke="#4F6A5C" stroke-width="6"><line x1="200" y1="165" x2="60" y2="80"/><line x1="200" y1="165" x2="300" y2="60"/><line x1="200" y1="165" x2="60" y2="250"/><line x1="200" y1="165" x2="300" y2="270"/></g>
+          <circle cx="200" cy="165" r="56" fill="#4F6A5C" stroke="#202E2C" stroke-width="6"/>
           <path d="M180 144 L220 182 L200 202 V128 L220 148 L180 186" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-          <g fill="#fbf8f1" stroke="#111" stroke-width="6"><circle cx="60" cy="80" r="28"/><circle cx="300" cy="60" r="28"/><circle cx="60" cy="250" r="28"/><circle cx="300" cy="270" r="28"/></g>
-          <line x1="262" y1="165" x2="400" y2="165" stroke="#e03c27" stroke-width="6" stroke-dasharray="12 12"/>
-          <text x="332" y="148" text-anchor="middle" font-size="44" font-weight="900" fill="#e03c27">✕</text>
-          <circle cx="450" cy="165" r="38" fill="#111" stroke="#111" stroke-width="6"/>
+          <g fill="#FBF7EE" stroke="#202E2C" stroke-width="6"><circle cx="60" cy="80" r="28"/><circle cx="300" cy="60" r="28"/><circle cx="60" cy="250" r="28"/><circle cx="300" cy="270" r="28"/></g>
+          <line x1="262" y1="165" x2="400" y2="165" stroke="#D36C4E" stroke-width="6" stroke-dasharray="12 12"/>
+          <text x="332" y="148" text-anchor="middle" font-size="44" font-weight="900" fill="#D36C4E">✕</text>
+          <circle cx="450" cy="165" r="38" fill="#202E2C" stroke="#202E2C" stroke-width="6"/>
         </svg>
         <h3>이향인: 그 신호가 잘 잡히지 않는다</h3><p>사람과는 잘 지내지만, 무리의 ‘우리’에 저절로 이어지지 않는다</p>
       </div>
@@ -330,14 +285,9 @@
     <p class="kicker" data-anim="fade-up"><span class="no">3</span>이향인, 다른 쪽을 보는 사람</p>
     <h2 class="h2" data-anim="fade-up">네댓 살쯤, 아이들은 <em>‘우리’와 ‘그들’</em>을 배운다<span class="cite">5</span></h2>
     <div class="timeline" data-anim="stagger-list">
-      <div class="card"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" />
-  <path d="M15 12h.01" />
-  <path d="M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" />
-  <path d="M9 12h.01" /></g></svg></span><h3>아기</h3><p>종교도, 국적도 없이 태어난다</p></div>
+      <div class="card"><img class="obj" src="img/stroller.webp" alt=""><h3>아기</h3><p>종교도, 국적도 없이 태어난다</p></div>
       <div class="ar">→</div>
-      <div class="card yel"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8" />
-  <path d="M12 3v3" />
-  <path d="M2.354 10.354a1.207 1.207 0 0 1 0-1.708l2.06-2.06A2 2 0 0 1 5.828 6h12.344a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H5.828a2 2 0 0 1-1.414-.586z" /></g></svg></span><h3>네댓 살쯤</h3><div class="signs"><span>우리</span><span>그들</span></div></div>
+      <div class="card yel"><img class="obj" src="img/tags.webp" alt=""><h3>네댓 살쯤</h3><div class="signs"><span>우리</span><span>그들</span></div></div>
       <div class="ar">→</div>
       <div class="card"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21a8 8 0 0 1 13.292-6" />
   <circle cx="10" cy="8" r="5" />
@@ -366,14 +316,7 @@
       <h2 class="h2">네 칸의<br>성격 지도</h2>
       <p class="lede">오른쪽 아래는 <b>MBTI의 선 하나로는 보이지 않는 칸</b>입니다. 처음 장면의 그 사람이 여기 있습니다.</p>
     </div>
-    <div data-anim="fade-left"><div class="plane"><div class="q ul"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-  <path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1" /></g></svg></span><h4>작은 무리를 아끼는 사람</h4><p>혼자 충전하지만, 단짝 셋의 대화방이 제일 편한</p></div><div class="q ur"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528" /></g></svg></span><h4>무리와 하나 되는 사람</h4><p>사람 많은 자리에서 힘이 나는, 응원석 맨 앞의 깃발</p></div><div class="q dl"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10h4" />
-  <path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3" />
-  <path d="M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z" />
-  <path d="M 22 16 L 2 16" />
-  <path d="M4 21a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2z" />
-  <path d="M9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3" /></g></svg></span><h4>혼자가 자연스러운 관찰자</h4><p>혼자 있는 시간이 가장 편한</p></div><div class="q dr"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-  <circle cx="12" cy="7" r="4" /></g></svg></span><h4>사람은 좋은데, 무리에는 속하지 않는 사람</h4><p>처음 장면의 그 사람 · 카민스키의 ‘이향인’</p></div><div class="axis-x"><span>← 안쪽에서 충전 (I)</span><span>바깥에서 충전 (E) →</span></div><div class="axis-y"><span>작다</span><span>‘우리’가 되고 싶은 마음</span><span>크다</span></div><div class="mbti-line"><span>MBTI의 선 하나</span></div><i class="me"></i></div></div>
+    <div data-anim="fade-left"><div class="plane"><div class="q ul"><img class="obj" src="img/chat.webp" alt=""><h4>작은 무리를 아끼는 사람</h4><p>혼자 충전하지만, 단짝 셋의 대화방이 제일 편한</p></div><div class="q ur"><img class="obj" src="img/megaphone.webp" alt=""><h4>무리와 하나 되는 사람</h4><p>사람 많은 자리에서 힘이 나는, 응원석 맨 앞의 응원단</p></div><div class="q dl"><img class="obj" src="img/window.webp" alt=""><h4>혼자가 자연스러운 관찰자</h4><p>혼자 있는 시간이 가장 편한</p></div><div class="q dr"><img class="obj" src="img/vane.webp" alt=""><h4>사람은 좋은데, 무리에는 속하지 않는 사람</h4><p>처음 장면의 그 사람 · 카민스키의 ‘이향인’</p></div><div class="axis-x"><span>← 안쪽에서 충전 (I)</span><span>바깥에서 충전 (E) →</span></div><div class="axis-y"><span>작다</span><span>‘우리’가 되고 싶은 마음</span><span>크다</span></div><div class="mbti-line"><span>MBTI의 선 하나</span></div><i class="me"></i></div></div>
     <aside class="notes"><p>오른쪽 위는, 사람 많은 자리에서 힘이 나고, 무리와 하나 되는 사람.</p><p>응원석 맨 앞에서 깃발을 흔드는 사람이죠.</p><p>왼쪽 위는, 혼자 충전하지만 작은 무리를 아끼는 사람.</p><p>오래된 단짝 셋의 대화방이 세상에서 제일 편한 사람입니다.</p><p>왼쪽 아래는, 혼자 있는 시간이 가장 자연스러운 관찰자.</p><p>그리고 <strong>오른쪽 아래.</strong></p><p>사람과 잘 어울리고 대화도 즐기는데, 어느 무리에도 속하지 않는 사람.</p><p>처음 장면의 그 사람이, 여기 있습니다.</p><p>MBTI의 선 하나로는, <strong>이 칸이 보이지 않죠.</strong></p></aside>
   </section>
 
@@ -389,14 +332,7 @@
   <path d="M7.2 2.2 8 5.1" />
   <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z" /></g></svg></span>평면을 누르면 점이 찍힙니다</p>
     </div>
-    <div data-anim="fade-left"><div class="plane pick"><div class="q ul"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-  <path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1" /></g></svg></span><h4>작은 무리를 아끼는 사람</h4><p>혼자 충전하지만, 단짝 셋의 대화방이 제일 편한</p></div><div class="q ur"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528" /></g></svg></span><h4>무리와 하나 되는 사람</h4><p>사람 많은 자리에서 힘이 나는, 응원석 맨 앞의 깃발</p></div><div class="q dl"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10h4" />
-  <path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3" />
-  <path d="M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z" />
-  <path d="M 22 16 L 2 16" />
-  <path d="M4 21a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2z" />
-  <path d="M9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3" /></g></svg></span><h4>혼자가 자연스러운 관찰자</h4><p>혼자 있는 시간이 가장 편한</p></div><div class="q dr"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-  <circle cx="12" cy="7" r="4" /></g></svg></span><h4>사람은 좋은데, 무리에는 속하지 않는 사람</h4><p>처음 장면의 그 사람 · 카민스키의 ‘이향인’</p></div><div class="axis-x"><span>← 안쪽에서 충전 (I)</span><span>바깥에서 충전 (E) →</span></div><div class="axis-y"><span>작다</span><span>‘우리’가 되고 싶은 마음</span><span>크다</span></div><i class="me"></i></div></div>
+    <div data-anim="fade-left"><div class="plane pick"><div class="q ul"><img class="obj" src="img/chat.webp" alt=""><h4>작은 무리를 아끼는 사람</h4><p>혼자 충전하지만, 단짝 셋의 대화방이 제일 편한</p></div><div class="q ur"><img class="obj" src="img/megaphone.webp" alt=""><h4>무리와 하나 되는 사람</h4><p>사람 많은 자리에서 힘이 나는, 응원석 맨 앞의 응원단</p></div><div class="q dl"><img class="obj" src="img/window.webp" alt=""><h4>혼자가 자연스러운 관찰자</h4><p>혼자 있는 시간이 가장 편한</p></div><div class="q dr"><img class="obj" src="img/vane.webp" alt=""><h4>사람은 좋은데, 무리에는 속하지 않는 사람</h4><p>처음 장면의 그 사람 · 카민스키의 ‘이향인’</p></div><div class="axis-x"><span>← 안쪽에서 충전 (I)</span><span>바깥에서 충전 (E) →</span></div><div class="axis-y"><span>작다</span><span>‘우리’가 되고 싶은 마음</span><span>크다</span></div><i class="me"></i></div></div>
     <aside class="notes"><p>지금 잠깐, 이 평면 위에 <strong>내 점</strong>을 찍어 보세요.</p><p>E인지 I인지보다,</p><p><strong>“우리 편”</strong>이라는 말이 마지막으로 진심으로 나왔던 때를 떠올려 보면 쉽습니다.</p></aside>
   </section>
 
@@ -425,11 +361,11 @@
     <h2 class="h2" data-anim="fade-up">그림 취향 하나로 나눈 <em>두 무리</em><span class="cite">9</span></h2>
     <div class="exp">
       <div class="card painting" data-anim="fade-up">
-        <div class="frame"><svg viewBox="0 0 300 300" aria-hidden="true"><rect width="300" height="300" fill="#fbf8f1"/><circle cx="100" cy="110" r="60" fill="#e03c27"/><rect x="150" y="60" width="90" height="90" fill="#1d4eaf"/><circle cx="190" cy="210" r="44" fill="#f4c430"/><rect x="50" y="190" width="70" height="70" fill="#111"/></svg></div>
+        <div class="frame"><svg viewBox="0 0 300 300" aria-hidden="true"><rect width="300" height="300" fill="#FBF7EE"/><circle cx="100" cy="110" r="60" fill="#D36C4E"/><rect x="150" y="60" width="90" height="90" fill="#4F6A5C"/><circle cx="190" cy="210" r="44" fill="#E2C48A"/><rect x="50" y="190" width="70" height="70" fill="#202E2C"/></svg></div>
         <h4>‘클레를 좋아하는 무리’</h4>
       </div>
       <div class="card painting" data-anim="fade-up">
-        <div class="frame"><svg viewBox="0 0 300 300" aria-hidden="true"><rect width="300" height="300" fill="#fbf8f1"/><g stroke="#111" stroke-width="10" stroke-linecap="round"><line x1="30" y1="250" x2="270" y2="40"/><line x1="40" y1="60" x2="260" y2="200"/><line x1="150" y1="20" x2="150" y2="280"/></g><path d="M60 230 L120 130 L180 230 Z" fill="#1d4eaf"/><path d="M200 70 L260 70 L230 120 Z" fill="#e03c27"/></svg></div>
+        <div class="frame"><svg viewBox="0 0 300 300" aria-hidden="true"><rect width="300" height="300" fill="#FBF7EE"/><g stroke="#202E2C" stroke-width="10" stroke-linecap="round"><line x1="30" y1="250" x2="270" y2="40"/><line x1="40" y1="60" x2="260" y2="200"/><line x1="150" y1="20" x2="150" y2="280"/></g><path d="M60 230 L120 130 L180 230 Z" fill="#4F6A5C"/><path d="M200 70 L260 70 L230 120 Z" fill="#D36C4E"/></svg></div>
         <h4>‘칸딘스키를 좋아하는 무리’</h4>
       </div>
       <div class="facts" data-anim="stagger-list">
@@ -457,12 +393,9 @@
     <p class="kicker" data-anim="fade-up"><span class="no">5</span>네 글자가 만드는 ‘우리’</p>
     <h2 class="h2" data-anim="fade-up">얼굴도 모르는 ‘우리’를, <em>더 챙겼다</em></h2>
     <div class="results" data-anim="stagger-list">
-      <div class="card red"><svg class="bars" viewBox="0 0 300 220" aria-hidden="true"><rect x="50" y="30" width="80" height="170" fill="#e03c27" stroke="#111" stroke-width="5"/><rect x="170" y="110" width="80" height="90" fill="#fbf8f1" stroke="#111" stroke-width="5"/><text x="90" y="20" text-anchor="middle" font-size="22" font-weight="900">우리</text><text x="210" y="100" text-anchor="middle" font-size="22" font-weight="900">그들</text></svg><h3>자기 무리에 더 많이</h3><p>점수를 나눌 때 자기 무리 쪽으로<span class="cite">9</span></p></div>
-      <div class="card yel"><svg class="bars" viewBox="0 0 300 220" aria-hidden="true"><g opacity=".45"><rect x="20" y="40" width="50" height="160" fill="#e03c27" stroke="#111" stroke-width="4"/><rect x="78" y="50" width="50" height="150" fill="#fbf8f1" stroke="#111" stroke-width="4"/></g><rect x="172" y="90" width="50" height="110" fill="#e03c27" stroke="#111" stroke-width="4"/><rect x="230" y="160" width="50" height="40" fill="#fbf8f1" stroke="#111" stroke-width="4"/><text x="74" y="28" text-anchor="middle" font-size="20" font-weight="800">둘 다 더</text><text x="226" y="70" text-anchor="middle" font-size="20" font-weight="900" fill="#e03c27">차이를 크게 ✓</text></svg><h3>차이를 벌리는 쪽</h3><p>두 무리가 모두 더 받는 방법을 두고도<span class="cite">9</span></p></div>
-      <div class="card blue"><span class="ic" style="width:220px;height:220px;margin:0 auto 16px"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
-  <path d="M13 5v2" />
-  <path d="M13 17v2" />
-  <path d="M13 11v2" /></g></svg></span><h3>제비뽑기로 나눠도</h3><p>대놓고 무작위로 나눈 무리도 더 챙겼다<span class="cite">10</span></p></div>
+      <div class="card red"><svg class="bars" viewBox="0 0 300 220" aria-hidden="true"><rect x="50" y="30" width="80" height="170" fill="#D36C4E" stroke="#202E2C" stroke-width="5"/><rect x="170" y="110" width="80" height="90" fill="#FBF7EE" stroke="#202E2C" stroke-width="5"/><text x="90" y="20" text-anchor="middle" font-size="22" font-weight="900">우리</text><text x="210" y="100" text-anchor="middle" font-size="22" font-weight="900">그들</text></svg><h3>자기 무리에 더 많이</h3><p>점수를 나눌 때 자기 무리 쪽으로<span class="cite">9</span></p></div>
+      <div class="card yel"><svg class="bars" viewBox="0 0 300 220" aria-hidden="true"><g opacity=".45"><rect x="20" y="40" width="50" height="160" fill="#D36C4E" stroke="#202E2C" stroke-width="4"/><rect x="78" y="50" width="50" height="150" fill="#FBF7EE" stroke="#202E2C" stroke-width="4"/></g><rect x="172" y="90" width="50" height="110" fill="#D36C4E" stroke="#202E2C" stroke-width="4"/><rect x="230" y="160" width="50" height="40" fill="#FBF7EE" stroke="#202E2C" stroke-width="4"/><text x="74" y="28" text-anchor="middle" font-size="20" font-weight="800">둘 다 더</text><text x="226" y="70" text-anchor="middle" font-size="20" font-weight="900" fill="#D36C4E">차이를 크게 ✓</text></svg><h3>차이를 벌리는 쪽</h3><p>두 무리가 모두 더 받는 방법을 두고도<span class="cite">9</span></p></div>
+      <div class="card blue"><img class="obj" src="img/ticket.webp" alt=""><h3>제비뽑기로 나눠도</h3><p>대놓고 무작위로 나눈 무리도 더 챙겼다<span class="cite">10</span></p></div>
     </div>
     <p class="foot">막대는 개념도입니다. 실험의 점수를 옮긴 것이 아닙니다.</p>
     <aside class="notes"><p>자기 무리에 <strong>더 많이</strong> 줬습니다.</p><p>심지어 두 무리가 모두 더 받는 방법을 두고도,</p><p>두 무리의 <strong>차이를 벌리는 쪽</strong>을 고르기도 했습니다.</p><p>나중에는 대놓고 <strong>제비뽑기</strong>로 나눠도,</p><p>사람들은 자기 무리를 더 챙겼습니다.</p></aside>
@@ -499,11 +432,9 @@
     <p class="kicker blue" data-anim="fade-up"><span class="no">6</span>그럼, 이향인에게는 소속이 필요 없을까?</p>
     <h2 class="h2" data-anim="fade-up">여기서 나올 수 있는 반론</h2>
     <div class="clash">
-      <div class="card blue" data-anim="fade-up"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-  <path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></g></svg></span><h3>소속 욕구는 강력하고<br>근본적인 동기<span class="cite">11</span></h3><p>관계가 없으면 몸과 마음의 건강까지 나빠진다는 연구들</p><p class="paper-ref">Baumeister &amp; Leary (1995)</p></div>
+      <div class="card blue" data-anim="fade-up"><img class="obj" src="img/papers.webp" alt=""><h3>소속 욕구는 강력하고<br>근본적인 동기<span class="cite">11</span></h3><p>관계가 없으면 몸과 마음의 건강까지 나빠진다는 연구들</p><p class="paper-ref">Baumeister &amp; Leary (1995)</p></div>
       <span class="bolt" data-anim="zoom-pop"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></g></svg></span>
-      <div class="card red" data-anim="fade-left"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-  <circle cx="12" cy="7" r="4" /></g></svg></span><h3>무리에 ‘우리’가 되고 싶은<br>충동이 거의 없는 사람</h3><p>그럼 이향인은 이 오래된 결론과 정면으로 부딪칠까?</p></div>
+      <div class="card red" data-anim="fade-left"><img class="obj" src="img/headphones.webp" alt=""><h3>무리에 ‘우리’가 되고 싶은<br>충동이 거의 없는 사람</h3><p>그럼 이향인은 이 오래된 결론과 정면으로 부딪칠까?</p></div>
     </div>
     <aside class="notes"><p>여기서 반론이 나올 수 있습니다.</p><p>심리학은 오래전부터, 소속을 사람의 <strong>기본 욕구</strong>로 봐 왔으니까요.</p><p>1995년, 두 심리학자가 수많은 연구를 모아,</p><p>소속 욕구가 사람의 <strong>강력하고 근본적인 동기</strong>라고 정리했습니다.</p><p>관계가 없으면 몸과 마음의 건강까지 나빠진다는 연구들과 함께요.</p><p>그럼 이향인은, 이 오래된 결론과 정면으로 부딪치는 걸까요?</p></aside>
   </section>
@@ -518,17 +449,14 @@
   <path d="M16 3.128a4 4 0 0 1 0 7.744" />
   <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
   <circle cx="9" cy="7" r="4" /></g></svg></span>몇몇 사람과</div>
-        <div class="box token"><span class="ic" style="color:var(--red)"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2" />
-  <path d="M14 2v2" />
-  <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
-  <path d="M6 2v2" /></g></svg></span>자주, 따뜻하게 만나고</div>
+        <div class="box token"><img class="obj" src="img/tea.webp" alt="">자주, 따뜻하게 만나고</div>
         <div class="box token"><span class="ic" style="color:#9a7400"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8" /></g></svg></span>앞으로도 이어질 거라 믿는 것</div>
       </div>
       <div class="card curve" data-anim="fade-left">
         <svg viewBox="0 0 640 400" aria-hidden="true">
-          <line x1="60" y1="350" x2="620" y2="350" stroke="#111" stroke-width="6"/><line x1="60" y1="350" x2="60" y2="20" stroke="#111" stroke-width="6"/>
-          <path d="M60 350 C130 140 220 90 600 70" fill="none" stroke="#1d4eaf" stroke-width="10" stroke-linecap="round"/>
-          <rect x="70" y="20" width="200" height="330" fill="#f4c430" opacity=".25"/>
+          <line x1="60" y1="350" x2="620" y2="350" stroke="#202E2C" stroke-width="6"/><line x1="60" y1="350" x2="60" y2="20" stroke="#202E2C" stroke-width="6"/>
+          <path d="M60 350 C130 140 220 90 600 70" fill="none" stroke="#4F6A5C" stroke-width="10" stroke-linecap="round"/>
+          <rect x="70" y="20" width="200" height="330" fill="#E2C48A" opacity=".25"/>
           <text x="170" y="320" text-anchor="middle" font-size="24" font-weight="900">몇 사람</text>
           <text x="420" y="130" text-anchor="middle" font-size="24" font-weight="800">채워지면, 더 늘려도</text>
           <text x="420" y="162" text-anchor="middle" font-size="24" font-weight="800">만족은 덜 커진다</text>
@@ -547,11 +475,11 @@
     <h2 class="h2" data-anim="fade-up">소속은 <em>한 가지가 아니다</em></h2>
     <div class="forks" data-anim="stagger-list">
       <div class="card blue">
-        <svg viewBox="0 0 300 300" aria-hidden="true"><g stroke="#111" stroke-width="8"><line x1="150" y1="70" x2="70" y2="220"/><line x1="150" y1="70" x2="230" y2="220"/><line x1="70" y1="220" x2="230" y2="220"/></g><g fill="#1d4eaf" stroke="#111" stroke-width="6"><circle cx="150" cy="70" r="40"/><circle cx="70" cy="220" r="40"/><circle cx="230" cy="220" r="40"/></g></svg>
+        <svg viewBox="0 0 300 300" aria-hidden="true"><g stroke="#202E2C" stroke-width="8"><line x1="150" y1="70" x2="70" y2="220"/><line x1="150" y1="70" x2="230" y2="220"/><line x1="70" y1="220" x2="230" y2="220"/></g><g fill="#4F6A5C" stroke="#202E2C" stroke-width="6"><circle cx="150" cy="70" r="40"/><circle cx="70" cy="220" r="40"/><circle cx="230" cy="220" r="40"/></g></svg>
         <div><h3>몇 사람과<br>이어지는 소속</h3><p>깊고, 오래 가는 몇 개의 관계</p><span class="has o">이향인도 원한다 ○</span></div>
       </div>
       <div class="card red">
-        <svg viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="150" r="130" fill="#e03c27" opacity=".16" stroke="#111" stroke-width="6"/><g fill="#e03c27" stroke="#111" stroke-width="4"><circle cx="110" cy="80" r="20"/><circle cx="170" cy="70" r="20"/><circle cx="220" cy="110" r="20"/><circle cx="80" cy="140" r="20"/><circle cx="140" cy="130" r="20"/><circle cx="200" cy="165" r="20"/><circle cx="100" cy="200" r="20"/><circle cx="160" cy="195" r="20"/><circle cx="220" cy="220" r="20"/><circle cx="130" cy="250" r="20"/></g></svg>
+        <svg viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="150" r="130" fill="#D36C4E" opacity=".16" stroke="#202E2C" stroke-width="6"/><g fill="#D36C4E" stroke="#202E2C" stroke-width="4"><circle cx="110" cy="80" r="20"/><circle cx="170" cy="70" r="20"/><circle cx="220" cy="110" r="20"/><circle cx="80" cy="140" r="20"/><circle cx="140" cy="130" r="20"/><circle cx="200" cy="165" r="20"/><circle cx="100" cy="200" r="20"/><circle cx="160" cy="195" r="20"/><circle cx="220" cy="220" r="20"/><circle cx="130" cy="250" r="20"/></g></svg>
         <div><h3>무리에<br>녹아드는 소속</h3><p>하나의 ‘우리’가 되는 느낌</p><span class="has q">이향인에게 빠진 것일지도 ?</span></div>
       </div>
     </div>
@@ -569,7 +497,7 @@
         <div class="box check"><span class="mk x">✕</span><span>질환이나 진단명이 아니다 (카민스키 본인)<span class="cite">8·12</span></span></div>
         <div class="box check"><span class="mk q">?</span><span>“고집 센 개인주의자에게 듣기 좋은 이름 아닐까?”라는 물음도 있다<span class="cite">13</span></span></div>
       </div>
-      <div class="card scale-card" data-anim="fade-left"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><path d="M120 40 V204 M72 204 H168 M50 70 H190" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 70 L22 136 H78 Z M190 70 L162 136 H218 Z" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="from"><s>증명된 성격 유형</s></p><p class="to">오래 지켜본 끝에 내놓은<br><em>좋은 질문</em></p></div>
+      <div class="card scale-card" data-anim="fade-left"><img class="obj" src="img/scale.webp" alt=""><p class="from"><s>증명된 성격 유형</s></p><p class="to">오래 지켜본 끝에 내놓은<br><em>좋은 질문</em></p></div>
     </div>
     <aside class="notes"><p>다만, 짚어 둘 것이 있습니다.</p><p>이향인은 아직 <strong>동료 심사를 거친 논문</strong>으로 확인된 개념이 아닙니다.</p><p>카민스키도 이것이 <strong>질환이나 진단명이 아니라고</strong> 말합니다.</p><p>고집 센 개인주의자에게 듣기 좋은 이름을 붙여 준 것 아니냐는 물음도 있고요.</p><p>그러니 이향인은 증명된 성격 유형이라기보다,</p><p>한 정신과 의사가 오래 지켜본 끝에 내놓은 <strong>좋은 질문</strong>에 가깝습니다.</p></aside>
   </section>
@@ -580,20 +508,17 @@
     <h2 class="h2" data-anim="fade-up">무리에 속하지 않는 사람들의 <em>무리</em></h2>
     <div class="paradox">
       <svg viewBox="0 0 720 600" data-anim="fade-up" aria-hidden="true">
-        <line x1="360" y1="40" x2="360" y2="330" stroke="#111" stroke-width="12"/>
-        <path d="M366 46 H600 L560 110 L600 174 H366 Z" fill="#e03c27" stroke="#111" stroke-width="6"/>
+        <line x1="360" y1="40" x2="360" y2="330" stroke="#202E2C" stroke-width="12"/>
+        <path d="M366 46 H600 L560 110 L600 174 H366 Z" fill="#D36C4E" stroke="#202E2C" stroke-width="6"/>
         <text x="476" y="124" text-anchor="middle" font-size="44" font-weight="900" fill="#fff">이향인</text>
-        <g fill="#111"><circle cx="160" cy="400" r="26"/><circle cx="240" cy="380" r="26"/><circle cx="320" cy="400" r="26"/><circle cx="400" cy="380" r="26"/><circle cx="480" cy="400" r="26"/><circle cx="560" cy="385" r="26"/>
+        <g fill="#202E2C"><circle cx="160" cy="400" r="26"/><circle cx="240" cy="380" r="26"/><circle cx="320" cy="400" r="26"/><circle cx="400" cy="380" r="26"/><circle cx="480" cy="400" r="26"/><circle cx="560" cy="385" r="26"/>
         <circle cx="120" cy="480" r="26"/><circle cx="200" cy="470" r="26"/><circle cx="280" cy="485" r="26"/><circle cx="360" cy="470" r="26"/><circle cx="440" cy="485" r="26"/><circle cx="520" cy="470" r="26"/><circle cx="600" cy="480" r="26"/>
         <circle cx="180" cy="555" r="26"/><circle cx="260" cy="560" r="26"/><circle cx="340" cy="555" r="26"/><circle cx="420" cy="560" r="26"/><circle cx="500" cy="555" r="26"/></g>
       </svg>
       <div data-anim="fade-left">
-        <p class="fact-line"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 1-1.732" />
-  <path d="m22 5.5-6.419 4.179a2 2 0 0 1-2.162 0L7 5.5" />
-  <rect x="7" y="3" width="15" height="12" rx="2" /></g></svg></span><span>카민스키에 따르면, 책이 나온 뒤 <b>수만 명</b>이 질문지에 이름을 올리고 “이게 바로 나”라는 편지가 쏟아졌다<span class="cite">8·13</span></span></p>
+        <p class="fact-line"><img class="obj" src="img/mail.webp" alt=""><span>카민스키에 따르면, 책이 나온 뒤 <b>수만 명</b>이 질문지에 이름을 올리고 “이게 바로 나”라는 편지가 쏟아졌다<span class="cite">8·13</span></span></p>
         <div class="box quote-box">‘이향인 운동’이라는 말,<br>그 자체가 모순 아닐까?<small>아일랜드의 한 칼럼니스트가 던진 물음(요약)<span class="cite">13</span></small></div>
-        <p class="tagline"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
-  <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" /></g></svg></span>열일곱 번째 유형으로 쓰는 순간, 또 하나의 꼬리표</p>
+        <p class="tagline"><img class="obj" src="img/tags.webp" alt="">열일곱 번째 유형으로 쓰는 순간, 또 하나의 꼬리표</p>
       </div>
     </div>
     <aside class="notes"><p>이제 미뤄 둔 반응입니다.</p><p>카민스키에 따르면, 책이 나온 뒤 <strong>수만 명</strong>이 그의 질문지에 이름을 올렸고,</p><p>“이게 바로 나”라는 편지가 쏟아졌다고 합니다.</p><p>그러자 한 아일랜드 칼럼니스트가 물었습니다.</p><p><strong>‘이향인 운동’이라는 말, 그 자체가 모순 아닐까?</strong></p><p>무리를 벗어난 사람들이, ‘이향인’이라는 이름 아래 다시 하나의 무리가 되는 거죠.</p><p>웃음이 나지만, 중요한 장면입니다.</p><p>이향인을 열일곱 번째 유형으로 쓰는 순간,</p><p>네 글자에서 빠져나온 자리에, <strong>또 하나의 꼬리표</strong>가 붙으니까요.</p></aside>
@@ -626,13 +551,13 @@
     <h2 class="h2" data-anim="fade-up">한 발짝 떨어져 있는 아이에게 <em>건넬 질문</em></h2>
     <div class="classroom">
       <svg viewBox="0 0 640 520" data-anim="fade-up" aria-hidden="true">
-        <rect x="40" y="250" width="360" height="40" fill="#111"/>
-        <g fill="#1d4eaf"><circle cx="90" cy="180" r="34"/><circle cx="180" cy="160" r="34"/><circle cx="270" cy="160" r="34"/><circle cx="360" cy="180" r="34"/></g>
-        <g fill="#e03c27"><circle cx="130" cy="350" r="34"/><circle cx="310" cy="350" r="34"/></g>
-        <rect x="160" y="60" width="130" height="56" fill="#f4c430" stroke="#111" stroke-width="5"/><text x="225" y="98" text-anchor="middle" font-size="28" font-weight="900">모둠</text>
-        <line x1="420" y1="250" x2="500" y2="250" stroke="#111" stroke-width="5" stroke-dasharray="12 10"/>
-        <circle cx="560" cy="230" r="34" fill="#fbf8f1" stroke="#111" stroke-width="6"/>
-        <path d="M510 330 V300 a50 50 0 0 1 100 0 V330 Z" fill="#fbf8f1" stroke="#111" stroke-width="6"/>
+        <rect x="40" y="250" width="360" height="40" fill="#202E2C"/>
+        <g fill="#4F6A5C"><circle cx="90" cy="180" r="34"/><circle cx="180" cy="160" r="34"/><circle cx="270" cy="160" r="34"/><circle cx="360" cy="180" r="34"/></g>
+        <g fill="#D36C4E"><circle cx="130" cy="350" r="34"/><circle cx="310" cy="350" r="34"/></g>
+        <rect x="160" y="60" width="130" height="56" fill="#E2C48A" stroke="#202E2C" stroke-width="5"/><text x="225" y="98" text-anchor="middle" font-size="28" font-weight="900">모둠</text>
+        <line x1="420" y1="250" x2="500" y2="250" stroke="#202E2C" stroke-width="5" stroke-dasharray="12 10"/>
+        <circle cx="560" cy="230" r="34" fill="#FBF7EE" stroke="#202E2C" stroke-width="6"/>
+        <path d="M510 330 V300 a50 50 0 0 1 100 0 V330 Z" fill="#FBF7EE" stroke="#202E2C" stroke-width="6"/>
         
       </svg>
       <div class="class-talk" data-anim="stagger-list">
@@ -640,8 +565,7 @@
         <p class="bub r">“너는 누구랑 있을 때 편해?”</p>
         <p class="bub r">“몇 명이랑 하는 게 좋아?”</p>
         <p class="lede">무리에 녹아드는 것만이 어울리는 방법은 아닙니다. <b>한 친구와 깊이 이어진 아이도, 누군가와 함께 있는 아이</b>입니다.</p>
-        <div class="care"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-  <path d="m9 12 2 2 4-4" /></g></svg></span><span>다만 아이가 <b>오래 외로워하거나 괴로워 보인다면</b>, 성향과는 따로 살펴야 할 일입니다.</span></div>
+        <div class="care"><img class="obj" src="img/shield.webp" alt=""><span>다만 아이가 <b>오래 외로워하거나 괴로워 보인다면</b>, 성향과는 따로 살펴야 할 일입니다.</span></div>
       </div>
     </div>
     <p class="foot">교실 장면은 설명을 위한 가상 예시이고, 질문은 효과를 검증한 방법이 아니라 이 강의의 제안입니다.</p>
@@ -652,10 +576,7 @@
   <section class="slide" data-title="다시, 건배 자리의 그 사람">
     <p class="kicker" data-anim="fade-up"><span class="no">9</span>다시, 건배 자리의 그 사람</p>
     <h2 class="h2" data-anim="fade-up">그 사람의 문장을 <em>고쳐 써 봅니다</em></h2>
-    <span class="cheers ic" data-anim="fade-up"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8" />
-  <path d="M7 10h10" />
-  <path d="M12 15v7" />
-  <path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z" /></g></svg></span>
+    <div class="float-obj" style="right:150px;top:110px;width:300px" data-anim="fade-up"><img class="obj" src="img/notebook.webp" alt=""></div>
     <div class="rewrite" data-anim="stagger-list">
       <p class="lbl"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><g transform="scale(10)" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
   <path d="M3 3v5h5" />
@@ -674,19 +595,19 @@
       <p class="statement">지금 나에게<br>꼭 필요한 <em>‘우리’</em>는,<br>몇 명인가요?</p>
     </div>
     <svg class="dots" viewBox="0 0 560 560" data-anim="fade-left" aria-hidden="true">
-      <rect x="20" y="20" width="520" height="520" fill="#fbf8f1" stroke="#111" stroke-width="6"/>
-      <line x1="280" y1="20" x2="280" y2="540" stroke="#111" stroke-width="4"/><line x1="20" y1="280" x2="540" y2="280" stroke="#111" stroke-width="4"/>
-      <g stroke="#111" stroke-width="6"><line x1="400" y1="400" x2="470" y2="350"/><line x1="400" y1="400" x2="460" y2="460"/></g>
-      <circle cx="400" cy="400" r="30" fill="#e03c27" stroke="#111" stroke-width="5"/>
-      <circle cx="470" cy="350" r="20" fill="#1d4eaf" stroke="#111" stroke-width="5"/><circle cx="460" cy="460" r="20" fill="#f4c430" stroke="#111" stroke-width="5"/>
-      <text x="400" y="330" text-anchor="middle" font-size="40" font-weight="900" fill="#e03c27">?</text>
+      <rect x="20" y="20" width="520" height="520" fill="#FBF7EE" stroke="#202E2C" stroke-width="6"/>
+      <line x1="280" y1="20" x2="280" y2="540" stroke="#202E2C" stroke-width="4"/><line x1="20" y1="280" x2="540" y2="280" stroke="#202E2C" stroke-width="4"/>
+      <g stroke="#202E2C" stroke-width="6"><line x1="400" y1="400" x2="470" y2="350"/><line x1="400" y1="400" x2="460" y2="460"/></g>
+      <circle cx="400" cy="400" r="30" fill="#D36C4E" stroke="#202E2C" stroke-width="5"/>
+      <circle cx="470" cy="350" r="20" fill="#4F6A5C" stroke="#202E2C" stroke-width="5"/><circle cx="460" cy="460" r="20" fill="#E2C48A" stroke="#202E2C" stroke-width="5"/>
+      <text x="400" y="330" text-anchor="middle" font-size="40" font-weight="900" fill="#D36C4E">?</text>
     </svg>
     <aside class="notes"><p>여러분은 평면의 어느 칸에 점을 찍으셨나요?</p><p>그리고 지금 나에게 꼭 필요한 ‘우리’는, <strong>몇 명인가요?</strong></p></aside>
   </section>
 
   <!-- 30. 참고 자료 -->
   <section class="slide" data-title="참고 자료">
-    <div class="refs-head" data-anim="fade-up"><span class="ic"><svg viewBox="0 0 240 240" aria-hidden="true"><rect x="40" y="60" width="40" height="144" rx="6" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><rect x="96" y="40" width="40" height="164" rx="6" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M156 68 L190 58 L222 196 L188 206 Z" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 92 H80 M96 72 H136" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h2 class="h2" style="margin:0">이 강의가 기대고 있는 자료</h2></div>
+    <div class="refs-head" data-anim="fade-up"><img class="obj" src="img/book.webp" alt=""><h2 class="h2" style="margin:0">이 강의가 기대고 있는 자료</h2></div>
     <ol class="refs" data-anim="fade-up">
       <li><span class="n">1</span><div><a href="https://shop.themyersbriggs.com/pdfs/6539.pdf">The Myers-Briggs Company, <i>Introduction to Myers-Briggs Type</i> 발췌</a> · E·I는 에너지의 방향</div></li>
       <li><span class="n">2</span><div><a href="https://www.myersbriggs.org/my-mbti-personality-type/the-mbti-preferences/">The Myers &amp; Briggs Foundation, The MBTI Preferences</a></div></li>

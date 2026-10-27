@@ -1,9 +1,15 @@
-/* I도 E도 아니라면, 나는 뭘까? — deck-specific styles (bauhaus 바탕: 종이·먹·빨강·노랑·파랑) */
+/* I도 E도 아니라면, 나는 뭘까? — 낯선납득 영상의 그림 말투를 빌린 덱: 크림 종이·점 모눈·먹녹색 선·세이지·테라코타,
+   제목은 강원교육모두 Bold(fonts/gw-bold.woff2, build.py가 쓰인 글자만 잘라 만듦), 본문은 Noto Sans KR, 사물은 낯선납득 펜 선화(img/*.webp) */
+@font-face{font-family:"GW";src:url("fonts/gw-bold.woff2") format("woff2");font-weight:700;font-display:block}
+/* 제목(GW) 속 영문·숫자는 Noto Sans KR 600 — 강원교육모두 Bold와 굵기가 비슷하고 I가 또렷하다 */
+@font-face{font-family:"GW";src:url("fonts/latin-600.woff2") format("woff2");font-weight:700;font-display:block;unicode-range:U+0030-0039,U+0041-005A,U+0061-007A}
 
 html,body{height:100%;overflow:hidden}
 .deck{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%) scale(var(--stage-scale,1))}
-body{word-break:keep-all;overflow-wrap:break-word;font-family:'Pretendard Variable','Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif}
-:root{--ink:#111;--red:var(--accent);--yel:var(--accent-2);--blu:var(--accent-3);--paper:#fbf8f1;--line:3px solid var(--ink)}
+body{word-break:keep-all;overflow-wrap:break-word;font-family:'Noto Sans KR','Apple SD Gothic Neo',sans-serif;background:var(--paper-bg)}
+:root{--paper-bg:#F3EDE1;--ink:#202E2C;--red:#D36C4E;--red-d:#BC4F33;--yel:#E2C48A;--blu:#4F6A5C;--sage:#AEB9AE;--sage-l:#DCE4DC;--terra-l:#F4D8CC;--paper:#FBF7EE;--mute:#5E6B66;
+  --line:3px solid var(--ink);--sh:10px 10px 0 var(--sage);--r:22px;
+  --bg:#F3EDE1;--text-1:#202E2C;--text-2:#46524E;--text-3:#7A847F;--accent:#D36C4E;--accent-2:#E2C48A;--accent-3:#4F6A5C;--border:rgba(32,46,44,.15)}
 .slide{padding:110px 130px 100px}
 p{margin:0}
 .h1{font-size:96px;line-height:1.18;font-weight:900;letter-spacing:-.04em;margin:0}
@@ -21,7 +27,7 @@ p{margin:0}
 .tag.red{background:var(--red);color:#fff}.tag.blue{background:var(--blu);color:#fff}.tag.ink{background:var(--ink);color:#fff}
 .ic{display:inline-block;flex:none}
 .ic svg{width:100%;height:100%;display:block}
-.box{background:var(--paper);border:var(--line);box-shadow:6px 6px 0 var(--ink)}
+.box{background:var(--paper);border:var(--line);box-shadow:var(--sh)}
 .ok{color:var(--blu);font-weight:900}.no-{color:var(--red);font-weight:900}
 .deck-header,.deck-footer{font-size:16px;color:var(--text-3);letter-spacing:.04em;text-transform:none}
 .deck-header{top:34px;left:60px;right:60px}.deck-footer{bottom:30px;left:60px;right:60px}
@@ -41,7 +47,7 @@ p{margin:0}
 .cover .mini-plane{width:640px;height:640px;justify-self:center}
 
 /* ---------- 평면 지도(공통) ---------- */
-.plane{position:relative;border:var(--line);background:var(--paper);box-shadow:8px 8px 0 var(--ink);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.plane{position:relative;border:var(--line);background:var(--paper);box-shadow:var(--sh);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
 .plane .q{position:relative;padding:26px 30px;display:flex;flex-direction:column;gap:10px}
 .plane .q .ic{width:64px;height:64px}
 .plane .q h4{margin:0;font-size:30px;line-height:1.3;font-weight:900;letter-spacing:-.02em}
@@ -65,7 +71,7 @@ p{margin:0}
 /* ---------- 카드 묶음 ---------- */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:40px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:36px;align-items:stretch}
-.card{background:var(--paper);border:var(--line);box-shadow:6px 6px 0 var(--ink);padding:34px 36px;position:relative}
+.card{background:var(--paper);border:var(--line);box-shadow:var(--sh);padding:34px 36px;position:relative}
 .card .ic{width:96px;height:96px;margin-bottom:18px}
 .card h3{margin:0 0 12px;font-size:34px;line-height:1.32;font-weight:900;letter-spacing:-.02em}
 .card p{font-size:24px;line-height:1.6;color:var(--text-2)}
@@ -77,7 +83,7 @@ p{margin:0}
 .scene{display:grid;grid-template-columns:1.15fr 1fr;gap:70px;align-items:center;margin-top:24px}
 .crowd{height:560px}
 .crowd svg{width:100%;height:100%}
-.chatbox{background:var(--paper);border:var(--line);box-shadow:6px 6px 0 var(--ink);padding:26px 30px}
+.chatbox{background:var(--paper);border:var(--line);box-shadow:var(--sh);padding:26px 30px}
 .chatbox .top{display:flex;justify-content:space-between;font-size:20px;font-weight:800;border-bottom:var(--line);padding-bottom:12px;margin-bottom:18px}
 .chatbox .msg{display:flex;align-items:center;gap:14px;margin:12px 0;font-size:25px}
 .chatbox .msg i{width:40px;height:40px;border-radius:50%;flex:none;border:2px solid var(--ink)}
@@ -89,7 +95,7 @@ p{margin:0}
 .ask{display:grid;grid-template-columns:1fr 280px 1fr;gap:40px;align-items:center;margin-top:34px}
 .ask .card{min-height:330px}
 .ask .card .x{position:absolute;right:26px;top:20px;font-size:54px;font-weight:900;color:var(--red)}
-.qmark{width:280px;height:280px;border-radius:50%;background:var(--yel);border:var(--line);display:grid;place-items:center;font-size:190px;font-weight:900;line-height:1;box-shadow:6px 6px 0 var(--ink)}
+.qmark{width:280px;height:280px;border-radius:50%;background:var(--yel);border:var(--line);display:grid;place-items:center;font-size:190px;font-weight:900;line-height:1;box-shadow:var(--sh)}
 .teaser{margin-top:44px;display:flex;align-items:center;gap:22px;font-size:27px;font-weight:700;padding:20px 28px;border:3px dashed var(--ink);background:color-mix(in srgb,var(--yel) 22%,transparent)}
 .teaser .ic{width:52px;height:52px;flex:none}
 .teaser b{color:var(--red)}
@@ -171,7 +177,7 @@ p{margin:0}
 .bt .card h3{margin-top:10px}
 
 /* ---------- 비교 표 ---------- */
-.cmp{margin-top:34px;display:grid;grid-template-columns:330px 1fr 1fr;border:var(--line);box-shadow:8px 8px 0 var(--ink);background:var(--paper)}
+.cmp{margin-top:34px;display:grid;grid-template-columns:330px 1fr 1fr;border:var(--line);box-shadow:var(--sh);background:var(--paper)}
 .cmp>div{padding:26px 30px;border-bottom:var(--line);font-size:28px;line-height:1.45;display:flex;align-items:center;gap:18px}
 .cmp>div:nth-last-child(-n+3){border-bottom:none}
 .cmp .hd{font-size:36px;font-weight:900;color:#fff;justify-content:center}
@@ -223,7 +229,7 @@ p{margin:0}
 
 /* ---------- 말풍선 ---------- */
 .bubbles{display:flex;flex-direction:column;gap:22px;margin-top:30px}
-.bub{align-self:flex-start;font-size:40px;font-weight:800;padding:20px 34px;border:var(--line);background:#fff;box-shadow:5px 5px 0 var(--ink);position:relative}
+.bub{align-self:flex-start;font-size:40px;font-weight:800;padding:20px 34px;border:var(--line);background:#fff;box-shadow:var(--sh);position:relative}
 .bub.r{align-self:flex-end;background:var(--yel)}
 .badges{position:relative;height:560px}
 .badges .grp{position:absolute;border:4px solid var(--ink);border-radius:50%;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:12px;padding:30px}
@@ -365,3 +371,105 @@ p{margin:0}
 .disclose{margin-top:24px;font-size:18px;line-height:1.6;color:var(--text-3);max-width:1640px}
 .refs-head{display:flex;align-items:center;gap:22px}
 .refs-head .ic{width:70px;height:70px;color:var(--red)}
+
+/* ================= 낯선납득 그림 말투 ================= */
+.slide{background-color:var(--paper-bg);background-image:radial-gradient(rgba(32,46,44,.10) 1.6px,transparent 1.8px),radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%);background-size:38px 38px,100% 100%}
+.h1,.h2,.big,.word,.word-mean,.statement,.closing .statement,.card h3,.trait h3,.plane .q h4,.two-q .q,.final-q .qq,.bub,.swap .bub,.qmark,.flip .types,.lt,.rewrite .after,.quote-box,.keyq,.cmp .hd,.chart h4,.token,.scale-card .to,.memory-q,.verdict span,.forks .has,.statement-band,.signs span,.badges .grp span,.painting h4{font-family:"GW","Noto Sans KR",sans-serif;font-weight:700}
+.h1{font-size:104px;line-height:1.2;letter-spacing:-.01em}
+.h2{font-size:62px;line-height:1.28;letter-spacing:-.01em}
+.big{font-size:60px;letter-spacing:-.01em}
+.h2 em,.big em,.statement em,.memory-q em,.rewrite .after em{color:var(--red)}
+.kicker{font-weight:700;color:var(--blu)}
+.kicker .no{border-radius:12px;border:none;background:var(--red)}
+.kicker.blue .no{background:var(--blu)}.kicker.yel .no{background:var(--yel);color:var(--ink)}
+.cite{color:var(--red-d)}
+.obj{display:block;filter:drop-shadow(10px 12px 0 rgba(174,185,174,.55));object-fit:contain}
+.box,.card,.chatbox,.cmp,.plane,.form,.reveal,.facts div,.check,.trait,.token,.quote-box,.curve,.care,.rewrite .after,.rewrite .before,.teaser,.statement-band,.pick-hint{border-radius:var(--r)}
+.card.red{border-top:3px solid var(--ink);box-shadow:10px 10px 0 var(--terra-l)}
+.card.yel{border-top:3px solid var(--ink);box-shadow:10px 10px 0 #EFE0BE}
+.card.blue{border-top:3px solid var(--ink);box-shadow:10px 10px 0 var(--sage)}
+.card .obj{width:auto;height:170px;max-width:100%;margin-bottom:16px}
+.card .n{color:rgba(32,46,44,.10);font-family:"GW",sans-serif}
+.tag,.bub,.signs span,.badges .grp span,.chain>span,.final-q .subq span,.verdict span,.forks .has,.trait .mk,.check .mk,.form .row2 .st,.qmark{border-radius:999px}
+.trait .mk,.check .mk{border-radius:50%}
+.bub{border-radius:28px;font-weight:700}
+.bub.r{background:var(--terra-l)}
+.bub:not(.r):not(.old){background:var(--sage-l)}
+
+/* 표지 */
+.cover-art{position:relative;justify-self:center}
+.cover-art .obj{position:absolute;right:-70px;top:-90px;width:250px}
+.cover .meta b{color:var(--red)}
+.mini-plane{filter:drop-shadow(12px 12px 0 rgba(174,185,174,.7))}
+
+/* 평면 지도 */
+.plane{overflow:visible}
+.plane .q.ul{background:var(--sage-l);border-radius:var(--r) 0 0 0}
+.plane .q.ur{background:var(--terra-l);border-radius:0 var(--r) 0 0}
+.plane .q.dl{background:#EFE6D2;border-radius:0 0 0 var(--r)}
+.plane .q.dr{background:var(--ink);border-radius:0 0 var(--r) 0}
+.plane .q .obj{height:120px;width:auto;max-width:180px;filter:drop-shadow(6px 8px 0 rgba(174,185,174,.5))}
+.plane .q.dr .obj{filter:drop-shadow(6px 8px 0 rgba(0,0,0,.35)) brightness(1.08)}
+.plane .q h4{font-size:32px}
+.mbti-line{border-top-color:var(--red)}
+.mbti-line span{background:var(--red);border-radius:999px}
+.plane .me{background:var(--red)}
+.plane .me::after{border-radius:999px}
+
+/* 장면 3 대화방 */
+.chatbox .msg span{border-radius:20px;border:2px solid var(--ink);background:var(--sage-l)}
+.chatbox .msg.me span{background:transparent}
+.chatbox .msg i{border-radius:50%}
+
+/* 에너지·사물 크기 */
+.energy .flow .obj{height:150px;width:auto}
+.energy .card.red .lt{color:var(--red)}.energy .card.blue .lt{color:var(--blu)}
+.lt{font-size:160px}
+.flip{position:relative}
+.flip .obj{position:absolute;right:-40px;top:-80px;height:190px;width:auto;transform:rotate(6deg)}
+.flip .stat em{background:#EFE0BE;border-radius:6px}
+.float-obj{position:absolute}
+.float-obj .obj{width:100%;height:auto}
+.form{max-width:1220px}
+.vane-card{padding:30px;text-align:center}
+.vane-card .obj{height:500px;width:auto;margin:0 auto}
+.vane-card p{font-size:30px;font-weight:700;margin-top:10px}
+.vane-card em{font-style:normal;color:var(--red)}
+.bookchip{border-radius:999px;background:var(--ink);padding:10px 26px 10px 14px}
+.bookchip .obj{height:56px;width:auto;filter:none}
+.word em{color:var(--red)}
+.timeline .card .obj{height:150px}
+.results .card .obj{height:220px;margin:0 auto 16px}
+.clash .card .obj{height:200px}
+.token .obj{height:70px;width:70px;flex:none;filter:none}
+.scale-card .obj{height:230px;margin:0 auto 18px}
+.fact-line .obj{height:80px;width:auto;flex:none;filter:none}
+.tagline .obj{height:80px;width:auto;filter:none}
+.care .obj{height:70px;width:auto;flex:none;filter:none}
+.refs-head .obj{height:90px;width:auto;filter:none}
+.cmp .hd.blank{background:var(--ink);border-radius:var(--r) 0 0 0}
+.cmp .hd.o{background:var(--red);border-radius:0 var(--r) 0 0}
+.cmp .hd.i{background:var(--blu)}
+.cmp .rl{background:#EFE6D2}
+.statement-band{background:var(--ink)}
+.statement-band em{color:#F2C9B8}
+.reveal{background:#EFE6D2}
+.chart.real{border-top:3px solid var(--ink);box-shadow:10px 10px 0 var(--sage)}
+.chart.guess{border-top:3px solid var(--ink);box-shadow:10px 10px 0 #EFE0BE}
+.rooms .r2{background:var(--ink);border-radius:999px;padding:8px 22px}
+.two-q .card.blue{border-left:3px solid var(--ink);box-shadow:10px 10px 0 var(--sage)}
+.two-q .card.red{border-left:3px solid var(--ink);box-shadow:10px 10px 0 var(--terra-l)}
+.plane-arrow .sq{border-radius:10px}
+.form .row2 .st.has{background:var(--blu)}
+.trait.dim{background:var(--terra-l)}
+.trait .mk.x{background:var(--red)}
+.check .mk.x{background:var(--red)}.check .mk.q{background:#EFE0BE}
+.final-q .card .ic{color:var(--blu)}
+.again .ic,.tagline .ic{color:var(--red)}
+.refs li .n{border-radius:50%;background:var(--blu)}
+.deck-header,.deck-footer{color:var(--mute)}
+.progress-bar>span{background:var(--red)}
+.geo{display:none}
+/* MBTI 글자 I·E: 같은 강원교육모두로, 지도 색(I=세이지, E=테라코타)의 둥근 글자판에 */
+.mb{display:inline-block;min-width:.92em;text-align:center;font-family:"GW",sans-serif;font-weight:700;color:#FBF7EE;border-radius:.2em;padding:.1em .18em .06em;line-height:1;font-size:.8em;vertical-align:.08em;margin-right:.1em;box-shadow:.06em .06em 0 var(--sage)}
+.mb.i{background:var(--blu)}.mb.e{background:var(--red)}
