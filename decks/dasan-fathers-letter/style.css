@@ -226,3 +226,7 @@ p{margin:0}
 /* 펜 선화가 아직 없을 때의 임시 선 아이콘(build.py FALLBACK) */
 .obj-ic{display:grid;place-items:center;aspect-ratio:1;max-width:100%;border-radius:50%;background:radial-gradient(circle,var(--yel-l) 0 62%,transparent 63%);color:var(--ink)}
 .obj-ic .ic{width:58%;height:58%}
+
+/* 11장: 옛 편지(서첩) 그림 */
+.old{position:absolute;right:150px;top:130px;width:400px}
+.old .obj{width:100%}
