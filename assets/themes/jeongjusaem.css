@@ -1,0 +1,22 @@
+/* theme: jeongjusaem — 정주샘 채널 기본색(종이·먹·주홍·황토·쪽빛, 원고지 칸)
+   만든 곳: videos/정주샘/brand/palette/colors.py (직접 고치지 말고 그 파일을 고친 뒤 다시 실행) */
+:root{
+  --bg:#F3ECDF;--bg-soft:#F6E7C8;--surface:#FBF7EE;--surface-2:#F3ECDF;
+  --border:rgba(31,28,24,.14);--border-strong:#1F1C18;
+  --text-1:#1F1C18;--text-2:#4A433C;--text-3:#6B625A;
+  --accent:#C4472B;--accent-2:#3F5873;--accent-3:#E9C98F;
+  --good:#3F5873;--warn:#E9C98F;--bad:#C4472B;
+  --grad:linear-gradient(135deg,#C4472B,#E9C98F);
+  --grad-soft:linear-gradient(135deg,#F3D5CB,#F6E7C8);
+  --radius:22px;--radius-sm:12px;--radius-lg:28px;
+  --shadow:10px 10px 0 #E9C98F;
+  --shadow-lg:14px 14px 0 #E9C98F;
+  --font-sans:'Noto Sans KR','Inter',sans-serif;
+  --font-serif:'Noto Serif KR',serif;
+  --font-display:'Noto Sans KR','Inter',sans-serif;
+}
+body,.deck{background:#F3ECDF}
+.slide{background-color:#F3ECDF;background-image:linear-gradient(rgba(196,71,43,.13) 2px,transparent 2px),linear-gradient(90deg,rgba(196,71,43,.13) 2px,transparent 2px);background-size:56px 56px}
+.card{background:#FBF7EE;border:3px solid #1F1C18;box-shadow:10px 10px 0 #E9C98F}
+.kicker{color:#C4472B}
+.divider-accent{background:#C4472B}

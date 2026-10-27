@@ -1,0 +1,228 @@
+/* 내가 하면 잔소리, 정약용이 하면 고전? — 정주샘 기본색 덱(2026-10-28 확정: 종이·먹·주홍·황토·쪽빛, 원고지 칸)
+   테마는 assets/themes/jeongjusaem.css, 색 변수는 videos/정주샘/brand/palette/colors.py와 같은 값.
+   제목은 강원교육모두 Bold(fonts/gw-bold.woff2, build.py가 쓰인 글자만 잘라 만듦), 본문은 Noto Sans KR, 사물은 정주샘 펜 선화(img/*.webp).
+   이 파일은 videos/정주샘/deck-src/dasan-fathers-letter/style.css가 원본 — build.py가 덱 폴더로 복사한다. */
+@font-face{font-family:"GW";src:url("fonts/gw-bold.woff2") format("woff2");font-weight:700;font-display:block}
+@font-face{font-family:"GW";src:url("fonts/latin-600.woff2") format("woff2");font-weight:700;font-display:block;unicode-range:U+0030-0039,U+0041-005A,U+0061-007A}
+
+html,body{height:100%;overflow:hidden}
+.deck{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%) scale(var(--stage-scale,1))}
+:root{--paper-bg:#F3ECDF;--ink:#1F1C18;--red:#C4472B;--red-d:#A8371F;--red-l:#F3D5CB;--yel:#E9C98F;--yel-l:#F6E7C8;--blu:#3F5873;--blu-l:#DCE3EC;
+  --paper:#FBF7EE;--mute:#6B625A;--ink2:#4A433C;--night:#22334A;--grid:rgba(196,71,43,.13);
+  --line:3px solid var(--ink);--sh:10px 10px 0 var(--yel);--r:22px}
+body{word-break:keep-all;overflow-wrap:break-word;font-family:'Noto Sans KR',sans-serif;background:var(--paper-bg);color:var(--ink)}
+.slide{padding:100px 130px 96px;background-color:var(--paper-bg);
+  background-image:linear-gradient(var(--grid) 2px,transparent 2px),linear-gradient(90deg,var(--grid) 2px,transparent 2px);background-size:56px 56px}
+p{margin:0}
+.h1,.h2,.big,.card h3,.quote,.pull,.swap .after,.letter-paper .to,.kicker{font-family:"GW","Noto Sans KR",sans-serif;font-weight:700}
+.h1{font-size:104px;line-height:1.16;letter-spacing:-.02em;margin:0}
+.h2{font-size:62px;line-height:1.26;letter-spacing:-.02em;margin:0 0 14px}
+.h1 em,.h2 em,.big em,.pull em{font-style:normal;color:var(--red)}
+.kicker{display:inline-flex;align-items:center;gap:14px;font-size:26px;letter-spacing:.02em;margin-bottom:22px;color:var(--ink)}
+.kicker .no{display:inline-grid;place-items:center;width:46px;height:46px;background:var(--red);color:#fff;font-size:24px;border:var(--line);border-radius:50%}
+.kicker.blu .no{background:var(--blu)}.kicker.yel .no{background:var(--yel);color:var(--ink)}
+.lede{font-size:30px;line-height:1.65;color:var(--ink2)}
+.cite{font-size:.5em;vertical-align:super;color:var(--red);font-weight:800;margin-left:3px;font-family:'Noto Sans KR',sans-serif}
+.foot{position:absolute;left:130px;right:330px;bottom:58px;font-size:20px;line-height:1.5;color:var(--mute)}
+.obj{display:block;object-fit:contain;filter:drop-shadow(8px 10px 0 rgba(31,28,24,.10))}
+.ic{display:inline-block;flex:none}.ic svg{width:100%;height:100%;display:block}
+.box,.card{background:var(--paper);border:var(--line);box-shadow:var(--sh);border-radius:var(--r)}
+.tag{display:inline-block;font-size:20px;font-weight:800;padding:6px 16px;border:var(--line);border-radius:999px;background:var(--yel);color:var(--ink)}
+.tag.red{background:var(--red);color:#fff}.tag.blu{background:var(--blu);color:#fff}.tag.ink{background:var(--ink);color:#fff}
+.dots{position:absolute;right:130px;top:104px;display:flex;gap:14px;align-items:center;font-size:20px;font-weight:800;color:var(--mute)}
+.dots i{width:30px;height:30px;border-radius:50%;border:var(--line);background:var(--paper)}
+.dots i.on{background:var(--red)}
+.progress-bar>span{background:var(--red)}
+
+/* ---------- 말풍선(부모 = 먹, 아이 = 주홍) ---------- */
+.bub{position:relative;display:inline-block;padding:18px 30px;border:var(--line);border-radius:30px;background:#fff;font-size:32px;line-height:1.4;font-weight:700}
+.bub.kid{background:var(--red);color:#fff;border-color:var(--ink)}
+.bub.par{background:var(--paper)}
+.bub::after{content:"";position:absolute;bottom:-22px;left:44px;border:12px solid transparent;border-top:16px solid var(--ink)}
+.bub.r::after{left:auto;right:44px}
+.who{display:block;font-size:19px;font-weight:800;color:var(--mute);margin:0 0 8px 8px}
+
+/* ---------- 1. 표지 ---------- */
+.cover{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.cover .bub{font-size:36px;margin-bottom:46px}
+.cover .sub{margin-top:30px;font-size:32px;line-height:1.5;color:var(--ink2);font-weight:600}
+.cover .art{position:relative;height:720px}
+.cover .art .obj{position:absolute;left:30px;top:120px;width:620px}
+.promise{display:flex;gap:18px;margin-top:44px;align-items:center}
+.promise .q{display:grid;place-items:center;width:78px;height:78px;border:var(--line);border-radius:50%;background:var(--paper);font:700 40px "GW";color:var(--red);box-shadow:5px 5px 0 var(--yel)}
+.promise .plus{font:700 40px "GW";color:var(--mute)}
+.promise .env{display:flex;align-items:center;gap:10px;padding:14px 24px;border:var(--line);border-radius:999px;background:var(--yel);font-size:26px;font-weight:800}
+.promise .lbl{font-size:24px;font-weight:800;color:var(--ink2);margin-right:4px;white-space:nowrap}
+.promise .qlbl{font-size:26px;font-weight:800;white-space:nowrap}
+.promise .env .ic{width:36px;height:36px}
+.promise .env{white-space:nowrap}
+
+/* ---------- 2. 잔소리 / 고전 ---------- */
+.vs{display:grid;grid-template-columns:1fr 120px 1fr;gap:20px;align-items:center;margin-top:46px}
+.vs .side{padding:34px 40px;text-align:center}
+.vs .side .obj{height:250px;margin:0 auto 10px}
+.vs .side .lines{font-size:30px;line-height:1.6;font-weight:700}
+.vs .side .stamp{display:inline-block;margin-top:18px;font:700 44px "GW";padding:6px 28px;border:4px solid currentColor;border-radius:14px;transform:rotate(-4deg)}
+.vs .side.nag .stamp{color:var(--mute)}.vs .side.classic .stamp{color:var(--red)}
+.vs .eq{font:700 64px "GW";text-align:center;color:var(--ink)}
+.turn{margin-top:48px;display:flex;align-items:center;gap:20px;font-size:30px;font-weight:700}
+.turn s{color:var(--mute)}
+
+/* ---------- 3. 노을빛 치마 ---------- */
+.skirt-row{display:grid;grid-template-columns:400px 120px 420px 1fr;gap:16px;align-items:center;margin-top:20px}
+.skirt-row .obj{width:100%}
+.arrow{font:700 70px "GW";color:var(--red);text-align:center}
+.name-card{padding:28px 32px}
+.name-card .hanja{font-size:62px;font-weight:900;letter-spacing:.1em;font-family:'Noto Serif KR','Noto Sans KR',serif}
+.name-card .kr{font:700 46px "GW";margin:4px 0 14px}
+.name-card p{font-size:24px;line-height:1.6;color:var(--ink2)}
+.name-card b{color:var(--red)}
+.timeline{position:relative;margin:34px 0 0;height:150px}
+.timeline .bar{position:absolute;left:0;right:0;top:52px;height:8px;background:var(--ink);border-radius:4px}
+.timeline .pt{position:absolute;top:0;transform:translateX(-50%);text-align:center;width:300px}
+.timeline .pt b{display:block;font:700 34px "GW"}
+.timeline .pt i{display:block;width:30px;height:30px;margin:6px auto 10px;border-radius:50%;border:var(--line);background:var(--paper)}
+.timeline .pt.hot i{background:var(--red)}
+.timeline .pt span{font-size:22px;font-weight:700;color:var(--ink2)}
+.books{display:flex;gap:10px;align-items:flex-end}
+.books u{display:block;width:34px;height:48px;border:3px solid var(--ink);border-radius:4px;background:var(--red-l)}
+.books u.gone{background:transparent;border-style:dashed;opacity:.5}
+.loop{position:absolute;right:130px;bottom:60px;transform:rotate(-3deg)}
+
+/* ---------- 4. 곁에 없는 부모 ---------- */
+.far{display:grid;grid-template-columns:520px 1fr;gap:70px;align-items:center;margin-top:30px}
+.far .obj{width:480px;margin:0 auto}
+.pull{font-size:58px;line-height:1.4;letter-spacing:-.01em;padding:44px 52px;position:relative}
+.pull::before{content:"‘";position:absolute;left:18px;top:-30px;font-size:130px;color:var(--red)}
+.pull small{display:block;margin-top:24px;font:600 24px 'Noto Sans KR',sans-serif;color:var(--mute)}
+.next3{margin-top:40px;display:flex;align-items:center;gap:16px;font-size:30px;font-weight:800}
+.next3 i{width:34px;height:34px;border-radius:50%;border:var(--line);background:var(--paper)}
+
+/* ---------- 5. 골라 적는 독서 ---------- */
+.pick{display:grid;grid-template-columns:1fr 130px 1fr;gap:20px;align-items:center;margin-top:30px}
+.pick .card{padding:30px 34px;text-align:center}
+.pick .obj{height:300px;margin:0 auto 14px}
+.pick .card p{font-size:28px;font-weight:700;line-height:1.5}
+.pick .x{color:var(--mute)}.pick .o{color:var(--red)}
+.mark{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;border:var(--line);font:700 30px "GW";vertical-align:middle;margin-right:10px}
+.mark.x{background:var(--paper);color:var(--mute)}.mark.o{background:var(--red);color:#fff}
+.because{margin-top:44px;font-size:32px;font-weight:700;text-align:center}
+.because em{font-style:normal;color:var(--red)}
+
+/* ---------- 6. 수사본부 ---------- */
+.hq{display:grid;grid-template-columns:600px 1fr;gap:70px;margin-top:20px;align-items:start}
+.talk{display:flex;flex-direction:column;gap:30px}
+.talk .r{align-self:flex-end;text-align:right}
+.board{position:relative}
+.board .obj{width:560px}
+.swap{padding:30px 36px;margin-top:10px}
+.swap .before{font-size:30px;color:var(--mute);text-decoration:line-through;text-decoration-thickness:3px}
+.swap .after{font-size:44px;line-height:1.35;color:var(--red);margin-top:10px}
+.swap .lbl{font-size:20px;font-weight:800;color:var(--ink2);margin-bottom:6px}
+.oneline{margin-top:34px;display:flex;gap:16px;align-items:center;font-size:26px;font-weight:700}
+.oneline .memo{padding:10px 22px;background:var(--yel-l);border:var(--line);transform:rotate(-1.5deg)}
+
+/* ---------- 7. 몸가짐(원문 인용 + 3초) ---------- */
+.quote-row{display:grid;grid-template-columns:1fr 360px;gap:50px;align-items:center;margin-top:16px}
+.quote{padding:36px 46px;background:var(--paper);border:var(--line);border-left:18px solid var(--red);border-radius:var(--r);box-shadow:var(--sh)}
+.quote .hanja{font:600 30px 'Noto Serif KR','Noto Sans KR',serif;letter-spacing:.14em;color:var(--mute);margin-bottom:14px}
+.quote .kr{font-size:46px;line-height:1.45}
+.quote .src{font:600 22px 'Noto Sans KR',sans-serif;color:var(--mute);margin-top:16px}
+.quote-row .obj{width:340px}
+.think{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;margin-top:44px}
+.timer{width:150px;height:150px;border-radius:50%;border:6px solid var(--ink);display:grid;place-items:center;background:conic-gradient(var(--red) 0 75%,var(--paper) 0);font:700 70px "GW";color:#fff;text-shadow:0 2px 0 var(--ink)}
+.think .ask{font-size:36px;font-weight:700;line-height:1.45}
+.think .ask s{color:var(--mute)}
+.reveal{margin-top:14px;display:inline-block;padding:16px 30px;border:var(--line);border-radius:18px;background:var(--red);color:#fff;font:700 40px "GW";cursor:pointer;position:relative}
+.reveal .cover-up{position:absolute;inset:-3px;border-radius:18px;background:var(--yel);border:var(--line);display:grid;place-items:center;font:700 28px 'Noto Sans KR',sans-serif;color:var(--ink)}
+.reveal.show .cover-up,.solved .reveal .cover-up{display:none}
+
+/* ---------- 8. 사과문 / 반박문 ---------- */
+.strip{display:flex;align-items:stretch;margin-top:110px;font-size:38px;font-weight:700}
+.strip .a,.strip .b{padding:30px 34px;border:var(--line);background:var(--paper)}
+.strip .a{border-radius:var(--r) 0 0 var(--r);box-shadow:var(--sh)}
+.strip .b{border-left:none;border-radius:0 var(--r) var(--r) 0;background:var(--red-l);color:var(--ink2);transform:translate(40px,30px) rotate(3deg);opacity:.85}
+.strip .lbl{display:block;font-size:20px;font-weight:800;color:var(--mute);margin-bottom:8px}
+.cutline{position:relative;width:0;border-left:5px dashed var(--red)}
+.cutline .ic{position:absolute;left:-46px;top:-96px;width:90px;height:90px;color:var(--red);transform:rotate(90deg)}
+.fixed{margin-top:80px;padding:30px 40px;display:flex;align-items:center;gap:24px;font:700 44px "GW"}
+.fixed .mark{flex:none}
+.rule{margin-top:34px;font-size:28px;font-weight:700;color:var(--ink2)}
+.rule b{color:var(--blu)}
+
+/* ---------- 9. 내 몫과 도움 ---------- */
+.share{display:grid;grid-template-columns:330px 1fr;gap:60px;align-items:center;margin-top:16px}
+.share .obj{width:320px}
+.ask-card{padding:24px 34px;font:700 38px/1.4 "GW";color:var(--red);margin-bottom:30px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.cols div{padding:22px 24px;background:var(--paper);border-right:var(--line)}
+.cols div:last-child{border-right:none}
+.cols h4{margin:0 0 12px;font:700 32px "GW"}
+.cols p{font-size:25px;line-height:1.5;font-weight:600}
+.cols .k h4{color:var(--red)}.cols .t h4{color:#9a6a00}.cols .p h4{color:var(--blu)}
+.cols .k{background:color-mix(in srgb,var(--red) 10%,var(--paper))}
+.cols .t{background:color-mix(in srgb,var(--yel) 30%,var(--paper))}
+.cols .p{background:color-mix(in srgb,var(--blu) 12%,var(--paper))}
+.grow{margin-top:34px;font-size:28px;font-weight:700}
+.grow em{font-style:normal;color:var(--red)}
+
+/* ---------- 10. 남은 천 조각 ---------- */
+.gift{display:grid;grid-template-columns:1fr 1fr 360px;gap:40px;align-items:center;margin-top:20px}
+.gift .card{padding:28px 32px}
+.gift .card .who2{font-size:22px;font-weight:800;color:var(--mute)}
+.gift .card h3{font-size:40px;margin:6px 0 10px}
+.gift .card p{font-size:24px;line-height:1.55;color:var(--ink2)}
+.gift .card .obj{height:220px;margin:0 auto 6px}
+.gift .scroll .obj{height:620px;margin:0 auto}
+.facts{display:flex;gap:16px;margin-top:20px;flex-wrap:wrap}
+.remain{margin-top:36px;font:700 40px "GW"}
+.remain em{font-style:normal;color:var(--red)}
+
+/* ---------- 11. 골라 읽기 ---------- */
+.choose{display:flex;flex-direction:column;gap:18px;margin-top:30px;max-width:1080px}
+.choose .row{display:grid;grid-template-columns:330px 50px 1fr;align-items:center;padding:20px 30px;font-size:30px;font-weight:700}
+.choose .row .keep{color:var(--blu)}.choose .row .drop{color:var(--red)}
+.choose .row .sep{font:700 34px "GW";color:var(--mute);text-align:center}
+.reflect{position:absolute;right:130px;bottom:150px;width:480px;padding:28px 32px;background:var(--night);color:#fff;border:var(--line);border-radius:var(--r);box-shadow:var(--sh);font-size:28px;line-height:1.55;font-weight:700}
+.reflect b{color:var(--yel)}
+.side-note{margin-top:22px;font-size:24px;color:var(--mute);font-weight:600}
+
+/* ---------- 12. 편지 ---------- */
+.letter-wrap{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;margin-top:10px}
+.letter-paper{position:relative;padding:44px 56px;background:linear-gradient(180deg,#FBEEDD,#F4D9C4);border:var(--line);border-radius:10px;box-shadow:var(--sh);
+  background-image:linear-gradient(transparent 58px,rgba(196,71,43,.18) 58px,rgba(196,71,43,.18) 60px),linear-gradient(180deg,#FBEEDD,#F4D9C4);background-size:100% 60px,100% 100%}
+.letter-paper .to{font-size:40px;margin-bottom:14px}
+.letter-paper p{font-size:28px;line-height:60px;font-weight:600}
+.letter-wrap .obj{width:400px}
+.made{margin-top:20px;font-size:22px;color:var(--mute);font-weight:600}
+
+/* ---------- 13. 바꿔 말하기 카드 ---------- */
+.cardset{margin-top:24px;padding:20px 40px;max-width:1500px}
+.cardset .ln{display:grid;grid-template-columns:1fr 70px 1.25fr;align-items:center;padding:16px 0;border-bottom:2px dashed rgba(31,28,24,.25);font-size:31px}
+.cardset .ln:last-child{border-bottom:none}
+.cardset .ln .was{color:var(--mute);font-weight:600}
+.cardset .ln .to{font-family:"GW";font-weight:700;color:var(--ink)}
+.cardset .ln .to em{font-style:normal;color:var(--red)}
+.cardset .ln .ar{font:700 36px "GW";color:var(--red);text-align:center}
+.save{position:absolute;right:130px;top:110px;display:flex;align-items:center;gap:12px;font-size:22px;font-weight:800;color:var(--mute)}
+.save .ic{width:44px;height:44px;color:var(--red)}
+
+/* ---------- 14. 오늘 저녁 ---------- */
+.evening{display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:center;margin-top:30px}
+.evening .obj{width:460px}
+.qq{font-size:38px;font-weight:700;color:var(--mute);text-decoration:line-through;text-decoration-thickness:4px}
+.qa{font:700 70px/1.3 "GW";color:var(--red);margin:14px 0 30px}
+.listen{font-size:32px;font-weight:700;line-height:1.6}
+.closing{margin-top:50px;padding:30px 40px;background:var(--night);color:#fff;border-radius:var(--r);border:var(--line);font:700 40px/1.45 "GW"}
+.closing em{font-style:normal;color:var(--yel)}
+
+/* ---------- 15. 참고 자료 ---------- */
+.refs{margin-top:20px;display:flex;flex-direction:column;gap:16px;font-size:22px;line-height:1.5}
+.refs li{list-style:none;padding:14px 22px;background:var(--paper);border:2px solid rgba(31,28,24,.2);border-radius:14px}
+.refs b{color:var(--red);margin-right:8px}
+.refs a{color:var(--blu);word-break:break-all}
+.refs small{display:block;color:var(--mute);font-size:19px}
+
+/* 펜 선화가 아직 없을 때의 임시 선 아이콘(build.py FALLBACK) */
+.obj-ic{display:grid;place-items:center;aspect-ratio:1;max-width:100%;border-radius:50%;background:radial-gradient(circle,var(--yel-l) 0 62%,transparent 63%);color:var(--ink)}
+.obj-ic .ic{width:58%;height:58%}
