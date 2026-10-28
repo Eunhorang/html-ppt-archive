@@ -48,6 +48,8 @@ p{margin:0}
 .cover .sub{margin-top:30px;font-size:32px;line-height:1.5;color:var(--ink2);font-weight:600}
 .cover .art{position:relative;height:720px}
 .cover .art .obj{position:absolute;left:30px;top:120px;width:620px}
+.cover .art .lq{position:absolute;left:10px;top:40px;padding:16px 28px 18px;background:var(--paper);border:var(--line);border-radius:14px;box-shadow:6px 6px 0 var(--yel);font:700 36px/1.4 "GW";transform:rotate(-3deg)}
+.cover .art .lq small{display:block;font:800 20px 'Noto Sans KR',sans-serif;color:var(--red);margin-bottom:4px}
 .promise{display:flex;gap:18px;margin-top:44px;align-items:center}
 .promise .q{display:grid;place-items:center;width:78px;height:78px;border:var(--line);border-radius:50%;background:var(--paper);font:700 40px "GW";color:var(--red);box-shadow:5px 5px 0 var(--yel)}
 .promise .plus{font:700 40px "GW";color:var(--mute)}
